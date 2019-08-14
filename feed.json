@@ -1,0 +1,13 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "PSyLib",
+    "description": "",
+    "home_page_url": "https://PSyLib.github.io",
+    "feed_url": "https://PSyLib.github.io/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Tassos Fragos"
+    },
+    "items": [
+    ]
+}
