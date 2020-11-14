@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FirstVersionWeb</title>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="POSYDON, CIERA, Astrophysics">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" href="images/logo.png">
+	</head>
+
+	<style>
+		body, h1, h2, h3, h4, h5, h6 {font-family: "Roboto", sans-serif}
+	</style>
+
+	<body>
+		<button onclick="topFunction()" id="back2Top" title="Go to top">Top</button>
+
+		<!-- Header -->
+		<header>
+			<img src="images/logo.png" alt="POSYDON logo" />
+			<h1>P O S Y D O N</h1>
+		</header>
+
+		<!-- Navigation -->
+		<nav>
+			<a href="#About">About</a>
+			<a href="#News">News</a>
+			<a href="#Research">Research</a>
+            <a href="#Team">Team</a>
+		</nav>
+
+		<main>
+			<div id="About">
+				<h2>ABOUT</h2>
+				<p><b>POSYDON</b> is a collaborated project, including <a href="https://ciera.northwestern.edu/" target="_blank">CIERA</a> at <a href="https://www.northwestern.edu/" target="_blank">Northwestern University</a></p>
+				<p>An old man lived in the village. He was one of the most unfortunate people in the world. The whole village was tired of him; he was always gloomy, he constantly complained and was always in a bad mood.</p>
+				<p>The longer he lived, the more bile he was becoming and the more poisonous were his words. People avoided him, because his misfortune became contagious. It was even unnatural and insulting to be happy next to him. He created the feeling of unhappiness in others.</p>
+				<p>But one day, when he turned eighty years old, an incredible thing happened. Instantly everyone started hearing the rumour:</p>
+				<p>“An Old Man is happy today, he doesn’t complain about anything, smiles, and even his face is freshened up.”</p>
+				<p>The whole village gathered together. The old man was asked:</p>
+				<p>Villager: What happened to you?</p>
+				<p>“Nothing special. Eighty years I’ve been chasing happiness, and it was useless. And then I decided to live without happiness and just enjoy life. That’s why I’m happy now.” – An Old Man</p>
+			</div>
+
+			<div id="News">
+				<h2>NEWS</h2>
+				<ul style="font-weight: bold">
+					<li>(02.30.2077). <a href="https://www.wikipedia.org/" target="_blank">Something</a> happened</li>
+					<li>(02.17.1963). Michael Jordan was born</li>
+				</ul>
+			</div>
+
+			<div id="Research">
+				<h2>Research</h2>
+				<p>People have been coming to the wise man, complaining about the same problems every time. One day he told them a joke and everyone roared in laughter. After a couple of minutes, he told them the same joke and only a few of them smiled. When he told the same joke for the third time no one laughed anymore.</p>
+				<p>The wise man smiled and said: “You can’t laugh at the same joke over and over. So why are you always crying about the same problem?”</p>
+				<p>Worrying won’t solve your problems, it’ll just waste your time and energy.</p>
+			</div>
+
+			<div id="Team">
+				<h2>TEAM</h2>
+				<table cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						<td> <a href="https://www.northwestern.edu/"> <img src="images/test1.jpg" height=150px /></a> <br />ABC</td>
+						<td><img src="images/test1.jpg" height=150px /><br />ABC</td>
+						<td><img src="images/test1.jpg" height=150px /><br />ABC</td>
+					</tr>
+				</table>
+			</div>
+		</main>
+
+		<!-- Foot -->
+		<footer>
+			<p>Contact me at <i class="fa fa-envelope"></i> <i>somewhere@gmail.com</i></p>
+		</footer>
+
+
+
+		<script>
+		//Get the button
+		var mybutton = document.getElementById("back2Top");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		    mybutton.style.display = "block";
+		  } else {
+		    mybutton.style.display = "none";
+		  }
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		</script>
+
+	</body>
+
+</html>
