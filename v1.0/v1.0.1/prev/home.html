@@ -3,6 +3,8 @@
 
   <head>
     <meta charset="utf-8" />
+    <meta name="keywords" content="POSYDON, CIERA, Astrophysics">
+    <link rel="icon" href="images/logo.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Simple Webpage</title>
@@ -16,12 +18,15 @@
 	
 	
 	<!-- Carousel Scripts -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
 	
 	
     <style>
-      
+    	
       footer a {
         color: white;
       }
@@ -69,50 +74,15 @@
         color: white;
         background-color: #555; /* Add a dark-grey background on hover */
       }
-	  
-	  <!-- Image Fade-In Styling -->
-	  <!-- BROKEN -->
-	  .fade_in_container {
- 	    position: relative;
-  	    width: 50%;
-	  }
-	  
-	  
-	  .fade_in_image {
- 	    display: block;
-  	    width: 100%;
-  	    height: auto;
-	  }
 
-	  .fade_in_overlay {
-	    position: absolute;
-	    top: 0;
-	    bottom: 0;
-	    left: 0;
-	    right: 0;
-	    height: 100%;
-	    width: 100%;
-	    opacity: 0;
-	    transition: .5s ease;
-	    background-color: #008CBA;
-	  }
-	  
-	  .fade_in_container:hover .fade_in_overlay {
-	    opacity: 1;
-	  }
-	  
-	  .fade_in_text {
-	    color: white;
-	    font-size: 20px;
-	    position: absolute;
-	    top: 50%;
-	    left: 50%;
-	    -webkit-transform: translate(-50%, -50%);
-	    -ms-transform: translate(-50%, -50%);
-	    transform: translate(-50%, -50%);
-	    text-align: center;
-	  }
-	  
+      .carousel-inner{
+        overflow:visible !important;
+      }
+
+      .carousel{
+        overflow:visible !important;
+      }
+
     </style>
   </head>
 
@@ -145,6 +115,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#News">News</a>
           </li>
+          <!--
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Team
@@ -152,8 +123,12 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#Teams">John Doe</a>
               <a class="dropdown-item" href="#Teams">Jane Doe</a>
-              <!-- <div class="dropdown-divider"></div> -->
+            
             </div>
+          </li>
+          -->
+          <li class="nav-item">
+            <a class="nav-link" href="#Teams">Teams</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Acknowledge">Acknowledge</a>
@@ -175,19 +150,19 @@
 	
 	
 	<!-- Carousel Implementation -->
-	<div id="carousel" class="carousel slide" data-ride="carousel">
+	<div id="demo" class="carousel slide" data-ride="carousel">
 	
  	  <!-- Indicators -->
  	  <ul class="carousel-indicators">
-  	    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-  	    <li data-target="#carousel" data-slide-to="1"></li>
-  	    <li data-target="#carousel" data-slide-to="2"></li>
-		<li data-target="#carousel" data-slide-to="3"></li>
-  	    <li data-target="#carousel" data-slide-to="4"></li>
-  	    <li data-target="#carousel" data-slide-to="5"></li>
-		<li data-target="#carousel" data-slide-to="6"></li>
-  	    <li data-target="#carousel" data-slide-to="7"></li>
-  	    <li data-target="#carousel" data-slide-to="8"></li>
+  	    <li data-target="#demo" data-slide-to="0" class="active"></li>
+  	    <li data-target="#demo" data-slide-to="1"></li>
+  	    <li data-target="#demo" data-slide-to="2"></li>
+		<li data-target="#demo" data-slide-to="3"></li>
+  	    <li data-target="#demo" data-slide-to="4"></li>
+  	    <li data-target="#demo" data-slide-to="5"></li>
+		<li data-target="#demo" data-slide-to="6"></li>
+  	    <li data-target="#demo" data-slide-to="7"></li>
+  	    <li data-target="#demo" data-slide-to="8"></li>
  	  </ul>
   	  
       <!-- The slideshow -->
@@ -258,27 +233,15 @@
       </div>
       
       <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </a>
-      <a class="carousel-control-next" href="#carousel" data-slide="next">
+      <a class="carousel-control-next" href="#demo" data-slide="next">
         <span class="carousel-control-next-icon"></span>
       </a>
     </div>
-	
-	
-	
-	<!-- Image Fade-In Implementation -->
-	<!-- BROKEN -->
-    <div class="fade_in_container">
-      <img src="images/road.jpg" alt="Road Image" class="fade_in_image">
-      <div class="fade_in_overlay">
-        <div class="fade_in_text">This is the image text!</div>
-      </div>
-    </div>
-	
-	
-	
+
+    <!--
     <div class="jumbotron">
       <p style="position:relative;">
         <a id="About" style="position:absolute; top:-150px;"></a>
@@ -294,7 +257,42 @@
       <p>Villager: What happened to you?</p>
       <p>“Nothing special. Eighty years I’ve been chasing happiness, and it was useless. And then I decided to live without happiness and just enjoy life. That’s why I’m happy now.” – An Old Man</p>
     </div>
+    -->
 
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-7 bg-light text-dark">
+          <p style="position:relative;">
+            <a id="About" style="position:absolute; top:-150px;"></a>
+          </p>
+          <h1 style="text-align:center">ABOUT</h1> 
+          <hr/>
+          <p><b>POSYDON</b> is a collaborated project, including <a href="https://ciera.northwestern.edu/" target="_blank">CIERA</a> at <a href="https://www.northwestern.edu/" target="_blank">Northwestern University</a></p>
+          <p>An old man lived in the village. He was one of the most unfortunate people in the world. The whole village was tired of him; he was always gloomy, he constantly complained and was always in a bad mood.</p>
+          <p>The longer he lived, the more bile he was becoming and the more poisonous were his words. People avoided him, because his misfortune became contagious. It was even unnatural and insulting to be happy next to him. He created the feeling of unhappiness in others.</p>
+          <p>But one day, when he turned eighty years old, an incredible thing happened. Instantly everyone started hearing the rumour:</p>
+          <p>“An Old Man is happy today, he doesn’t complain about anything, smiles, and even his face is freshened up.”</p>
+          <p>The whole village gathered together. The old man was asked:</p>
+          <p>Villager: What happened to you?</p>
+          <p>“Nothing special. Eighty years I’ve been chasing happiness, and it was useless. And then I decided to live without happiness and just enjoy life. That’s why I’m happy now.” – An Old Man</p>
+        </div>
+
+        <div class="col-md-4 offset-1 bg-info text-white" >
+          <p style="position:relative;">
+            <a id="News" style="position:absolute; top:-150px;"></a>
+          </p>
+          <h1 style="text-align:center">NEWS</h1> 
+          <hr/>
+          <ul class="list-group list-group-flush">
+            <a href="https://www.wikipedia.org/" class="list-group-item list-group-item-info" target="_blank">[01.01.2021] Happy New Year \o/</a>
+            <li class="list-group-item list-group-item-info">[01.01.2021] Some other thing happened without link</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!--
     <div class="container p-4">
       <p style="position:relative;">
         <a id="News" style="position:absolute; top:-150px;"></a>
@@ -307,7 +305,8 @@
         <li class="list-group-item">Some other thing happened without link</li>
       </ul>
     </div>
-
+    -->
+    
     <div class="container p-4">
       <p style="position:relative;">
         <a id="Teams" style="position:absolute; top:-150px;"></a>
