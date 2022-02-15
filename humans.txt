@@ -1,4 +1,9 @@
 POSYDON Website Contributors:
 
-Benjamin Huinker:
-Implemented various pieces of functionality for the POSYDON Website
+Benjamin Huinker (past member), Iowa State University:
+	- Implemented various pieces of functionality for the POSYDON website
+
+Xu Teng, Iowa State University:
+	- Responsible for building and maintaining POSYDON website
+
+If you have any problem regarding the website issue, please contact Xu Teng through xuteng AT iastate.edu
