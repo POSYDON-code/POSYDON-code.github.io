@@ -123,6 +123,29 @@
         </ul>
       </div>
     </nav>
+
+    <div class="container p-4">
+      <h1><a href="https://arxiv.org/abs/2203.16683" target="_blank" style="color: rgb(0,0,0)">Active Learning for Computationally Efficient Distribution of Binary Evolution Simulations</a></h1>
+      <p></p>
+      <h5>Roche et al. 2022</h5>
+      <p></p>
+
+      <p>
+        <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#psy-cris" aria-expanded="false" aria-controls="psy-cris">
+          Details
+        </button>
+      </p>
+      <div class="collapse" id="psy-cris">
+        <div class="card card-body">
+          <p><b>Authors: </b> Kyle Akira Rocha, Jeff J. Andrews, Christopher P. L. Berry, Zoheyr Doctor, Pablo Marchant, Vicky Kalogera, Scott Coughlin, Simone S. Bavera, Aaron Dotter, Tassos Fragos, Konstantinos Kovlakas, Devina Misra, Zepei Xing, Emmanouil Zapartas</p>
+
+          <p><b>Access: </b> <a href="https://arxiv.org/abs/2203.16683" target="_blank">arXiv:2203.16683</a> || <a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220316683A/abstract" target="_blank">NASA ADS</a> || <a href="https://inspirehep.net/literature/2061114" target="_blank">INSPIRE-HEP</a></p>
+          <p><b>Abstract: </b>Binary stars undergo a variety of interactions and evolutionary phases, critical for predicting and explaining observed properties. Binary population synthesis with full stellar-structure and evolution simulations are computationally expensive requiring a large number of mass-transfer sequences. The recently developed binary population synthesis code POSYDON incorporates grids of MESA binary star simulations which are then interpolated to model large-scale populations of massive binaries. The traditional method of computing a high-density rectilinear grid of simulations is not scalable for higher-dimension grids, accounting for a range of metallicities, rotation, and eccentricity. We present a new active learning algorithm, psy-cris, which uses machine learning in the data-gathering process to adaptively and iteratively select targeted simulations to run, resulting in a custom, high-performance training set. We test psy-cris on a toy problem and find the resulting training sets require fewer simulations for accurate classification and regression than either regular or randomly sampled grids. We further apply psy-cris to the target problem of building a dynamic grid of MESA simulations, and we demonstrate that, even without fine tuning, a simulation set of only ∼1/4 the size of a rectilinear grid is sufficient to achieve the same classification accuracy. We anticipate further gains when algorithmic parameters are optimized for the targeted application. We find that optimizing for classification only may lead to performance losses in regression, and vice versa. Lowering the computational cost of producing grids will enable future versions of POSYDON to cover more input parameters while preserving interpolation accuracies.</p>
+        </div>
+      </div>
+      <hr/>
+    </div>
+
     <div class="container p-4">
       <h1><a href="https://arxiv.org/abs/2202.05892" target="_blank" style="color: rgb(0,0,0)">POSYDON: A General-Purpose Population Synthesis Code with Detailed Binary-Evolution Simulations</a></h1>
       <p></p>
@@ -138,7 +161,7 @@
         <div class="card card-body">
           <p><b>Authors: </b> Tassos Fragos, Jeff J. Andrews, Simone S. Bavera, Christopher P. L. Berry, Scott Coughlin, Aaron Dotter, Prabin Giri, Vicky Kalogera, Aggelos Katsaggelos, Konstantinos Kovlakas, Shamal Lalvani, Devina Misra, Philipp M. Srivastava, Ying Qin, Kyle A. Rocha, Jaime Rom&#225;n-Garza, Juan Gabriel Serra, Petter Stahle, Meng Sun, Xu Teng, Goce Trajcevski, Nam Hai Tran, Zepei Xing, Emmanouil Zapartas, Michael Zevin</p>
 
-          <p><b>Access: </b> <a href="https://arxiv.org/abs/2202.05892" target="_blank">arXiv:2202.05892 </a> || <a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220205892F/abstract" target="_blank">NASA ADS</a></p>
+          <p><b>Access: </b> <a href="https://arxiv.org/abs/2202.05892" target="_blank">arXiv:2202.05892</a> || <a href="https://ui.adsabs.harvard.edu/abs/2022arXiv220205892F/abstract" target="_blank">NASA ADS</a> || <a href="https://inspirehep.net/literature/2032448" target="_blank">INSPIRE-HEP</a></p>
           <p><b>Abstract: </b>Most massive stars are members of a binary or a higher-order stellar systems, where the presence of a binary companion can decisively alter their evolution via binary interactions. Interacting binaries are also important astrophysical laboratories for the study of compact objects. Binary population synthesis studies have been used extensively over the last two decades to interpret observations of compact-object binaries and to decipher the physical processes that lead to their formation. Here, we present POSYDON, a novel, binary population synthesis code that incorporates full stellar-structure and binary-evolution modeling, using the MESA code, throughout the whole evolution of the binaries. The use of POSYDON enables the self-consistent treatment of physical processes in stellar and binary evolution, including: realistic mass-transfer calculations and assessment of stability, internal angular-momentum transport and tides, stellar core sizes, mass-transfer rates and orbital periods. This paper describes the detailed methodology and implementation of POSYDON, including the assumed physics of stellar- and binary-evolution, the extensive grids of detailed single- and binary-star models, the post-processing, classification and interpolation methods we developed for use with the grids, and the treatment of evolutionary phases that are not based on pre-calculated grids. The first version of POSYDON targets binaries with massive primary stars (potential progenitors of neutron stars or black holes) at solar metallicity.</p>
         </div>
       </div>
