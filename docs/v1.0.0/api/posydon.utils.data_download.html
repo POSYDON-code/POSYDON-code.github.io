@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>&lt;no title&gt; &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>&lt;no title&gt; &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -32,7 +33,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -102,19 +103,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <span class="target" id="module-posydon.utils.data_download"></span><p>Functions handling the download of data from Zenodo.</p>
+  <p id="module-posydon.utils.data_download">Functions handling the download of data from Zenodo.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="posydon.utils.data_download.ProgressBar">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">posydon.utils.data_download.</span></span><span class="sig-name descname"><span class="pre">ProgressBar</span></span><a class="reference internal" href="../_modules/posydon/utils/data_download.html#ProgressBar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#posydon.utils.data_download.ProgressBar" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">posydon.utils.data_download.</span></span><span class="sig-name descname"><span class="pre">ProgressBar</span></span><a class="reference internal" href="../_modules/posydon/utils/data_download.html#ProgressBar"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#posydon.utils.data_download.ProgressBar" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="posydon.utils.data_download.data_download">
-<span class="sig-prename descclassname"><span class="pre">posydon.utils.data_download.</span></span><span class="sig-name descname"><span class="pre">data_download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'./POSYDON_data.tar.gz'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MD5_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/posydon/utils/data_download.html#data_download"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#posydon.utils.data_download.data_download" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">posydon.utils.data_download.</span></span><span class="sig-name descname"><span class="pre">data_download</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/media/konstantinos/CosmicXRB/POSYDON_DATA/230914/POSYDON_data.tar.gz'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MD5_check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/posydon/utils/data_download.html#data_download"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#posydon.utils.data_download.data_download" title="Link to this definition"></a></dt>
 <dd><p>Download data files from Zenodo if they do not exist.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>file</strong> (<em>string</em>) – <ul class="simple">
 <li><p>Filename of the data file to be downloaded</p></li>
 </ul>

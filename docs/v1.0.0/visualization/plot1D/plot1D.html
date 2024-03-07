@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1D plotting functionalities for POSYON GRIDS &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>1D plotting functionalities for POSYON GRIDS &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -34,7 +35,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -118,7 +119,7 @@
            <div itemprop="articleBody">
              
   <section id="d-plotting-functionalities-for-posyon-grids">
-<span id="plot1d"></span><h1>1D plotting functionalities for POSYON GRIDS<a class="headerlink" href="#d-plotting-functionalities-for-posyon-grids" title="Permalink to this headline"></a></h1>
+<span id="plot1d"></span><h1>1D plotting functionalities for POSYON GRIDS<a class="headerlink" href="#d-plotting-functionalities-for-posyon-grids" title="Link to this heading"></a></h1>
 <p>We provide a variety of 1D MESA grids plotting functions within POSYDON.
 We start by loading a grid in a PSyGrid object. The <code class="docutils literal notranslate"><span class="pre">plot</span></code> method supports
 any POSYDON MESA grid. Here, we will use the <code class="docutils literal notranslate"><span class="pre">HMS-HMS</span></code> grid as an example.</p>
@@ -128,9 +129,9 @@ any POSYDON MESA grid. Here, we will use the <code class="docutils literal notra
 </pre></div>
 </div>
 <section id="how-to-plot-one-track">
-<h2>How to plot one track<a class="headerlink" href="#how-to-plot-one-track" title="Permalink to this headline"></a></h2>
+<h2>How to plot one track<a class="headerlink" href="#how-to-plot-one-track" title="Link to this heading"></a></h2>
 <section id="plot-one-quantity-as-a-function-of-another">
-<h3>Plot one quantity as a function of another<a class="headerlink" href="#plot-one-quantity-as-a-function-of-another" title="Permalink to this headline"></a></h3>
+<h3>Plot one quantity as a function of another<a class="headerlink" href="#plot-one-quantity-as-a-function-of-another" title="Link to this heading"></a></h3>
 <p>The properties to plot for a given MESA track (we have chosen the 42nd track in
 the grid) can be read from <code class="docutils literal notranslate"><span class="pre">history1</span></code>, <code class="docutils literal notranslate"><span class="pre">history2</span></code>, or <code class="docutils literal notranslate"><span class="pre">binary_history</span></code>.
 For example, to plot the mass evolution of <cite>star_1</cite>:</p>
@@ -156,7 +157,7 @@ Hertzsprung-Russell diagram:</p>
 <a class="reference internal image-reference" href="../../_images/1D_logR_logL.png"><img alt="../../_images/1D_logR_logL.png" src="../../_images/1D_logR_logL.png" style="width: 400px;" /></a>
 </section>
 <section id="plot-multiple-quantities-as-a-function-of-one">
-<h3>Plot multiple quantities as a function of one<a class="headerlink" href="#plot-multiple-quantities-as-a-function-of-one" title="Permalink to this headline"></a></h3>
+<h3>Plot multiple quantities as a function of one<a class="headerlink" href="#plot-multiple-quantities-as-a-function-of-one" title="Link to this heading"></a></h3>
 <p>We can display more properties as a function of another in a subplot like
 the following examples.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PLOT_PROPERTIES_4</span> <span class="o">=</span> <span class="n">PLOT_PROPERTIES_1</span>
@@ -178,9 +179,9 @@ the following examples.</p>
 </section>
 </section>
 <section id="how-to-plot-many-tracks">
-<h2>How to plot many tracks<a class="headerlink" href="#how-to-plot-many-tracks" title="Permalink to this headline"></a></h2>
+<h2>How to plot many tracks<a class="headerlink" href="#how-to-plot-many-tracks" title="Link to this heading"></a></h2>
 <section id="plot-one-or-more-quantities-as-a-function-of-another-for-multiple-tracks">
-<h3>Plot one or more quantities as a function of another for multiple tracks<a class="headerlink" href="#plot-one-or-more-quantities-as-a-function-of-another-for-multiple-tracks" title="Permalink to this headline"></a></h3>
+<h3>Plot one or more quantities as a function of another for multiple tracks<a class="headerlink" href="#plot-one-or-more-quantities-as-a-function-of-another-for-multiple-tracks" title="Link to this heading"></a></h3>
 <p>If one wants to compare multiple tracks on the same plot, the indices for all
 binaries can be provided as a list.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PLOT_PROPERTIES_5</span> <span class="o">=</span> <span class="n">PLOT_PROPERTIES_1</span>
@@ -194,7 +195,7 @@ binaries can be provided as a list.</p>
 </section>
 </section>
 <section id="plot-third-quantity-as-a-color-map">
-<h2>Plot third quantity as a color map<a class="headerlink" href="#plot-third-quantity-as-a-color-map" title="Permalink to this headline"></a></h2>
+<h2>Plot third quantity as a color map<a class="headerlink" href="#plot-third-quantity-as-a-color-map" title="Link to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PLOT_PROPERTIES_6</span> <span class="o">=</span> <span class="n">PLOT_PROPERTIES_1</span>
 <span class="n">PLOT_PROPERTIES_6</span><span class="p">[</span><span class="s1">&#39;fname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1D_color.png&#39;</span>
 <span class="n">PLOT_PROPERTIES_6</span><span class="p">[</span><span class="s1">&#39;log10_x&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
@@ -205,7 +206,7 @@ binaries can be provided as a list.</p>
 <a class="reference internal image-reference" href="../../_images/1D_color.png"><img alt="../../_images/1D_color.png" src="../../_images/1D_color.png" style="width: 400px;" /></a>
 </section>
 <section id="plotting-an-hr-diagram">
-<h2>Plotting an HR diagram<a class="headerlink" href="#plotting-an-hr-diagram" title="Permalink to this headline"></a></h2>
+<h2>Plotting an HR diagram<a class="headerlink" href="#plotting-an-hr-diagram" title="Link to this heading"></a></h2>
 <p>One can use the <code class="docutils literal notranslate"><span class="pre">HR</span></code> method to display the HR diagram.
 Note that multiple tracks at once can also be displayed.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PLOT_PROPERTIES_7</span> <span class="o">=</span> <span class="n">PLOT_PROPERTIES_1</span>

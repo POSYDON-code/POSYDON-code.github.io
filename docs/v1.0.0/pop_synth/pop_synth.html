@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Running a POSYDON population synthesis &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>Running a POSYDON population synthesis &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -34,7 +35,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -105,7 +106,7 @@
            <div itemprop="articleBody">
              
   <section id="running-a-posydon-population-synthesis">
-<span id="pop-synth"></span><h1>Running a POSYDON population synthesis<a class="headerlink" href="#running-a-posydon-population-synthesis" title="Permalink to this headline"></a></h1>
+<span id="pop-synth"></span><h1>Running a POSYDON population synthesis<a class="headerlink" href="#running-a-posydon-population-synthesis" title="Link to this heading"></a></h1>
 <p>NOTE: this is a temporary tutorial until we have a proper API</p>
 <p>This script list all customisable option of a POSYDON population synthesis run.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">writefile</span> <span class="n">script</span><span class="o">.</span><span class="n">py</span>
@@ -427,19 +428,19 @@
 <p>If you want to run the script on a HPC cluster with MPI, you can do so
 by setting <code class="docutils literal notranslate"><span class="pre">use_MPI=True</span></code> in the above script and runnning the following
 Slurm magic command.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%sbatch
-#!/bin/bash
-#SBATCH --mail-user=my_email
-#SBATCH --job-name=pop-syn
-#SBATCH --output=log.out
-#SBATCH --error=log.err
-#SBATCH --partition=debug-cpu
-#SBATCH --nodes=2
-#SBATCH --ntasks-per-node=2
-#SBATCH --mem-per-cpu=8G
-#SBATCH --time=00:15:00
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">sbatch</span>
+<span class="c1">#!/bin/bash</span>
+<span class="c1">#SBATCH --mail-user=my_email</span>
+<span class="c1">#SBATCH --job-name=pop-syn</span>
+<span class="c1">#SBATCH --output=log.out</span>
+<span class="c1">#SBATCH --error=log.err</span>
+<span class="c1">#SBATCH --partition=debug-cpu</span>
+<span class="c1">#SBATCH --nodes=2</span>
+<span class="c1">#SBATCH --ntasks-per-node=2</span>
+<span class="c1">#SBATCH --mem-per-cpu=8G</span>
+<span class="c1">#SBATCH --time=00:15:00</span>
 
-mpiexec -n ${SLURM_NTASKS} python script.py
+<span class="n">mpiexec</span> <span class="o">-</span><span class="n">n</span> <span class="err">$</span><span class="p">{</span><span class="n">SLURM_NTASKS</span><span class="p">}</span> <span class="n">python</span> <span class="n">script</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>Notice that the <code class="docutils literal notranslate"><span class="pre">run_simulation</span></code> method allows to reevolve any binary, e.g.</p>

@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Evolutionary Hooks &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>Evolutionary Hooks &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -34,7 +35,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -109,7 +110,7 @@
            <div itemprop="articleBody">
              
   <section id="evolutionary-hooks">
-<span id="custom-hooks"></span><h1>Evolutionary Hooks<a class="headerlink" href="#evolutionary-hooks" title="Permalink to this headline"></a></h1>
+<span id="custom-hooks"></span><h1>Evolutionary Hooks<a class="headerlink" href="#evolutionary-hooks" title="Link to this heading"></a></h1>
 <p>During the evolution of a binary, one may be interested in having access to
 the <code class="docutils literal notranslate"><span class="pre">BinaryStar</span></code> instance before, during, and after the evolutionary loop.
 You may check the attributes, or add your own data to the binary during the
@@ -138,7 +139,7 @@ Then <code class="docutils literal notranslate"><span class="pre">extra_hooks</s
 <li><p>a class deriving from <code class="docutils literal notranslate"><span class="pre">EvolveHooks</span></code> and a dictionary passed during initialization.</p></li>
 </ol>
 <section id="passing-extra-hooks-functions">
-<h2>1. Passing extra hooks functions<a class="headerlink" href="#passing-extra-hooks-functions" title="Permalink to this headline"></a></h2>
+<h2>1. Passing extra hooks functions<a class="headerlink" href="#passing-extra-hooks-functions" title="Link to this heading"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># import evolutionary steps</span>
 <span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">posydon.popsyn.binarypopulation</span> <span class="kn">import</span> <span class="n">BinaryPopulation</span>
 <span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">posydon.binary_evol.simulationproperties</span> <span class="kn">import</span> <span class="n">SimulationProperties</span>
@@ -197,7 +198,7 @@ after:      BinaryStar(merged, END, p=nan, S1=(H-rich_Core_H_burning,M=87.20), S
 </ul>
 </section>
 <section id="passing-extra-hooks-classes">
-<h2>2. Passing extra hooks classes<a class="headerlink" href="#passing-extra-hooks-classes" title="Permalink to this headline"></a></h2>
+<h2>2. Passing extra hooks classes<a class="headerlink" href="#passing-extra-hooks-classes" title="Link to this heading"></a></h2>
 <p>For more complex tasks, you can provide a class deriving from <code class="docutils literal notranslate"><span class="pre">EvolveHooks</span></code>.
 We have implemented two examples of hooks classes which add step timing and
 step names to the history of a binary in <code class="docutils literal notranslate"><span class="pre">simulationproperties.py</span></code>:</p>

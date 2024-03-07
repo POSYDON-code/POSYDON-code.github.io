@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>posydon.utils.data_download &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>posydon.utils.data_download &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -31,7 +32,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -124,7 +125,9 @@
 <span class="n">data_url</span> <span class="o">=</span> <span class="s2">&quot;https://zenodo.org/record/6655751/files/POSYDON_data.tar.gz&quot;</span>
 <span class="n">original_md5</span> <span class="o">=</span> <span class="s2">&quot;8873544d9a568ebb85bccffbf1bdcd99&quot;</span>
 
-<div class="viewcode-block" id="ProgressBar"><a class="viewcode-back" href="../../../api/posydon.utils.data_download.html#posydon.utils.data_download.ProgressBar">[docs]</a><span class="k">class</span> <span class="nc">ProgressBar</span><span class="p">():</span>
+<div class="viewcode-block" id="ProgressBar">
+<a class="viewcode-back" href="../../../api/posydon.utils.data_download.html#posydon.utils.data_download.ProgressBar">[docs]</a>
+<span class="k">class</span> <span class="nc">ProgressBar</span><span class="p">():</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pbar</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">widgets</span> <span class="o">=</span> <span class="p">[</span><span class="n">progressbar</span><span class="o">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">marker</span><span class="o">=</span><span class="s2">&quot;#&quot;</span><span class="p">,</span><span class="n">left</span><span class="o">=</span><span class="s2">&quot;[&quot;</span><span class="p">,</span><span class="n">right</span><span class="o">=</span><span class="s2">&quot;]&quot;</span><span class="p">),</span>
@@ -146,7 +149,10 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">pbar</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="data_download"><a class="viewcode-back" href="../../../api/posydon.utils.data_download.html#posydon.utils.data_download.data_download">[docs]</a><span class="k">def</span> <span class="nf">data_download</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">file</span><span class="p">,</span> <span class="n">MD5_check</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="data_download">
+<a class="viewcode-back" href="../../../api/posydon.utils.data_download.html#posydon.utils.data_download.data_download">[docs]</a>
+<span class="k">def</span> <span class="nf">data_download</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">file</span><span class="p">,</span> <span class="n">MD5_check</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Download data files from Zenodo if they do not exist.</span>
 
 <span class="sd">       Parameters</span>
@@ -210,6 +216,7 @@
         <span class="k">return</span>
 
     <span class="k">return</span></div>
+
 </pre></div>
 
            </div>

@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Running populations using POSYDON &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>Running populations using POSYDON &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -34,7 +35,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -122,15 +123,15 @@
            <div itemprop="articleBody">
              
   <section id="running-populations-using-posydon">
-<h1>Running populations using POSYDON<a class="headerlink" href="#running-populations-using-posydon" title="Permalink to this headline"></a></h1>
+<h1>Running populations using POSYDON<a class="headerlink" href="#running-populations-using-posydon" title="Link to this heading"></a></h1>
 <section id="run-a-basic-population">
-<h2>1. Run a basic population<a class="headerlink" href="#run-a-basic-population" title="Permalink to this headline"></a></h2>
+<h2>1. Run a basic population<a class="headerlink" href="#run-a-basic-population" title="Link to this heading"></a></h2>
 <p>To run the most basic population with all the pre-set POSYDON defaults,
 you only need the following few lines of code. By default the code
 runs 100 initial binaries of a constant star formation for a duration of
 Hubble time (13.7e9 years).</p>
 <section id="all-the-required-posydon-imports">
-<h3>All the required POSYDON imports:<a class="headerlink" href="#all-the-required-posydon-imports" title="Permalink to this headline"></a></h3>
+<h3>All the required POSYDON imports:<a class="headerlink" href="#all-the-required-posydon-imports" title="Link to this heading"></a></h3>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">posydon.popsyn.binarypopulation</span> <span class="kn">import</span> <span class="n">BinaryPopulation</span>
 <span class="kn">from</span> <span class="nn">posydon.binary_evol.simulationproperties</span> <span class="kn">import</span> <span class="n">SimulationProperties</span>
 <span class="kn">from</span> <span class="nn">posydon.binary_evol.flow_chart</span> <span class="kn">import</span> <span class="n">flow_chart</span>
@@ -144,7 +145,7 @@ Hubble time (13.7e9 years).</p>
 </div>
 </section>
 <section id="define-the-posydon-evolutionary-steps">
-<h3>Define the POSYDON evolutionary steps<a class="headerlink" href="#define-the-posydon-evolutionary-steps" title="Permalink to this headline"></a></h3>
+<h3>Define the POSYDON evolutionary steps<a class="headerlink" href="#define-the-posydon-evolutionary-steps" title="Link to this heading"></a></h3>
 <p>We should define all the evolutionary steps involved. By default, the parameters
 for these steps are pre-defined. Then, <code class="docutils literal notranslate"><span class="pre">SimulationProperties(**sim_kwargs)</span></code>
 initializes the population object with the steps defined, in <code class="docutils literal notranslate"><span class="pre">sim_prop</span></code>. This
@@ -167,7 +168,7 @@ files.</p>
 </div>
 </section>
 <section id="initializing-the-population-object">
-<h3>Initializing the population object<a class="headerlink" href="#initializing-the-population-object" title="Permalink to this headline"></a></h3>
+<h3>Initializing the population object<a class="headerlink" href="#initializing-the-population-object" title="Link to this heading"></a></h3>
 <p>We invoke the population class <code class="docutils literal notranslate"><span class="pre">BinaryPopulation</span></code>, which is the
 population class with the function <code class="docutils literal notranslate"><span class="pre">evolve</span></code> that does the work of
 evolving the binaries. The population class takes in the simulation
@@ -186,13 +187,13 @@ benefits of the functionalities available for managing dataframes.</p>
 </section>
 </section>
 <section id="customize-the-script-to-run-more-complicated-populations">
-<h2>2. Customize the script to run more complicated populations<a class="headerlink" href="#customize-the-script-to-run-more-complicated-populations" title="Permalink to this headline"></a></h2>
+<h2>2. Customize the script to run more complicated populations<a class="headerlink" href="#customize-the-script-to-run-more-complicated-populations" title="Link to this heading"></a></h2>
 <p>Now, for most science cases, the default POSYDON parameters would need
 to be changed. Below we show an example of how to run a population of
 1000 initial binaries with constant star-formation for a duration of
 Hubble time.</p>
 <section id="define-the-posydon-steps-and-their-parameters">
-<h3>Define the POSYDON steps and their parameters<a class="headerlink" href="#define-the-posydon-steps-and-their-parameters" title="Permalink to this headline"></a></h3>
+<h3>Define the POSYDON steps and their parameters<a class="headerlink" href="#define-the-posydon-steps-and-their-parameters" title="Link to this heading"></a></h3>
 <p>If there is a need to change a parameter in the POSYDON steps that would
 be done in the simulation properties. For example, to change the
 <code class="docutils literal notranslate"><span class="pre">interpolation_method</span></code> for the steps that evolve the binaries
@@ -219,7 +220,7 @@ parameter <code class="docutils literal notranslate"><span class="pre">interpola
 </div>
 </section>
 <section id="define-the-properties-of-the-initial-generated-population">
-<h3>Define the properties of the initial generated population<a class="headerlink" href="#define-the-properties-of-the-initial-generated-population" title="Permalink to this headline"></a></h3>
+<h3>Define the properties of the initial generated population<a class="headerlink" href="#define-the-properties-of-the-initial-generated-population" title="Link to this heading"></a></h3>
 <p>If some parameters of the initial population are required to be changed,
 they are changed as follows in <code class="docutils literal notranslate"><span class="pre">kwargs</span></code>. Here we change the
 <code class="docutils literal notranslate"><span class="pre">number_of_binaries</span></code>.</p>
@@ -229,7 +230,7 @@ they are changed as follows in <code class="docutils literal notranslate"><span 
 </div>
 </section>
 <section id="id1">
-<h3>Initializing the population object<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<h3>Initializing the population object<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <p>As before, we invoke the population class, this time with the parameters
 of the initial population that we want to include in <code class="docutils literal notranslate"><span class="pre">kwargs</span></code>.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="n">BinaryPopulation</span><span class="p">(</span><span class="n">population_properties</span><span class="o">=</span><span class="n">sim_prop</span><span class="p">,</span>
@@ -238,7 +239,7 @@ of the initial population that we want to include in <code class="docutils liter
 </div>
 </section>
 <section id="evolve-it-and-covert-to-pandas-dataframe">
-<h3>Evolve it! And covert to pandas dataframe<a class="headerlink" href="#evolve-it-and-covert-to-pandas-dataframe" title="Permalink to this headline"></a></h3>
+<h3>Evolve it! And covert to pandas dataframe<a class="headerlink" href="#evolve-it-and-covert-to-pandas-dataframe" title="Link to this heading"></a></h3>
 <p>The boolean parameter <code class="docutils literal notranslate"><span class="pre">tqdm</span></code> shows the progress bar.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pop</span><span class="o">.</span><span class="n">evolve</span><span class="p">(</span><span class="n">breakdown_to_df</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">tqdm</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">DF</span> <span class="o">=</span> <span class="n">pop</span><span class="o">.</span><span class="n">to_df</span><span class="p">()</span>
@@ -251,7 +252,7 @@ of the initial population that we want to include in <code class="docutils liter
 </section>
 </section>
 <section id="identify-double-compact-objects">
-<h2>3. Identify double compact objects<a class="headerlink" href="#identify-double-compact-objects" title="Permalink to this headline"></a></h2>
+<h2>3. Identify double compact objects<a class="headerlink" href="#identify-double-compact-objects" title="Link to this heading"></a></h2>
 <p>Now, the evolved population has the complete evolution of all binaries. We
 only require the last row from all the binaries as we want to study the
 “current” properties of the double compact objects. The example is to
@@ -281,7 +282,7 @@ phase with a BH and a donor:</p>
 </div>
 </section>
 <section id="identify-the-x-ray-binaries">
-<h2>4. Identify the X-ray Binaries<a class="headerlink" href="#identify-the-x-ray-binaries" title="Permalink to this headline"></a></h2>
+<h2>4. Identify the X-ray Binaries<a class="headerlink" href="#identify-the-x-ray-binaries" title="Link to this heading"></a></h2>
 <p>In order to investigate the XRBs from this population, we need to look
 into the originally run population again. Again, we only require the
 last row from all the binaries as we want to study the “current”

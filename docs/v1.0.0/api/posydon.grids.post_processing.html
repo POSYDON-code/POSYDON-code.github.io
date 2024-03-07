@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>&lt;no title&gt; &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>&lt;no title&gt; &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -32,7 +33,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -102,74 +103,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <span class="target" id="module-posydon.grids.post_processing"></span><p>Module for post-processing POSYDON grids.</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="posydon.grids.post_processing.add_post_processed_quantities">
-<span class="sig-prename descclassname"><span class="pre">posydon.grids.post_processing.</span></span><span class="sig-name descname"><span class="pre">add_post_processed_quantities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MESA_dirs_EXTRA_COLUMNS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">EXTRA_COLUMNS</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/posydon/grids/post_processing.html#add_post_processed_quantities"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#posydon.grids.post_processing.add_post_processed_quantities" title="Permalink to this definition"></a></dt>
-<dd><p>Append post processed quantity to a grid.</p>
-<p>This function appends the quantities computed in post_process_grid to any
-grid. Note that this function ensure you can append the quantities only if
-the grid follows the order of MESA_dirs_EXTRA_COLUMNS.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>grid</strong> (<a class="reference internal" href="posydon.grids.psygrid.html#posydon.grids.psygrid.PSyGrid" title="posydon.grids.psygrid.PSyGrid"><em>PSyGrid</em></a>) – MESA grid in PSyGrid format.</p></li>
-<li><p><strong>MESA_dirs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><em>list</em></a>) – List containing the path to each run corresponding to the post
-processed values. This is used to ensure one to one mapping when
-appending the extra columns back to a grid.</p></li>
-<li><p><strong>EXTRA_COLUMNS</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a>) – Dictionary containing all post processe quantities.</p></li>
-<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – If <cite>True</cite> print on screen the results of each core collpase.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="posydon.grids.post_processing.post_process_grid">
-<span class="sig-prename descclassname"><span class="pre">posydon.grids.post_processing.</span></span><span class="sig-name descname"><span class="pre">post_process_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">star_2_CO</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MODEL</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'ECSN':</span> <span class="pre">'Podsiadlowksi+04',</span> <span class="pre">'PISN':</span> <span class="pre">'Marchant+19',</span> <span class="pre">'approx_at_he_depletion':</span> <span class="pre">False,</span> <span class="pre">'engine':</span> <span class="pre">None,</span> <span class="pre">'kick':</span> <span class="pre">True,</span> <span class="pre">'max_NS_mass':</span> <span class="pre">2.5,</span> <span class="pre">'max_neutrino_mass_loss':</span> <span class="pre">0.5,</span> <span class="pre">'mechanism':</span> <span class="pre">None,</span> <span class="pre">'sigma_kick_CCSN_BH':</span> <span class="pre">265.0,</span> <span class="pre">'sigma_kick_CCSN_NS':</span> <span class="pre">265.0,</span> <span class="pre">'sigma_kick_ECSN':</span> <span class="pre">20.0,</span> <span class="pre">'use_core_masses':</span> <span class="pre">False,</span> <span class="pre">'use_interp_values':</span> <span class="pre">False,</span> <span class="pre">'use_profiles':</span> <span class="pre">True,</span> <span class="pre">'verbose':</span> <span class="pre">False}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_star</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/posydon/grids/post_processing.html#post_process_grid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#posydon.grids.post_processing.post_process_grid" title="Permalink to this definition"></a></dt>
-<dd><p>Compute post processed quantitiy of any grid.</p>
-<p>This function post process any supported grid and computes:
-- Core collpase quantities for 5 prescritions given the fiducial POSYDON
-assumption given in MODEL plus:</p>
-<blockquote>
-<div><p>A: direct collapse
-B: Fryer+12-rapid
-C: Fryer+12-delayed
-D: Sukhbold+16-engine, N20
-E: Patton&amp;Sukhbold20-engine, N20
-for each prescrition we store the compact object state (WD/NS/BH),
-SN type (WD, ECSN, CCSN, PISN, PPISN), fallback mass fraction f_gb,
-compact object mass and spin.</p>
-</div></blockquote>
-<ul class="simple">
-<li><p>Core masses at he-depletion (used in Patton core collpase)</p></li>
-<li><p>Mass envelopes for common ennvelope step.</p></li>
-</ul>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>grid</strong> (<a class="reference internal" href="posydon.grids.psygrid.html#posydon.grids.psygrid.PSyGrid" title="posydon.grids.psygrid.PSyGrid"><em>PSyGrid</em></a>) – MESA gri in PSyGrid format.</p></li>
-<li><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><em>None</em></a><em>, </em><em>touple</em><em> or </em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – If None, loop over all indicies otherwise provide a range, e.g. [10,20]
-or a index, e.g. 42.</p></li>
-<li><p><strong>star_2_CO</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – If ‘False’ star 2 is not a compact object.</p></li>
-<li><p><strong>MODEL</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a>) – Core collapse model assumptions.</p></li>
-<li><p><strong>single_star</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – If <cite>True</cite> the PSyGrid contains single stars.</p></li>
-<li><p><strong>verbose</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – If <cite>True</cite> print on screen the results of each core collpase.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><ul class="simple">
-<li><p><strong>MESA_dirs</strong> (<em>list</em>) – List containing the path to each run corresponding to the post
-processed values. This is used to ensure one to one mapping when
-appending the extra columns back to a grid.</p></li>
-<li><p><strong>EXTRA_COLUMNS</strong> (<em>dict</em>) – Dictionary containing all post processe quantities.</p></li>
-</ul>
-</p>
-</dd>
-</dl>
-</dd></dl>
-
-
+  
 
            </div>
           </div>

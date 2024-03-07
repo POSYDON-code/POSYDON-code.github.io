@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>posydon.active_learning.psy_cris.synthetic_data.synth_data_3D &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>posydon.active_learning.psy_cris.synthetic_data.synth_data_3D &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
-        <script src="../../../../../_static/jquery.js"></script>
-        <script src="../../../../../_static/underscore.js"></script>
-        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" /> 
@@ -31,7 +32,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
@@ -111,29 +112,46 @@
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<div class="viewcode-block" id="func_1"><a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.func_1">[docs]</a><span class="k">def</span> <span class="nf">func_1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
+<div class="viewcode-block" id="func_1">
+<a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.func_1">[docs]</a>
+<span class="k">def</span> <span class="nf">func_1</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
     <span class="c1"># Spheroid centered at [x,y]=[-1,1]</span>
     <span class="n">radius</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">1.2</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.8</span>
     <span class="k">return</span>  <span class="p">(</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">a</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span> <span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">b</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span> <span class="n">z</span><span class="o">/</span><span class="n">c</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">radius</span><span class="o">**</span><span class="mi">2</span></div>
 
-<div class="viewcode-block" id="func_2"><a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.func_2">[docs]</a><span class="k">def</span> <span class="nf">func_2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
+
+<div class="viewcode-block" id="func_2">
+<a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.func_2">[docs]</a>
+<span class="k">def</span> <span class="nf">func_2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
     <span class="c1"># Modified Rosenbrock function</span>
     <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="p">;</span>
     <span class="n">rosenbrock_func</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
     <span class="k">return</span> <span class="n">rosenbrock_func</span> <span class="o">+</span> <span class="n">c</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="n">z</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span></div>
 
-<div class="viewcode-block" id="func_3"><a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.func_3">[docs]</a><span class="k">def</span> <span class="nf">func_3</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
+
+<div class="viewcode-block" id="func_3">
+<a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.func_3">[docs]</a>
+<span class="k">def</span> <span class="nf">func_3</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span> <span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mf">0.25</span><span class="p">)</span> <span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">*</span><span class="n">z</span></div>
 
-<div class="viewcode-block" id="func_4"><a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.func_4">[docs]</a><span class="k">def</span> <span class="nf">func_4</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
+
+<div class="viewcode-block" id="func_4">
+<a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.func_4">[docs]</a>
+<span class="k">def</span> <span class="nf">func_4</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span> <span class="n">z</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">,</span>  <span class="nb">abs</span><span class="p">((</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">z</span><span class="p">),</span> <span class="mi">0</span> <span class="p">)</span></div>
 
-<div class="viewcode-block" id="func_5"><a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.func_5">[docs]</a><span class="k">def</span> <span class="nf">func_5</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
+
+<div class="viewcode-block" id="func_5">
+<a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.func_5">[docs]</a>
+<span class="k">def</span> <span class="nf">func_5</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
     <span class="c1"># Spheroid centered at [x,y,z]=[0.5,0.5,0.85]</span>
     <span class="n">radius</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">;</span> <span class="n">a</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">;</span>
     <span class="k">return</span> <span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">/</span><span class="n">a</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span> <span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">/</span><span class="n">b</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="p">(</span> <span class="p">(</span><span class="n">z</span><span class="o">-</span><span class="mf">0.85</span><span class="p">)</span><span class="o">/</span><span class="n">c</span> <span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">radius</span><span class="o">**</span><span class="mi">2</span></div>
 
-<div class="viewcode-block" id="analytic_classification_3D"><a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.analytic_classification_3D">[docs]</a><span class="k">def</span> <span class="nf">analytic_classification_3D</span><span class="p">(</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">f_splits</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]):</span>
+
+<div class="viewcode-block" id="analytic_classification_3D">
+<a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.analytic_classification_3D">[docs]</a>
+<span class="k">def</span> <span class="nf">analytic_classification_3D</span><span class="p">(</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">f_splits</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">]):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Unique classes 1,2,3,4,6,8 for a total of 6 classes. This nicely matches</span>
 <span class="sd">    the colormap Dark2 for plotting.&quot;&quot;&quot;</span>
     <span class="n">ret_f1</span> <span class="o">=</span> <span class="n">func_1</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">Z</span><span class="p">)</span>
@@ -165,12 +183,18 @@
     <span class="n">base_class</span><span class="p">[</span> <span class="n">np</span><span class="o">.</span><span class="n">invert</span><span class="p">(</span><span class="n">where_above_5</span><span class="p">)</span> <span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
     <span class="k">return</span> <span class="n">base_class</span></div>
 
-<div class="viewcode-block" id="analytic_regression_3D"><a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.analytic_regression_3D">[docs]</a><span class="k">def</span> <span class="nf">analytic_regression_3D</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
+
+<div class="viewcode-block" id="analytic_regression_3D">
+<a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.analytic_regression_3D">[docs]</a>
+<span class="k">def</span> <span class="nf">analytic_regression_3D</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span>
     <span class="c1"># Something simple to start with</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">z</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mf">0.75</span> <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="get_raw_output_3D"><a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.get_raw_output_3D">[docs]</a><span class="k">def</span> <span class="nf">get_raw_output_3D</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">Z</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_raw_output_3D">
+<a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.get_raw_output_3D">[docs]</a>
+<span class="k">def</span> <span class="nf">get_raw_output_3D</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">Z</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the raw output for classification and regression for</span>
 <span class="sd">    the 3D synthetic data set. Unique classes include the</span>
 <span class="sd">    following [1,2,3,4,6,8].</span>
@@ -192,7 +216,10 @@
     <span class="k">return</span> <span class="n">classification_data</span><span class="p">,</span> <span class="n">regression_data</span></div>
 
 
-<div class="viewcode-block" id="get_output_3D"><a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.get_output_3D">[docs]</a><span class="k">def</span> <span class="nf">get_output_3D</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">Z</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_output_3D">
+<a class="viewcode-back" href="../../../../../api/posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.html#posydon.active_learning.psy_cris.synthetic_data.synth_data_3D.get_output_3D">[docs]</a>
+<span class="k">def</span> <span class="nf">get_output_3D</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">Z</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Takes input points (X,Y,Z) in 3D and returns a DataFrame with the</span>
 <span class="sd">    corresponding 3D classification and regression functions.</span>
 
@@ -218,6 +245,7 @@
     <span class="n">data_frame</span><span class="p">[</span><span class="s2">&quot;class&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">classification_data</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
     <span class="n">data_frame</span><span class="p">[</span><span class="s2">&quot;output_1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">regression_data</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">data_frame</span></div>
+
 
 <span class="c1"># EXAMPLE</span>
 <span class="c1"># x_vals = np.linspace(-1,1,15)</span>

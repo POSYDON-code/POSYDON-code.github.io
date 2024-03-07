@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>posydon.utils.configfile &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>posydon.utils.configfile &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -31,7 +32,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -200,7 +201,9 @@
 <span class="kn">import</span> <span class="nn">operator</span>
 
 
-<div class="viewcode-block" id="ConfigFile"><a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile">[docs]</a><span class="k">class</span> <span class="nc">ConfigFile</span><span class="p">:</span>
+<div class="viewcode-block" id="ConfigFile">
+<a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile">[docs]</a>
+<span class="k">class</span> <span class="nc">ConfigFile</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Class handling input, process and output of configurations.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -211,12 +214,15 @@
             <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">):</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 
-<div class="viewcode-block" id="ConfigFile.deepcopy"><a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.deepcopy">[docs]</a>    <span class="k">def</span> <span class="nf">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ConfigFile.deepcopy">
+<a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.deepcopy">[docs]</a>
+    <span class="k">def</span> <span class="nf">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Make a deep copy of the object.&quot;&quot;&quot;</span>
         <span class="n">newobj</span> <span class="o">=</span> <span class="n">ConfigFile</span><span class="p">()</span>
         <span class="n">newobj</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
         <span class="n">newobj</span><span class="o">.</span><span class="n">entries</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">newobj</span></div>
+
 
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">_serialize</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
@@ -224,7 +230,9 @@
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
             <span class="k">return</span> <span class="n">data</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 
-<div class="viewcode-block" id="ConfigFile.save"><a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="viewcode-block" id="ConfigFile.save">
+<a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.save">[docs]</a>
+    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Save the configuration entries into a JSON file.</span>
 
 <span class="sd">        Parameters</span>
@@ -247,7 +255,10 @@
             <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
                       <span class="n">ensure_ascii</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_serialize</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ConfigFile.load"><a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.load">[docs]</a>    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">can_update</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ConfigFile.load">
+<a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.load">[docs]</a>
+    <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">can_update</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Load the entries from a JSON file containing a dictionary.</span>
 
 <span class="sd">        Parameters</span>
@@ -278,6 +289,7 @@
 
             <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">new_entries</span><span class="p">)</span></div>
 
+
     <span class="k">def</span> <span class="fm">__getattr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the value of an entry.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
@@ -298,21 +310,33 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Allow the iteration of entries.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">iter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="p">)</span>
 
-<div class="viewcode-block" id="ConfigFile.update"><a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">):</span>
+<div class="viewcode-block" id="ConfigFile.update">
+<a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.update">[docs]</a>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dictionary</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create new or update entries from an external dictionary.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ConfigFile.keys"><a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.keys">[docs]</a>    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ConfigFile.keys">
+<a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.keys">[docs]</a>
+    <span class="k">def</span> <span class="nf">keys</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the keys of the configuration dictionary.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="ConfigFile.values"><a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.values">[docs]</a>    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ConfigFile.values">
+<a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.values">[docs]</a>
+    <span class="k">def</span> <span class="nf">values</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the values of the configuration dictionary.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">values</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="ConfigFile.items"><a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.items">[docs]</a>    <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ConfigFile.items">
+<a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.ConfigFile.items">[docs]</a>
+    <span class="k">def</span> <span class="nf">items</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return (key, value) tuples of the configuration dictionary.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="o">.</span><span class="n">items</span><span class="p">()</span></div>
+
 
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Represent the configuration dictionary as a string.&quot;&quot;&quot;</span>
@@ -330,7 +354,10 @@
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">entries</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="parse_inifile"><a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.parse_inifile">[docs]</a><span class="k">def</span> <span class="nf">parse_inifile</span><span class="p">(</span><span class="n">inifile</span><span class="p">):</span>
+
+<div class="viewcode-block" id="parse_inifile">
+<a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.parse_inifile">[docs]</a>
+<span class="k">def</span> <span class="nf">parse_inifile</span><span class="p">(</span><span class="n">inifile</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Parse an inifile and return dicts of each section.&quot;&quot;&quot;</span>
     <span class="n">binOps</span> <span class="o">=</span> <span class="p">{</span>
         <span class="n">ast</span><span class="o">.</span><span class="n">Add</span><span class="p">:</span> <span class="n">operator</span><span class="o">.</span><span class="n">add</span><span class="p">,</span>
@@ -415,7 +442,10 @@
     <span class="k">return</span> <span class="n">run_parameters</span><span class="p">,</span> <span class="n">slurm</span><span class="p">,</span> <span class="n">mesa_inlists</span><span class="p">,</span> <span class="n">mesa_extras</span></div>
 
 
-<div class="viewcode-block" id="VariableKey"><a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.VariableKey">[docs]</a><span class="k">class</span> <span class="nc">VariableKey</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+<div class="viewcode-block" id="VariableKey">
+<a class="viewcode-back" href="../../../api/posydon.utils.configfile.html#posydon.utils.configfile.VariableKey">[docs]</a>
+<span class="k">class</span> <span class="nc">VariableKey</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A dictionary key which is a variable.</span>
 
 <span class="sd">    @ivar item: The variable AST object.</span>
@@ -435,6 +465,7 @@
     <span class="k">def</span> <span class="fm">__hash__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Allow hashing using the name of the variable.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span></div>
+
 </pre></div>
 
            </div>

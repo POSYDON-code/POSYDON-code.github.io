@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>posydon.binary_evol.DT.double_CO &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>posydon.binary_evol.DT.double_CO &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-        <script src="../../../../_static/jquery.js"></script>
-        <script src="../../../../_static/underscore.js"></script>
-        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
@@ -31,7 +32,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
@@ -121,7 +122,9 @@
 <span class="kn">from</span> <span class="nn">posydon.utils.common_functions</span> <span class="kn">import</span> <span class="n">CO_radius</span>
 
 
-<div class="viewcode-block" id="DoubleCO"><a class="viewcode-back" href="../../../../api/posydon.binary_evol.DT.double_CO.html#posydon.binary_evol.DT.double_CO.DoubleCO">[docs]</a><span class="k">class</span> <span class="nc">DoubleCO</span><span class="p">:</span>
+<div class="viewcode-block" id="DoubleCO">
+<a class="viewcode-back" href="../../../../api/posydon.binary_evol.DT.double_CO.html#posydon.binary_evol.DT.double_CO.DoubleCO">[docs]</a>
+<span class="k">class</span> <span class="nc">DoubleCO</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;The double compact-object step class.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n_o_steps_interval</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -326,7 +329,10 @@
                 <span class="nb">setattr</span><span class="p">(</span><span class="n">binary</span><span class="o">.</span><span class="n">star_2</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">current2</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="gr"><a class="viewcode-back" href="../../../../api/posydon.binary_evol.DT.double_CO.html#posydon.binary_evol.DT.double_CO.gr">[docs]</a><span class="k">def</span> <span class="nf">gr</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">M_acc</span><span class="p">,</span> <span class="n">M</span><span class="p">):</span>
+
+<div class="viewcode-block" id="gr">
+<a class="viewcode-back" href="../../../../api/posydon.binary_evol.DT.double_CO.html#posydon.binary_evol.DT.double_CO.gr">[docs]</a>
+<span class="k">def</span> <span class="nf">gr</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">M_acc</span><span class="p">,</span> <span class="n">M</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;TODO: add description and reference for the equations.&quot;&quot;&quot;</span>
     <span class="n">g</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">standard_cgrav</span>
     <span class="n">c</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">clight</span>
@@ -359,7 +365,10 @@
     <span class="k">return</span> <span class="p">[</span><span class="n">da</span><span class="p">,</span> <span class="n">de</span><span class="p">]</span></div>
 
 
-<div class="viewcode-block" id="event"><a class="viewcode-back" href="../../../../api/posydon.binary_evol.DT.double_CO.html#posydon.binary_evol.DT.double_CO.event">[docs]</a><span class="k">def</span> <span class="nf">event</span><span class="p">(</span><span class="n">terminal</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+
+<div class="viewcode-block" id="event">
+<a class="viewcode-back" href="../../../../api/posydon.binary_evol.DT.double_CO.html#posydon.binary_evol.DT.double_CO.event">[docs]</a>
+<span class="k">def</span> <span class="nf">event</span><span class="p">(</span><span class="n">terminal</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a helper function to set attributes for `solve_ivp` events.&quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">dec</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
         <span class="n">f</span><span class="o">.</span><span class="n">terminal</span> <span class="o">=</span> <span class="n">terminal</span>
@@ -367,6 +376,7 @@
         <span class="k">return</span> <span class="n">f</span>
 
     <span class="k">return</span> <span class="n">dec</span></div>
+
 </pre></div>
 
            </div>
