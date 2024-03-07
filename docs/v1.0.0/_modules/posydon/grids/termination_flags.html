@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>posydon.grids.termination_flags &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>posydon.grids.termination_flags &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -31,7 +32,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -142,7 +143,9 @@
                           <span class="s2">&quot;center_c12&quot;</span><span class="p">,</span> <span class="s2">&quot;log_LH&quot;</span><span class="p">,</span> <span class="s2">&quot;log_LHe&quot;</span><span class="p">,</span> <span class="s2">&quot;log_Lnuc&quot;</span><span class="p">]</span>
 
 
-<div class="viewcode-block" id="get_flag_from_MESA_output"><a class="viewcode-back" href="../../../api/posydon.grids.termination_flags.html#posydon.grids.termination_flags.get_flag_from_MESA_output">[docs]</a><span class="k">def</span> <span class="nf">get_flag_from_MESA_output</span><span class="p">(</span><span class="n">MESA_log_path</span><span class="p">):</span>
+<div class="viewcode-block" id="get_flag_from_MESA_output">
+<a class="viewcode-back" href="../../../api/posydon.grids.termination_flags.html#posydon.grids.termination_flags.get_flag_from_MESA_output">[docs]</a>
+<span class="k">def</span> <span class="nf">get_flag_from_MESA_output</span><span class="p">(</span><span class="n">MESA_log_path</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return a flag about evolutionary outcome based on MESA output file.</span>
 
 <span class="sd">    Parameters</span>
@@ -178,7 +181,10 @@
     <span class="k">return</span> <span class="s2">&quot;reach cluster timelimit&quot;</span></div>
 
 
-<div class="viewcode-block" id="get_mass_transfer_flag"><a class="viewcode-back" href="../../../api/posydon.grids.termination_flags.html#posydon.grids.termination_flags.get_mass_transfer_flag">[docs]</a><span class="k">def</span> <span class="nf">get_mass_transfer_flag</span><span class="p">(</span><span class="n">binary_history</span><span class="p">,</span> <span class="n">history1</span><span class="p">,</span> <span class="n">history2</span><span class="p">,</span>
+
+<div class="viewcode-block" id="get_mass_transfer_flag">
+<a class="viewcode-back" href="../../../api/posydon.grids.termination_flags.html#posydon.grids.termination_flags.get_mass_transfer_flag">[docs]</a>
+<span class="k">def</span> <span class="nf">get_mass_transfer_flag</span><span class="p">(</span><span class="n">binary_history</span><span class="p">,</span> <span class="n">history1</span><span class="p">,</span> <span class="n">history2</span><span class="p">,</span>
                            <span class="n">start_at_RLO</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">mesa_flag</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Read flag from MESA history.</span>
 
@@ -258,7 +264,10 @@
     <span class="k">return</span> <span class="n">flag</span> <span class="o">+</span> <span class="s2">&quot;_from_star</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">star</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="check_state_from_history"><a class="viewcode-back" href="../../../api/posydon.grids.termination_flags.html#posydon.grids.termination_flags.check_state_from_history">[docs]</a><span class="k">def</span> <span class="nf">check_state_from_history</span><span class="p">(</span><span class="n">history</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">model_index</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+
+<div class="viewcode-block" id="check_state_from_history">
+<a class="viewcode-back" href="../../../api/posydon.grids.termination_flags.html#posydon.grids.termination_flags.check_state_from_history">[docs]</a>
+<span class="k">def</span> <span class="nf">check_state_from_history</span><span class="p">(</span><span class="n">history</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">model_index</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the final state of the star from the star history data.</span>
 
 <span class="sd">    Parameters</span>
@@ -289,7 +298,10 @@
     <span class="k">return</span> <span class="n">infer_star_state</span><span class="p">(</span><span class="n">star_CO</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">variables_to_pass</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="get_flags_from_MESA_run"><a class="viewcode-back" href="../../../api/posydon.grids.termination_flags.html#posydon.grids.termination_flags.get_flags_from_MESA_run">[docs]</a><span class="k">def</span> <span class="nf">get_flags_from_MESA_run</span><span class="p">(</span><span class="n">MESA_log_path</span><span class="p">,</span> <span class="n">binary_history</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+
+<div class="viewcode-block" id="get_flags_from_MESA_run">
+<a class="viewcode-back" href="../../../api/posydon.grids.termination_flags.html#posydon.grids.termination_flags.get_flags_from_MESA_run">[docs]</a>
+<span class="k">def</span> <span class="nf">get_flags_from_MESA_run</span><span class="p">(</span><span class="n">MESA_log_path</span><span class="p">,</span> <span class="n">binary_history</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                             <span class="n">history1</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">history2</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">start_at_RLO</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Return the four termination flags.</span>
 
@@ -320,7 +332,10 @@
     <span class="k">return</span> <span class="n">flag_out</span><span class="p">,</span> <span class="n">flag_mass_transfer</span><span class="p">,</span> <span class="n">final_state_1</span><span class="p">,</span> <span class="n">final_state_2</span></div>
 
 
-<div class="viewcode-block" id="infer_interpolation_class"><a class="viewcode-back" href="../../../api/posydon.grids.termination_flags.html#posydon.grids.termination_flags.infer_interpolation_class">[docs]</a><span class="k">def</span> <span class="nf">infer_interpolation_class</span><span class="p">(</span><span class="n">tf1</span><span class="p">,</span> <span class="n">tf2</span><span class="p">):</span>
+
+<div class="viewcode-block" id="infer_interpolation_class">
+<a class="viewcode-back" href="../../../api/posydon.grids.termination_flags.html#posydon.grids.termination_flags.infer_interpolation_class">[docs]</a>
+<span class="k">def</span> <span class="nf">infer_interpolation_class</span><span class="p">(</span><span class="n">tf1</span><span class="p">,</span> <span class="n">tf2</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Use the first two termination flags to infer the interpolation class.&quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">tf1</span> <span class="ow">in</span> <span class="n">TF1_POOL_INITIAL_RLO</span><span class="p">:</span>
         <span class="k">return</span> <span class="s2">&quot;initial_MT&quot;</span>
@@ -335,7 +350,10 @@
     <span class="k">return</span> <span class="s2">&quot;unknown&quot;</span></div>
 
 
-<div class="viewcode-block" id="initial_RLO_fix_applies"><a class="viewcode-back" href="../../../api/posydon.grids.termination_flags.html#posydon.grids.termination_flags.initial_RLO_fix_applies">[docs]</a><span class="k">def</span> <span class="nf">initial_RLO_fix_applies</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">period</span><span class="p">):</span>
+
+<div class="viewcode-block" id="initial_RLO_fix_applies">
+<a class="viewcode-back" href="../../../api/posydon.grids.termination_flags.html#posydon.grids.termination_flags.initial_RLO_fix_applies">[docs]</a>
+<span class="k">def</span> <span class="nf">initial_RLO_fix_applies</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="n">period</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Check if initial RLO fix is warranted given the initial mass and period.</span>
 
 <span class="sd">    Parameters</span>
@@ -364,6 +382,7 @@
     <span class="k">if</span> <span class="n">mass</span> <span class="o">&lt;</span> <span class="mi">15</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">period</span> <span class="o">&lt;</span> <span class="mf">0.85</span>
     <span class="k">return</span> <span class="n">period</span> <span class="o">&lt;</span> <span class="mf">1.2</span></div>
+
 
     <span class="c1"># if period &gt; 1.0:</span>
     <span class="c1">#     return False</span>

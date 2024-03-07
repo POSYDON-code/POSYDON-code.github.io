@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>posydon.interpolation.data_scaling &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>posydon.interpolation.data_scaling &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -31,7 +32,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -113,7 +114,9 @@
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
-<div class="viewcode-block" id="DataScaler"><a class="viewcode-back" href="../../../api/posydon.interpolation.data_scaling.html#posydon.interpolation.data_scaling.DataScaler">[docs]</a><span class="k">class</span> <span class="nc">DataScaler</span><span class="p">:</span>
+<div class="viewcode-block" id="DataScaler">
+<a class="viewcode-back" href="../../../api/posydon.interpolation.data_scaling.html#posydon.interpolation.data_scaling.DataScaler">[docs]</a>
+<span class="k">class</span> <span class="nc">DataScaler</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Data Normalization class.</span>
 
 <span class="sd">    This class provides normalizing tools for float 1D arrays. Features can be</span>
@@ -139,7 +142,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">lower</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">upper</span> <span class="o">=</span> <span class="kc">None</span>
 
-<div class="viewcode-block" id="DataScaler.fit"><a class="viewcode-back" href="../../../api/posydon.interpolation.data_scaling.html#posydon.interpolation.data_scaling.DataScaler.fit">[docs]</a>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">lower</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<div class="viewcode-block" id="DataScaler.fit">
+<a class="viewcode-back" href="../../../api/posydon.interpolation.data_scaling.html#posydon.interpolation.data_scaling.DataScaler.fit">[docs]</a>
+    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">lower</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Fit a transform of 1D numpy array x.</span>
 
 <span class="sd">        Computes the parameters that define the transform.</span>
@@ -200,7 +205,10 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown method `</span><span class="si">{</span><span class="n">method</span><span class="si">}</span><span class="s2">` for data scaler.&quot;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DataScaler.transform"><a class="viewcode-back" href="../../../api/posydon.interpolation.data_scaling.html#posydon.interpolation.data_scaling.DataScaler.transform">[docs]</a>    <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DataScaler.transform">
+<a class="viewcode-back" href="../../../api/posydon.interpolation.data_scaling.html#posydon.interpolation.data_scaling.DataScaler.transform">[docs]</a>
+    <span class="k">def</span> <span class="nf">transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Transform x using the already obtained normalization values.</span>
 
 <span class="sd">        `self.fit()`` must be called first.</span>
@@ -253,7 +261,10 @@
 
         <span class="k">return</span> <span class="n">x_t</span></div>
 
-<div class="viewcode-block" id="DataScaler.fit_and_transform"><a class="viewcode-back" href="../../../api/posydon.interpolation.data_scaling.html#posydon.interpolation.data_scaling.DataScaler.fit_and_transform">[docs]</a>    <span class="k">def</span> <span class="nf">fit_and_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">lower</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DataScaler.fit_and_transform">
+<a class="viewcode-back" href="../../../api/posydon.interpolation.data_scaling.html#posydon.interpolation.data_scaling.DataScaler.fit_and_transform">[docs]</a>
+    <span class="k">def</span> <span class="nf">fit_and_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">lower</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">upper</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Fit and transform the array x according to the chosen scaling.</span>
 
 <span class="sd">        lower/upper will only be taken into account for (log_)min_max</span>
@@ -282,7 +293,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="DataScaler.inv_transform"><a class="viewcode-back" href="../../../api/posydon.interpolation.data_scaling.html#posydon.interpolation.data_scaling.DataScaler.inv_transform">[docs]</a>    <span class="k">def</span> <span class="nf">inv_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_t</span><span class="p">):</span>
+
+<div class="viewcode-block" id="DataScaler.inv_transform">
+<a class="viewcode-back" href="../../../api/posydon.interpolation.data_scaling.html#posydon.interpolation.data_scaling.DataScaler.inv_transform">[docs]</a>
+    <span class="k">def</span> <span class="nf">inv_transform</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_t</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Revert the scaling using the stored transform parameters.</span>
 
 <span class="sd">        Parameters</span>
@@ -325,7 +339,9 @@
         <span class="k">else</span><span class="p">:</span>  <span class="c1"># no transformation</span>
             <span class="n">x</span> <span class="o">=</span> <span class="n">x_t</span>
 
-        <span class="k">return</span> <span class="n">x</span></div></div>
+        <span class="k">return</span> <span class="n">x</span></div>
+</div>
+
 </pre></div>
 
            </div>

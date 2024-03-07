@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Initial-Final Interpolation &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>Initial-Final Interpolation &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -34,7 +35,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -110,7 +111,7 @@
            <div itemprop="articleBody">
              
   <section id="initial-final-interpolation">
-<span id="ifinterpolator"></span><h1>Initial-Final Interpolation<a class="headerlink" href="#initial-final-interpolation" title="Permalink to this headline"></a></h1>
+<span id="ifinterpolator"></span><h1>Initial-Final Interpolation<a class="headerlink" href="#initial-final-interpolation" title="Link to this heading"></a></h1>
 <p>We showcase the initial-final interpolator which plays a critical role in the
 evolving binary populations. To use the initial-final interpolator we first
 import the <code class="docutils literal notranslate"><span class="pre">IFInterpolator</span></code> object from the POSYDON library.</p>
@@ -119,7 +120,7 @@ import the <code class="docutils literal notranslate"><span class="pre">IFInterp
 </pre></div>
 </div>
 <section id="loading-a-pretrained-interpolator">
-<h2>Loading a Pretrained Interpolator<a class="headerlink" href="#loading-a-pretrained-interpolator" title="Permalink to this headline"></a></h2>
+<h2>Loading a Pretrained Interpolator<a class="headerlink" href="#loading-a-pretrained-interpolator" title="Link to this heading"></a></h2>
 <p>To load a pretrained interpolator we need to
 pass in the <code class="docutils literal notranslate"><span class="pre">filename</span></code> argument into the <code class="docutils literal notranslate"><span class="pre">IFInterpolator</span></code>
 constructor which specifies the path to a .pkl file where
@@ -131,7 +132,7 @@ can be found in the data directory of the POSYDON repository.</p>
 </div>
 </section>
 <section id="training-the-interpolator">
-<h2>Training the Interpolator<a class="headerlink" href="#training-the-interpolator" title="Permalink to this headline"></a></h2>
+<h2>Training the Interpolator<a class="headerlink" href="#training-the-interpolator" title="Link to this heading"></a></h2>
 <p>The interpolator can be trained using an instance of the <code class="docutils literal notranslate"><span class="pre">PSyGrid</span></code>
 class which can be constructed by running ones own simulations or
 by loading a simulation from an h5 file stored in the data directory
@@ -225,7 +226,7 @@ binaries. Only to be specified in the MCInterpolator case.</p>
 </div>
 </section>
 <section id="using-the-interpolator">
-<h2>Using the Interpolator<a class="headerlink" href="#using-the-interpolator" title="Permalink to this headline"></a></h2>
+<h2>Using the Interpolator<a class="headerlink" href="#using-the-interpolator" title="Link to this heading"></a></h2>
 <p>Once the interpolator has been trained or loaded from a .pkl file it can be used
 to accomplish various tasks which most commonly are to classify a track into its class
 given an input vector and or to approximate a final vector given an input vector.</p>

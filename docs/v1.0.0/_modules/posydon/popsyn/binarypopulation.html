@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>posydon.popsyn.binarypopulation &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>posydon.popsyn.binarypopulation &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -31,7 +32,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -151,7 +152,9 @@
                         <span class="s1">&#39;S1_SN_type&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;S2_SN_type&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
 
 
-<div class="viewcode-block" id="BinaryPopulation"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation">[docs]</a><span class="k">class</span> <span class="nc">BinaryPopulation</span><span class="p">:</span>
+<div class="viewcode-block" id="BinaryPopulation">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation">[docs]</a>
+<span class="k">class</span> <span class="nc">BinaryPopulation</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Handle a binary star population.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -201,7 +204,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">to_oneline_df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="n">to_oneline_df</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">find_failed</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="n">find_failed</span>
 
-<div class="viewcode-block" id="BinaryPopulation.from_ini"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation.from_ini">[docs]</a>    <span class="nd">@classmethod</span>
+<div class="viewcode-block" id="BinaryPopulation.from_ini">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation.from_ini">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_ini</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a BinaryPopulation instance from an inifile.</span>
 
@@ -221,7 +226,10 @@
         <span class="n">kwargs</span> <span class="o">=</span> <span class="n">binarypop_kwargs_from_ini</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="n">verbose</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BinaryPopulation.evolve"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation.evolve">[docs]</a>    <span class="k">def</span> <span class="nf">evolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryPopulation.evolve">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation.evolve">[docs]</a>
+    <span class="k">def</span> <span class="nf">evolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Evolve a binary population.</span>
 
 <span class="sd">        Parameters</span>
@@ -259,6 +267,7 @@
                               <span class="n">tqdm</span><span class="o">=</span><span class="n">mpi_tqdm_bool</span><span class="p">,</span>
                               <span class="n">breakdown_to_df</span><span class="o">=</span><span class="n">breakdown_to_df_bool</span><span class="p">,</span>
                               <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="p">)</span></div>
+
 
     <span class="k">def</span> <span class="nf">_safe_evolve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Evolve binaries in a population, catching warnings/exceptions.&quot;&quot;&quot;</span>
@@ -406,7 +415,9 @@
                                  <span class="sa">f</span><span class="s2">&quot;evolution.combined.</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span>
                     <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-<div class="viewcode-block" id="BinaryPopulation.save"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">save_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="BinaryPopulation.save">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation.save">[docs]</a>
+    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">save_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Save BinaryPopulation to hdf file.&quot;&quot;&quot;</span>
         <span class="n">optimize_ram</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;optimize_ram&#39;</span><span class="p">]</span>
         <span class="n">temp_directory</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;temp_directory&#39;</span><span class="p">]</span>
@@ -443,13 +454,19 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">return</span></div>
 
-<div class="viewcode-block" id="BinaryPopulation.make_temp_fname"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation.make_temp_fname">[docs]</a>    <span class="k">def</span> <span class="nf">make_temp_fname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryPopulation.make_temp_fname">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation.make_temp_fname">[docs]</a>
+    <span class="k">def</span> <span class="nf">make_temp_fname</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get a valid filename for the temporary file.&quot;&quot;&quot;</span>
         <span class="n">temp_directory</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;temp_directory&#39;</span><span class="p">]</span>
         <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">temp_directory</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;evolution.combined.</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">rank</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
         <span class="c1"># return os.path.join(dir_name, &#39;.tmp{}_&#39;.format(rank) + file_name)</span>
 
-<div class="viewcode-block" id="BinaryPopulation.combine_saved_files"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation.combine_saved_files">[docs]</a>    <span class="k">def</span> <span class="nf">combine_saved_files</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">absolute_filepath</span><span class="p">,</span> <span class="n">file_names</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span><span class="p">):</span>
+<div class="viewcode-block" id="BinaryPopulation.combine_saved_files">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation.combine_saved_files">[docs]</a>
+    <span class="k">def</span> <span class="nf">combine_saved_files</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">absolute_filepath</span><span class="p">,</span> <span class="n">file_names</span><span class="p">,</span> <span class="n">mode</span> <span class="o">=</span> <span class="s2">&quot;a&quot;</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Combine various temporary files in a given folder.&quot;&quot;&quot;</span>
         <span class="n">dir_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">absolute_filepath</span><span class="p">)</span>
 
@@ -478,10 +495,14 @@
                 <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
                     <span class="nb">print</span><span class="p">(</span><span class="n">traceback</span><span class="o">.</span><span class="n">format_exc</span><span class="p">(),</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BinaryPopulation.close"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryPopulation.close">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryPopulation.close">[docs]</a>
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Close loaded h5 files from SimulationProperties.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">population_properties</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">manager</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
+
 
     <span class="k">def</span> <span class="nf">__getstate__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Prepare the BinaryPopulation to be &#39;pickled&#39;.&quot;&quot;&quot;</span>
@@ -516,7 +537,10 @@
         <span class="k">return</span> <span class="n">s</span></div>
 
 
-<div class="viewcode-block" id="PopulationManager"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager">[docs]</a><span class="k">class</span> <span class="nc">PopulationManager</span><span class="p">:</span>
+
+<div class="viewcode-block" id="PopulationManager">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager">[docs]</a>
+<span class="k">class</span> <span class="nc">PopulationManager</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Manage a population of binaries.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -534,12 +558,17 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">store</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">HDFStore</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,)</span>
             <span class="n">atexit</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">PopulationManager</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="bp">self</span><span class="p">))</span>
 
-<div class="viewcode-block" id="PopulationManager.close"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.close">[docs]</a>    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="PopulationManager.close">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.close">[docs]</a>
+    <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Close the HDF5 file.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;store&#39;</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">store</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="PopulationManager.append"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.append">[docs]</a>    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binary</span><span class="p">):</span>
+
+<div class="viewcode-block" id="PopulationManager.append">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.append">[docs]</a>
+    <span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binary</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a binary instance internaly.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">binary</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">indices</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">b</span><span class="o">.</span><span class="n">index</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">binary</span><span class="p">])</span>
@@ -550,7 +579,10 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Must be BinaryStar or list of BinaryStars&#39;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PopulationManager.remove"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.remove">[docs]</a>    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binary</span><span class="p">):</span>
+
+<div class="viewcode-block" id="PopulationManager.remove">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.remove">[docs]</a>
+    <span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binary</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove a binary instance.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">binary</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)):</span>   
             <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">binary</span><span class="p">:</span>
@@ -563,12 +595,18 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Must be BinaryStar or list of BinaryStars&#39;</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PopulationManager.clear_dfs"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.clear_dfs">[docs]</a>    <span class="k">def</span> <span class="nf">clear_dfs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="PopulationManager.clear_dfs">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.clear_dfs">[docs]</a>
+    <span class="k">def</span> <span class="nf">clear_dfs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Remove all dfs.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">history_dfs</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">oneline_dfs</span> <span class="o">=</span> <span class="p">[]</span></div>
 
-<div class="viewcode-block" id="PopulationManager.breakdown_to_df"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.breakdown_to_df">[docs]</a>    <span class="k">def</span> <span class="nf">breakdown_to_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binary</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="PopulationManager.breakdown_to_df">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.breakdown_to_df">[docs]</a>
+    <span class="k">def</span> <span class="nf">breakdown_to_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">binary</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Breakdown to a pandas DataFrame.</span>
 
 <span class="sd">        Breakdown a binary into more convenient data type, store it, and</span>
@@ -585,11 +623,14 @@
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error during breakdown of </span><span class="si">{0}</span><span class="s2">:</span><span class="se">\n</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span>
                   <span class="nb">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">binary</span><span class="p">),</span> <span class="n">err</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="PopulationManager.to_df"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.to_df">[docs]</a>    <span class="k">def</span> <span class="nf">to_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selection_function</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="PopulationManager.to_df">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.to_df">[docs]</a>
+    <span class="k">def</span> <span class="nf">to_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selection_function</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert all binaries to dataframe.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">binaries</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">history_dfs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span>
-        <span class="n">is_callable</span> <span class="o">=</span> <span class="n">callable</span><span class="p">(</span><span class="n">selection_function</span><span class="p">)</span>
+        <span class="n">is_callable</span> <span class="o">=</span> <span class="nb">callable</span><span class="p">(</span><span class="n">selection_function</span><span class="p">)</span>
         <span class="n">holder</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">binaries</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">binary</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">binaries</span><span class="p">:</span>
@@ -602,11 +643,14 @@
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">holder</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">holder</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PopulationManager.to_oneline_df"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.to_oneline_df">[docs]</a>    <span class="k">def</span> <span class="nf">to_oneline_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selection_function</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="PopulationManager.to_oneline_df">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.to_oneline_df">[docs]</a>
+    <span class="k">def</span> <span class="nf">to_oneline_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">selection_function</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert all binaries to oneline dataframe.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">binaries</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">oneline_dfs</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span>
-        <span class="n">is_callable</span> <span class="o">=</span> <span class="n">callable</span><span class="p">(</span><span class="n">selection_function</span><span class="p">)</span>
+        <span class="n">is_callable</span> <span class="o">=</span> <span class="nb">callable</span><span class="p">(</span><span class="n">selection_function</span><span class="p">)</span>
         <span class="n">holder</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">binaries</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">binary</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">binaries</span><span class="p">:</span>
@@ -619,7 +663,10 @@
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">holder</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">holder</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="PopulationManager.find_failed"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.find_failed">[docs]</a>    <span class="k">def</span> <span class="nf">find_failed</span><span class="p">(</span><span class="bp">self</span><span class="p">,):</span>
+
+<div class="viewcode-block" id="PopulationManager.find_failed">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.find_failed">[docs]</a>
+    <span class="k">def</span> <span class="nf">find_failed</span><span class="p">(</span><span class="bp">self</span><span class="p">,):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Find any failed binaries in the population.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="p">[</span><span class="n">b</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="bp">self</span> <span class="k">if</span> <span class="n">b</span><span class="o">.</span><span class="n">event</span> <span class="o">==</span> <span class="s1">&#39;FAILED&#39;</span><span class="p">]</span>
@@ -631,7 +678,10 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">return</span> <span class="n">failed_dfs</span></div>
 
-<div class="viewcode-block" id="PopulationManager.generate"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.generate">[docs]</a>    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="PopulationManager.generate">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.generate">[docs]</a>
+    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Generate a binary by drawing from the binary_generator.</span>
 
 <span class="sd">        This can be a callable or a generator.</span>
@@ -640,7 +690,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">binary</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">binary</span></div>
 
-<div class="viewcode-block" id="PopulationManager.from_hdf"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.from_hdf">[docs]</a>    <span class="k">def</span> <span class="nf">from_hdf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">restore</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="PopulationManager.from_hdf">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.from_hdf">[docs]</a>
+    <span class="k">def</span> <span class="nf">from_hdf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">indices</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">restore</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Load a BinaryStar instance from an hdf file of a saved population.</span>
 
 <span class="sd">        Parameters</span>
@@ -701,7 +754,10 @@
 
         <span class="k">return</span> <span class="n">binary_holder</span></div>
 
-<div class="viewcode-block" id="PopulationManager.save"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.save">[docs]</a>    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="PopulationManager.save">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.PopulationManager.save">[docs]</a>
+    <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fname</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Save binaries to an hdf file using pandas HDFStore.</span>
 
 <span class="sd">        Any object dtype columns not parsed by infer_objects() is converted to</span>
@@ -754,6 +810,7 @@
 
             <span class="n">store</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;oneline&#39;</span><span class="p">,</span> <span class="n">online_df</span><span class="p">,</span> <span class="n">data_columns</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
 
+
 <span class="c1">#         store = pd.HDFStore(fname, mode=mode)</span>
 
 <span class="c1">#         history_df = self.to_df(**kwargs)</span>
@@ -798,7 +855,10 @@
         <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span></div>
 
 
-<div class="viewcode-block" id="BinaryGenerator"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryGenerator">[docs]</a><span class="k">class</span> <span class="nc">BinaryGenerator</span><span class="p">:</span>
+
+<div class="viewcode-block" id="BinaryGenerator">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryGenerator">[docs]</a>
+<span class="k">class</span> <span class="nc">BinaryGenerator</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate binaries to be included in a BinaryPopulation.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sampler</span><span class="o">=</span><span class="n">generate_independent_samples</span><span class="p">,</span>
@@ -817,18 +877,26 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">sampler</span> <span class="o">=</span> <span class="n">sampler</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">star_formation</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;star_formation&#39;</span><span class="p">,</span> <span class="s1">&#39;burst&#39;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="BinaryGenerator.reset_rng"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryGenerator.reset_rng">[docs]</a>    <span class="k">def</span> <span class="nf">reset_rng</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="BinaryGenerator.reset_rng">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryGenerator.reset_rng">[docs]</a>
+    <span class="k">def</span> <span class="nf">reset_rng</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Reset the RNG with the stored entropy.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_num_gen</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">RNG</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_original_rng</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="BinaryGenerator.get_original_rng"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryGenerator.get_original_rng">[docs]</a>    <span class="k">def</span> <span class="nf">get_original_rng</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryGenerator.get_original_rng">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryGenerator.get_original_rng">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_original_rng</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the random-number generator.&quot;&quot;&quot;</span>
         <span class="n">seq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">SeedSequence</span><span class="p">(</span><span class="n">entropy</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">entropy</span><span class="p">)</span>
         <span class="n">RNG</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="n">seq</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">RNG</span></div>
 
-<div class="viewcode-block" id="BinaryGenerator.get_binary_by_iter"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryGenerator.get_binary_by_iter">[docs]</a>    <span class="k">def</span> <span class="nf">get_binary_by_iter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryGenerator.get_binary_by_iter">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryGenerator.get_binary_by_iter">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_binary_by_iter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the nth binary as if n calls were made to draw_intial_binary.&quot;&quot;&quot;</span>
         <span class="n">RNG</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_original_rng</span><span class="p">()</span>
         <span class="n">original_num_gen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_num_gen</span>
@@ -839,7 +907,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_num_gen</span> <span class="o">=</span> <span class="n">original_num_gen</span>
         <span class="k">return</span> <span class="n">binary</span></div>
 
-<div class="viewcode-block" id="BinaryGenerator.draw_initial_samples"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryGenerator.draw_initial_samples">[docs]</a>    <span class="k">def</span> <span class="nf">draw_initial_samples</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orbital_scheme</span><span class="o">=</span><span class="s1">&#39;separation&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryGenerator.draw_initial_samples">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryGenerator.draw_initial_samples">[docs]</a>
+    <span class="k">def</span> <span class="nf">draw_initial_samples</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orbital_scheme</span><span class="o">=</span><span class="s1">&#39;separation&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Generate all random varibles.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="s1">&#39;RNG&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">keys</span><span class="p">()):</span>
             <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;RNG&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">RNG</span>
@@ -873,7 +944,10 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_num_gen</span> <span class="o">+=</span> <span class="n">N_binaries</span>
         <span class="k">return</span> <span class="n">output_dict</span></div>
 
-<div class="viewcode-block" id="BinaryGenerator.draw_initial_binary"><a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryGenerator.draw_initial_binary">[docs]</a>    <span class="k">def</span> <span class="nf">draw_initial_binary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryGenerator.draw_initial_binary">
+<a class="viewcode-back" href="../../../api/posydon.popsyn.binarypopulation.html#posydon.popsyn.binarypopulation.BinaryGenerator.draw_initial_binary">[docs]</a>
+    <span class="k">def</span> <span class="nf">draw_initial_binary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return a binary for evolution in a population.</span>
 
 <span class="sd">        Parameters</span>
@@ -929,6 +1003,7 @@
                             <span class="n">star_2</span><span class="o">=</span><span class="n">SingleStar</span><span class="p">(</span><span class="o">**</span><span class="n">star2_params</span><span class="p">))</span>
         <span class="k">return</span> <span class="n">binary</span></div>
 
+
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">,):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Report key properties of the BinaryGenerator instance.&quot;&quot;&quot;</span>
         <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&lt;</span><span class="si">{}</span><span class="s2">.</span><span class="si">{}</span><span class="s2"> at </span><span class="si">{}</span><span class="s2">&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
@@ -939,6 +1014,7 @@
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">arg</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">s</span> <span class="o">+=</span> <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">arg</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">s</span></div>
+
 </pre></div>
 
            </div>

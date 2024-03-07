@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>posydon.binary_evol.binarystar &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>posydon.binary_evol.binarystar &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -31,7 +32,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -212,16 +213,21 @@
 <span class="n">MAXIMUM_STEP_TIME</span> <span class="o">=</span> <span class="mi">120</span>
 
 
-<div class="viewcode-block" id="signal_handler"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.signal_handler">[docs]</a><span class="k">def</span> <span class="nf">signal_handler</span><span class="p">(</span><span class="n">signum</span><span class="p">,</span> <span class="n">frame</span><span class="p">):</span>
+<div class="viewcode-block" id="signal_handler">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.signal_handler">[docs]</a>
+<span class="k">def</span> <span class="nf">signal_handler</span><span class="p">(</span><span class="n">signum</span><span class="p">,</span> <span class="n">frame</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;React to a maximum time signal.&quot;&quot;&quot;</span>
     <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Binary Step Exceeded Alloted Time: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span>
                     <span class="nb">format</span><span class="p">(</span><span class="n">MAXIMUM_STEP_TIME</span><span class="p">))</span></div>
 
 
+
 <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGALRM</span><span class="p">,</span> <span class="n">signal_handler</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="BinaryStar"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar">[docs]</a><span class="k">class</span> <span class="nc">BinaryStar</span><span class="p">:</span>
+<div class="viewcode-block" id="BinaryStar">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar">[docs]</a>
+<span class="k">class</span> <span class="nc">BinaryStar</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;A class containing the state and history of a stellar binary.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">star_1</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">star_2</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -274,7 +280,9 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">properties</span> <span class="o">=</span> <span class="n">SimulationProperties</span><span class="p">()</span>
 
-<div class="viewcode-block" id="BinaryStar.evolve"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.evolve">[docs]</a>    <span class="k">def</span> <span class="nf">evolve</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="BinaryStar.evolve">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.evolve">[docs]</a>
+    <span class="k">def</span> <span class="nf">evolve</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Evolve a binary from start to finish.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">pre_evolve</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
@@ -303,7 +311,10 @@
             <span class="n">signal</span><span class="o">.</span><span class="n">alarm</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>     <span class="c1"># turning off alarm</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">post_evolve</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BinaryStar.run_step"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.run_step">[docs]</a>    <span class="k">def</span> <span class="nf">run_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryStar.run_step">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.run_step">[docs]</a>
+    <span class="k">def</span> <span class="nf">run_step</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Evolve the binary through one evolutionary step.&quot;&quot;&quot;</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="n">total_state</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">star_1</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">star_2</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">state</span><span class="p">,</span>
@@ -328,7 +339,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">append_state</span><span class="p">()</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">post_step</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">next_step_name</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BinaryStar.append_state"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.append_state">[docs]</a>    <span class="k">def</span> <span class="nf">append_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryStar.append_state">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.append_state">[docs]</a>
+    <span class="k">def</span> <span class="nf">append_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Update the history of the binaries&#39; properties.&quot;&quot;&quot;</span>
         <span class="c1"># Append to the binary history lists</span>
         <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">BINARYPROPERTIES</span><span class="p">:</span>
@@ -338,11 +352,17 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">star_1</span><span class="o">.</span><span class="n">append_state</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">star_2</span><span class="o">.</span><span class="n">append_state</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="BinaryStar.switch_star"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.switch_star">[docs]</a>    <span class="k">def</span> <span class="nf">switch_star</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryStar.switch_star">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.switch_star">[docs]</a>
+    <span class="k">def</span> <span class="nf">switch_star</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Switch stars.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">star_1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">star_2</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">star_2</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">star_1</span></div>
 
-<div class="viewcode-block" id="BinaryStar.restore"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.restore">[docs]</a>    <span class="k">def</span> <span class="nf">restore</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delete_history</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryStar.restore">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.restore">[docs]</a>
+    <span class="k">def</span> <span class="nf">restore</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">delete_history</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Restore the object to the i-th state.</span>
 
 <span class="sd">        Parameters</span>
@@ -364,7 +384,10 @@
                 <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span> <span class="o">+</span> <span class="s1">&#39;_history&#39;</span><span class="p">,</span>
                         <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span> <span class="o">+</span> <span class="s1">&#39;_history&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span></div>
 
-<div class="viewcode-block" id="BinaryStar.reset"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryStar.reset">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.reset">[docs]</a>
+    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">properties</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Reset the binary to its ZAMS state.</span>
 
 <span class="sd">        Parameters</span>
@@ -380,14 +403,20 @@
         <span class="c1"># Use the restore function to move the binary back to its initial state</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">restore</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="BinaryStar.update_star_states"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.update_star_states">[docs]</a>    <span class="k">def</span> <span class="nf">update_star_states</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryStar.update_star_states">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.update_star_states">[docs]</a>
+    <span class="k">def</span> <span class="nf">update_star_states</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Update the states of the two stars in the binary.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">star_1</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">check_state_of_star</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">star_1</span><span class="p">,</span> <span class="n">star_CO</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">star_1</span><span class="o">.</span><span class="n">state</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;WD&quot;</span><span class="p">,</span> <span class="s2">&quot;BH&quot;</span><span class="p">,</span> <span class="s2">&quot;NS&quot;</span><span class="p">])</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">star_2</span><span class="o">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">check_state_of_star</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">star_2</span><span class="p">,</span> <span class="n">star_CO</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">star_2</span><span class="o">.</span><span class="n">state</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;WD&quot;</span><span class="p">,</span> <span class="s2">&quot;BH&quot;</span><span class="p">,</span> <span class="s2">&quot;NS&quot;</span><span class="p">])</span></div>
 
-<div class="viewcode-block" id="BinaryStar.to_df"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.to_df">[docs]</a>    <span class="k">def</span> <span class="nf">to_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryStar.to_df">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.to_df">[docs]</a>
+    <span class="k">def</span> <span class="nf">to_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return history parameters from the binary in a DataFrame.</span>
 
 <span class="sd">        Includes star 1 and 2 (S1, S2) data and an extra column &#39;binary_index&#39;.</span>
@@ -499,7 +528,10 @@
         <span class="n">binary_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;binary_index&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">binary_df</span></div>
 
-<div class="viewcode-block" id="BinaryStar.from_df"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.from_df">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="BinaryStar.from_df">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.from_df">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_df</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">dataframe</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert a binary from a pandas DataFrame to BinaryStar instance.</span>
 
@@ -620,7 +652,10 @@
 
         <span class="k">return</span> <span class="n">binary</span></div>
 
-<div class="viewcode-block" id="BinaryStar.to_oneline_df"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.to_oneline_df">[docs]</a>    <span class="k">def</span> <span class="nf">to_oneline_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scalar_names</span><span class="o">=</span><span class="p">[],</span> <span class="n">history</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="BinaryStar.to_oneline_df">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.to_oneline_df">[docs]</a>
+    <span class="k">def</span> <span class="nf">to_oneline_df</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">scalar_names</span><span class="o">=</span><span class="p">[],</span> <span class="n">history</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert binary into a single row DataFrame.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">history</span><span class="p">:</span>
             <span class="n">bin_kwargs</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -672,7 +707,10 @@
         <span class="n">oneline_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;binary_index&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">oneline_df</span></div>
 
-<div class="viewcode-block" id="BinaryStar.from_oneline_df"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.from_oneline_df">[docs]</a>    <span class="nd">@classmethod</span>
+
+<div class="viewcode-block" id="BinaryStar.from_oneline_df">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.from_oneline_df">[docs]</a>
+    <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">from_oneline_df</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">oneline_df</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Convert a oneline DataFrame into a BinaryStar.</span>
 
@@ -813,6 +851,7 @@
             <span class="nb">setattr</span><span class="p">(</span><span class="n">binary</span><span class="p">,</span> <span class="s1">&#39;event&#39;</span><span class="p">,</span> <span class="s1">&#39;FAILED&#39;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">binary</span></div>
 
+
     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the object representation when print is called.&quot;&quot;&quot;</span>
         <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&lt;</span><span class="si">{}</span><span class="s1">.</span><span class="si">{}</span><span class="s1"> at </span><span class="si">{}</span><span class="s1">&gt;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__module__</span><span class="p">,</span>
@@ -849,7 +888,9 @@
         <span class="n">s</span> <span class="o">+=</span> <span class="s1">&#39;S2=(</span><span class="si">{0}</span><span class="s1">,M=</span><span class="si">{1:.2f}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">star_2</span><span class="o">.</span><span class="n">state</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span>
         <span class="k">return</span> <span class="s1">&#39;BinaryStar(&#39;</span> <span class="o">+</span> <span class="n">s</span> <span class="o">+</span> <span class="s1">&#39;)&#39;</span>
 
-<div class="viewcode-block" id="BinaryStar.from_run"><a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.from_run">[docs]</a>    <span class="nd">@staticmethod</span>
+<div class="viewcode-block" id="BinaryStar.from_run">
+<a class="viewcode-back" href="../../../api/posydon.binary_evol.binarystar.html#posydon.binary_evol.binarystar.BinaryStar.from_run">[docs]</a>
+    <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">from_run</span><span class="p">(</span><span class="n">run</span><span class="p">,</span> <span class="n">history</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">profiles</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Create a BinaryStar object from a PSyGrid run.&quot;&quot;&quot;</span>
         <span class="n">binary</span> <span class="o">=</span> <span class="n">BinaryStar</span><span class="p">()</span>
@@ -946,7 +987,9 @@
             <span class="n">binary</span><span class="o">.</span><span class="n">star_1</span><span class="o">.</span><span class="n">profile</span> <span class="o">=</span> <span class="n">run</span><span class="o">.</span><span class="n">final_profile1</span>
             <span class="n">binary</span><span class="o">.</span><span class="n">star_2</span><span class="o">.</span><span class="n">profile</span> <span class="o">=</span> <span class="n">run</span><span class="o">.</span><span class="n">final_profile2</span>
 
-        <span class="k">return</span> <span class="n">binary</span></div></div>
+        <span class="k">return</span> <span class="n">binary</span></div>
+</div>
+
 </pre></div>
 
            </div>

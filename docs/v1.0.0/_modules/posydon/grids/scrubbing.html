@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>posydon.grids.scrubbing &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>posydon.grids.scrubbing &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -31,7 +32,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -114,7 +115,9 @@
 <span class="kn">import</span> <span class="nn">warnings</span>
 
 
-<div class="viewcode-block" id="scrub"><a class="viewcode-back" href="../../../api/posydon.grids.scrubbing.html#posydon.grids.scrubbing.scrub">[docs]</a><span class="k">def</span> <span class="nf">scrub</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">models</span><span class="p">,</span> <span class="n">ages</span><span class="p">):</span>
+<div class="viewcode-block" id="scrub">
+<a class="viewcode-back" href="../../../api/posydon.grids.scrubbing.html#posydon.grids.scrubbing.scrub">[docs]</a>
+<span class="k">def</span> <span class="nf">scrub</span><span class="p">(</span><span class="n">tables</span><span class="p">,</span> <span class="n">models</span><span class="p">,</span> <span class="n">ages</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Scrub binary and star histories of a MESA run in one go.</span>
 
 <span class="sd">    Parameters</span>
@@ -175,7 +178,10 @@
     <span class="k">return</span> <span class="n">final_tables</span></div>
 
 
-<div class="viewcode-block" id="keep_after_RLO"><a class="viewcode-back" href="../../../api/posydon.grids.scrubbing.html#posydon.grids.scrubbing.keep_after_RLO">[docs]</a><span class="k">def</span> <span class="nf">keep_after_RLO</span><span class="p">(</span><span class="n">bh</span><span class="p">,</span> <span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">):</span>
+
+<div class="viewcode-block" id="keep_after_RLO">
+<a class="viewcode-back" href="../../../api/posydon.grids.scrubbing.html#posydon.grids.scrubbing.keep_after_RLO">[docs]</a>
+<span class="k">def</span> <span class="nf">keep_after_RLO</span><span class="p">(</span><span class="n">bh</span><span class="p">,</span> <span class="n">h1</span><span class="p">,</span> <span class="n">h2</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Scrub histories from the initial steps without RLO mass transfer.</span>
 
 <span class="sd">    Parameters</span>
@@ -256,6 +262,7 @@
         <span class="n">new_h2</span><span class="p">[</span><span class="s2">&quot;star_age&quot;</span><span class="p">]</span> <span class="o">-=</span> <span class="n">age_to_remove</span>
 
     <span class="k">return</span> <span class="n">new_bh</span><span class="p">,</span> <span class="n">new_h1</span><span class="p">,</span> <span class="n">new_h2</span></div>
+
 </pre></div>
 
            </div>

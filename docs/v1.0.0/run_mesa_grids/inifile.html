@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>.ini file documentation for POSYDON GRIDS &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>.ini file documentation for POSYDON GRIDS &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -34,7 +35,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -114,9 +115,9 @@
            <div itemprop="articleBody">
              
   <section id="ini-file-documentation-for-posydon-grids">
-<span id="inifile"></span><h1>.ini file documentation for POSYDON GRIDS<a class="headerlink" href="#ini-file-documentation-for-posydon-grids" title="Permalink to this headline"></a></h1>
+<span id="inifile"></span><h1>.ini file documentation for POSYDON GRIDS<a class="headerlink" href="#ini-file-documentation-for-posydon-grids" title="Link to this heading"></a></h1>
 <section id="how-to-write-a-configuration-file">
-<h2>How to write a configuration file<a class="headerlink" href="#how-to-write-a-configuration-file" title="Permalink to this headline"></a></h2>
+<h2>How to write a configuration file<a class="headerlink" href="#how-to-write-a-configuration-file" title="Link to this heading"></a></h2>
 <p>The <cite>posydon-setup-grid</cite> command-line executable cannot run without a
 configuration file. This inifile is meant to specify all aspects of the MESA
 simulation that is static, i.e. those parts that are shared amongst every MESA
@@ -136,13 +137,9 @@ for POSYDON:
 POSYDON:
 <a class="reference external" href="https://github.com/POSYDON-code/POSYDON/blob/main/grid_params/grid_params.ini">Development Version INIFILE</a></p>
 <section id="slurm">
-<h3>[slurm]<a class="headerlink" href="#slurm" title="Permalink to this headline"></a></h3>
+<h3>[slurm]<a class="headerlink" href="#slurm" title="Link to this heading"></a></h3>
 <p>This section designates all the SLURM-related parameters.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 73%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td></td>
 <td></td>
@@ -182,13 +179,9 @@ POSYDON:
 </div>
 </section>
 <section id="mesa-inlists">
-<h3>[mesa_inlists]<a class="headerlink" href="#mesa-inlists" title="Permalink to this headline"></a></h3>
+<h3>[mesa_inlists]<a class="headerlink" href="#mesa-inlists" title="Link to this heading"></a></h3>
 <p>This section designates all the basic MESA-specific parameters.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 22%" />
-<col style="width: 78%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td></td>
 <td></td>
@@ -310,13 +303,9 @@ POSYDON:
 </div>
 </section>
 <section id="mesa-extras">
-<h3>[mesa_extras]<a class="headerlink" href="#mesa-extras" title="Permalink to this headline"></a></h3>
+<h3>[mesa_extras]<a class="headerlink" href="#mesa-extras" title="Link to this heading"></a></h3>
 <p>This section designates all the parameters for MESA makefiles and fortran files.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 75%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td></td>
 <td></td>
@@ -357,13 +346,9 @@ POSYDON:
 </div>
 </section>
 <section id="run-parameters">
-<h3>[run_parameters]<a class="headerlink" href="#run-parameters" title="Permalink to this headline"></a></h3>
+<h3>[run_parameters]<a class="headerlink" href="#run-parameters" title="Link to this heading"></a></h3>
 <p>This section designates the run parameters for a grid.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 74%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td></td>
 <td></td>

@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>Installation &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -34,7 +35,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -47,8 +48,12 @@
               <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installing-posydon-v1-0-0-from-anaconda">Installing POSYDON v1.0.0 from Anaconda</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#installing-the-latest-release-from-github">Installing the latest release from GitHub</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installing-posydon-v1-0-0-from-anaconda-recommended-way">Installing POSYDON v1.0.0 from Anaconda (Recommended way)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#downloading-the-posydon-data">Downloading the POSYDON data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-posydon-v-1-0-from-github-manual-installation">Installing POSYDON v.1.0 from GitHub (Manual Installation)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#creating-a-conda-environment">Creating a conda environment</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#cloning-posydon">Cloning POSYDON</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#installing-posydon">Installing POSYDON</a><ul>
@@ -56,17 +61,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#installing-the-package">Installing the package</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#downloading-posydon-data">Downloading POSYDON data</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#option-1-zenodo-latest-official-version">OPTION 1: Zenodo (latest official version)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#option-2-git-lfs-submodule-latest-development-version">OPTION 2: git LFS submodule (latest development version)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#getting-the-posydon-data">Getting the POSYDON data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-posydon-documentation-modules">Installing POSYDON documentation modules</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#installing-posydon-documentations-modules">Installing POSYDON documentations modules</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#installation-notes-faq">Installation Notes/FAQ</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-notes-faq">Installation Notes/FAQ</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../data/data.html">Data Download</a></li>
@@ -127,15 +126,23 @@
            <div itemprop="articleBody">
              
   <section id="installation">
-<span id="install"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h1>
-<section id="installing-posydon-v1-0-0-from-anaconda">
-<h2>Installing POSYDON v1.0.0 from Anaconda<a class="headerlink" href="#installing-posydon-v1-0-0-from-anaconda" title="Permalink to this headline"></a></h2>
-<p>We recommend to install the Python distribution Anaconda and to install POSYDON
-in a virtual environment. Specifically, we recommend using the installation we
-have provided which can be accessed through conda-forge. On Linux, the new
-conda environment can be created (we have named our environment posydon-example,
-but you can choose any name), the conda-forge channel added, and the required
-library installation can all be completed in one line:</p>
+<span id="install"></span><h1>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h1>
+<p>The easiest way to start with POSYDON is to install it from Anaconda
+(Recommended way), and call an executable script that downloads the grid
+data automatically.</p>
+<p>Alternatively, if you are interested in modifying the code, you can install
+POSYDON manually through <cite>github</cite> (Manual Installation). Below we describe both
+ways.</p>
+<section id="installing-posydon-v1-0-0-from-anaconda-recommended-way">
+<h2>Installing POSYDON v1.0.0 from Anaconda (Recommended way)<a class="headerlink" href="#installing-posydon-v1-0-0-from-anaconda-recommended-way" title="Link to this heading"></a></h2>
+<section id="id1">
+<h3>Installation<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<p>We recommend using Anaconda and to install POSYDON in a virtual environment.
+We have created a package which can be accessed through conda-forge. On Linux,
+the new conda environment can be created (we have named our environment
+posydon-example, but you can choose any name), the conda-forge channel added,
+and the required library installation can all be completed in one line using
+the terminal or command line:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">posydon</span><span class="o">-</span><span class="n">example</span> <span class="o">-</span><span class="n">c</span> <span class="n">posydon</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">posydon</span>
 </pre></div>
 </div>
@@ -149,29 +156,53 @@ likely need to be separately run:</p>
 <span class="n">conda</span> <span class="n">install</span> <span class="n">posydon</span>
 </pre></div>
 </div>
-<p>Now, you can source the environment with</p>
+<p>In case of OSX-ARM architectures, where many packages of Python 3.7 are not
+available, please use the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">posydon_conda</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="n">posydon_conda</span>
+<span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">env</span> <span class="o">--</span><span class="nb">set</span> <span class="n">subdir</span> <span class="n">osx</span><span class="o">-</span><span class="mi">64</span>
+<span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+<span class="n">conda</span> <span class="n">config</span> <span class="o">--</span><span class="n">add</span> <span class="n">channels</span> <span class="n">posydon</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span>
+<span class="n">conda</span> <span class="n">install</span> <span class="n">posydon</span>
+</pre></div>
+</div>
+<p>Now, you can activate the environment with</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">posydon</span>
 </pre></div>
 </div>
 </section>
-<section id="installing-the-latest-release-from-github">
-<h2>Installing the latest release from GitHub<a class="headerlink" href="#installing-the-latest-release-from-github" title="Permalink to this headline"></a></h2>
+<section id="downloading-the-posydon-data">
+<h3>Downloading the POSYDON data<a class="headerlink" href="#downloading-the-posydon-data" title="Link to this heading"></a></h3>
+<p>Because the data is large, ~10 GB, it must be downloaded
+with an explicit command. Export the path to where you want
+to clone the data, e.g. <cite>/home/</cite>, and download the data from
+ZENODO with the following commands</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PATH_TO_POSYDON_DATA</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span>
+<span class="n">get</span><span class="o">-</span><span class="n">posydon</span><span class="o">-</span><span class="n">data</span>
+</pre></div>
+</div>
+<p>(Note that you can add the export command to your .bashrc or .bash_profile.)</p>
+</section>
+</section>
+<section id="installing-posydon-v-1-0-from-github-manual-installation">
+<h2>Installing POSYDON v.1.0 from GitHub (Manual Installation)<a class="headerlink" href="#installing-posydon-v-1-0-from-github-manual-installation" title="Link to this heading"></a></h2>
 <section id="creating-a-conda-environment">
-<h3>Creating a conda environment<a class="headerlink" href="#creating-a-conda-environment" title="Permalink to this headline"></a></h3>
-<p>We recommend to install the Python distribution Anaconda and to install POSYDON
-in a virtual environment. After creating the environment (you can choose any
-name, e.g., <cite>posydon</cite>, or <cite>posydon_env</cite>) like this:</p>
+<h3>Creating a conda environment<a class="headerlink" href="#creating-a-conda-environment" title="Link to this heading"></a></h3>
+<p>As above, we recommend using Anaconda to install POSYDON in a virtual
+environment. After creating the environment (you can choose any name, e.g.,
+<cite>posydon</cite>, or <cite>posydon_env</cite>) like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">posydon</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span>
 </pre></div>
 </div>
 <p>Make sure you agree to any questions about installing required libraries. To
-proceed with the installation, we will need to activate the environment:</p>
+proceed with the installation, you will need to activate the environment:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">posydon</span>
 </pre></div>
 </div>
 </section>
 <section id="cloning-posydon">
-<h3>Cloning POSYDON<a class="headerlink" href="#cloning-posydon" title="Permalink to this headline"></a></h3>
+<h3>Cloning POSYDON<a class="headerlink" href="#cloning-posydon" title="Link to this heading"></a></h3>
 <p>Clone the repository in a local directory, e.g. <cite>/home/POSYDON/</cite>, with</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">POSYDON</span><span class="o">-</span><span class="n">code</span><span class="o">/</span><span class="n">POSYDON</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
@@ -185,9 +216,9 @@ proceed with the installation, we will need to activate the environment:</p>
 </div>
 </section>
 <section id="installing-posydon">
-<h3>Installing POSYDON<a class="headerlink" href="#installing-posydon" title="Permalink to this headline"></a></h3>
+<h3>Installing POSYDON<a class="headerlink" href="#installing-posydon" title="Link to this heading"></a></h3>
 <section id="exporting-the-global-path">
-<h4>Exporting the global path<a class="headerlink" href="#exporting-the-global-path" title="Permalink to this headline"></a></h4>
+<h4>Exporting the global path<a class="headerlink" href="#exporting-the-global-path" title="Link to this heading"></a></h4>
 <p>Export the path to the cloned POSYDON code (you can add this line to your
 .bashrc or .bash_profile.), e.g.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PATH_TO_POSYDON</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">POSYDON</span><span class="o">/</span>
@@ -195,54 +226,43 @@ proceed with the installation, we will need to activate the environment:</p>
 </div>
 </section>
 <section id="installing-the-package">
-<h4>Installing the package<a class="headerlink" href="#installing-the-package" title="Permalink to this headline"></a></h4>
+<h4>Installing the package<a class="headerlink" href="#installing-the-package" title="Link to this heading"></a></h4>
 <p>From the cloned POSYDON directory execute the commands to install POSYDON and
-the <cite>mpi4py</cite> dependency</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
+the <cite>mpi4py</cite> dependency (first make sure you are on the main branch!)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
 <span class="n">conda</span> <span class="n">install</span> <span class="n">mpi4py</span>
 </pre></div>
 </div>
 </section>
 </section>
-<section id="downloading-posydon-data">
-<h3>Downloading POSYDON data<a class="headerlink" href="#downloading-posydon-data" title="Permalink to this headline"></a></h3>
-<section id="option-1-zenodo-latest-official-version">
-<h4>OPTION 1: Zenodo (latest official version)<a class="headerlink" href="#option-1-zenodo-latest-official-version" title="Permalink to this headline"></a></h4>
+<section id="getting-the-posydon-data">
+<h3>Getting the POSYDON data<a class="headerlink" href="#getting-the-posydon-data" title="Link to this heading"></a></h3>
 <p>Export the path to where you want to clone the data, e.g. <cite>/home/</cite>, and
-download the data with the following commands</p>
+download the data from ZENODO with the following commands</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PATH_TO_POSYDON_DATA</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span>
 <span class="n">get</span><span class="o">-</span><span class="n">posydon</span><span class="o">-</span><span class="n">data</span>
 </pre></div>
 </div>
+<p>(Note that you can add the export command to your .bashrc or .bash_profile.)</p>
 </section>
-<section id="option-2-git-lfs-submodule-latest-development-version">
-<h4>OPTION 2: git LFS submodule (latest development version)<a class="headerlink" href="#option-2-git-lfs-submodule-latest-development-version" title="Permalink to this headline"></a></h4>
-<p>Inside the cloned POSYDON repository run the following commands to
-install and initialise git LFS, and download the data.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PATH_TO_POSYDON_DATA=$PATH_TO_POSYDON/data/
-conda install git-lfs
-git lfs install
-git submodule init
-git submodule update data/POSYDON_data
-</pre></div>
-</div>
-</section>
-</section>
-</section>
-<section id="installing-posydon-documentations-modules">
-<h2>Installing POSYDON documentations modules<a class="headerlink" href="#installing-posydon-documentations-modules" title="Permalink to this headline"></a></h2>
-<p>These modules are needed in order to compile the documentation</p>
+<section id="installing-posydon-documentation-modules">
+<h3>Installing POSYDON documentation modules<a class="headerlink" href="#installing-posydon-documentation-modules" title="Link to this heading"></a></h3>
+<p>In the case of manual installation you can also alter and build the
+documentation. These modules are needed in order to compile the documentation</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span><span class="p">[</span><span class="n">doc</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>To compile the documentation and open the html page do the following</p>
+<p>To compile the documentation and open the html page use the following commands</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">docs</span><span class="o">/</span>
 <span class="n">make</span> <span class="n">html</span>
 <span class="nb">open</span> <span class="n">_build</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
 </pre></div>
 </div>
+</section>
+</section>
 <section id="installation-notes-faq">
-<h3>Installation Notes/FAQ<a class="headerlink" href="#installation-notes-faq" title="Permalink to this headline"></a></h3>
+<h2>Installation Notes/FAQ<a class="headerlink" href="#installation-notes-faq" title="Link to this heading"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>USING IPYTHON OR JUPYTER-NOTEBOOKS WITH POSYDON ENVIRONMENT</p>
@@ -252,7 +272,6 @@ PLEASE explicitly install both into the posydon environment with either</p>
 <p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">jupyter</span> <span class="pre">ipython</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">jupyter</span> <span class="pre">ipython</span></code></p>
 </div>
-</section>
 </section>
 </section>
 

@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>posydon.grids.io &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>posydon.grids.io &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -31,7 +32,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -171,7 +172,9 @@
 <span class="n">EEP_FILE_EXTENSIONS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.data.eep&quot;</span><span class="p">,</span> <span class="s2">&quot;.data.clean.eep&quot;</span><span class="p">]</span>
 
 
-<div class="viewcode-block" id="RunReader"><a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.RunReader">[docs]</a><span class="k">class</span> <span class="nc">RunReader</span><span class="p">:</span>
+<div class="viewcode-block" id="RunReader">
+<a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.RunReader">[docs]</a>
+<span class="k">class</span> <span class="nc">RunReader</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Class for reading MESA output files of an individual run.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;posydon&quot;</span><span class="p">,</span> <span class="n">binary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -218,7 +221,9 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Format </span><span class="si">{}</span><span class="s2"> not supported.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fmt</span><span class="p">))</span>
 
-<div class="viewcode-block" id="RunReader.read_posydon_format"><a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.RunReader.read_posydon_format">[docs]</a>    <span class="k">def</span> <span class="nf">read_posydon_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="RunReader.read_posydon_format">
+<a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.RunReader.read_posydon_format">[docs]</a>
+    <span class="k">def</span> <span class="nf">read_posydon_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Read run structure, expecting the POSYDON collaboration format.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reading run in </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">))</span>
@@ -266,7 +271,10 @@
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">report</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="RunReader.report"><a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.RunReader.report">[docs]</a>    <span class="k">def</span> <span class="nf">report</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="RunReader.report">
+<a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.RunReader.report">[docs]</a>
+    <span class="k">def</span> <span class="nf">report</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Report what data or metadata were found.&quot;&quot;&quot;</span>
         <span class="k">def</span> <span class="nf">isfound</span><span class="p">(</span><span class="n">var</span><span class="p">):</span>
             <span class="k">return</span> <span class="s2">&quot;Yes&quot;</span> <span class="k">if</span> <span class="n">var</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="s2">&quot;No&quot;</span>
@@ -285,10 +293,14 @@
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;METADATA FILES: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">metadata_files</span><span class="p">)))</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">metafile</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">metadata_files</span><span class="p">:</span>
-            <span class="n">print_meta_contents</span><span class="p">(</span><span class="n">metafile</span><span class="p">,</span> <span class="n">max_lines</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verbose_maxlines</span><span class="p">)</span></div></div>
+            <span class="n">print_meta_contents</span><span class="p">(</span><span class="n">metafile</span><span class="p">,</span> <span class="n">max_lines</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verbose_maxlines</span><span class="p">)</span></div>
+</div>
 
 
-<div class="viewcode-block" id="GridReader"><a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.GridReader">[docs]</a><span class="k">class</span> <span class="nc">GridReader</span><span class="p">:</span>
+
+<div class="viewcode-block" id="GridReader">
+<a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.GridReader">[docs]</a>
+<span class="k">class</span> <span class="nc">GridReader</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Class for quick reading of MESA grid files.&quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">&quot;posydon&quot;</span><span class="p">,</span> <span class="n">binary</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -366,7 +378,9 @@
 
         <span class="k">return</span> <span class="n">folders</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
 
-<div class="viewcode-block" id="GridReader.read_posydon_format"><a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.GridReader.read_posydon_format">[docs]</a>    <span class="k">def</span> <span class="nf">read_posydon_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="GridReader.read_posydon_format">
+<a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.GridReader.read_posydon_format">[docs]</a>
+    <span class="k">def</span> <span class="nf">read_posydon_format</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Read grid structure, expecting the POSYDON collaboration format.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reading grid in </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">))</span>
@@ -379,7 +393,10 @@
                     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Folder &quot;</span><span class="o">+</span><span class="n">fullpath</span><span class="o">+</span><span class="s2">&quot; has no stdout file.&quot;</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">runs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_run</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="GridReader.infer_history_columns"><a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.GridReader.infer_history_columns">[docs]</a>    <span class="k">def</span> <span class="nf">infer_history_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">BH_cols</span><span class="p">,</span> <span class="n">H1_cols</span><span class="p">,</span> <span class="n">H2_cols</span><span class="p">):</span>
+
+<div class="viewcode-block" id="GridReader.infer_history_columns">
+<a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.GridReader.infer_history_columns">[docs]</a>
+    <span class="k">def</span> <span class="nf">infer_history_columns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">BH_cols</span><span class="p">,</span> <span class="n">H1_cols</span><span class="p">,</span> <span class="n">H2_cols</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Infer the columns found in the grid&#39;s history data files.</span>
 
 <span class="sd">        Parameters</span>
@@ -421,10 +438,14 @@
         <span class="n">H1_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;S1_&quot;</span> <span class="o">+</span> <span class="n">h1_name</span> <span class="k">for</span> <span class="n">h1_name</span> <span class="ow">in</span> <span class="n">H1_names</span><span class="p">]</span>
         <span class="n">H2_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;S2_&quot;</span> <span class="o">+</span> <span class="n">h2_name</span> <span class="k">for</span> <span class="n">h2_name</span> <span class="ow">in</span> <span class="n">H2_names</span><span class="p">]</span>
 
-        <span class="k">return</span> <span class="n">BH_names</span> <span class="o">+</span> <span class="n">H1_names</span> <span class="o">+</span> <span class="n">H2_names</span></div></div>
+        <span class="k">return</span> <span class="n">BH_names</span> <span class="o">+</span> <span class="n">H1_names</span> <span class="o">+</span> <span class="n">H2_names</span></div>
+</div>
 
 
-<div class="viewcode-block" id="print_meta_contents"><a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.print_meta_contents">[docs]</a><span class="k">def</span> <span class="nf">print_meta_contents</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">max_lines</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_chars_per_line</span><span class="o">=</span><span class="mi">80</span><span class="p">):</span>
+
+<div class="viewcode-block" id="print_meta_contents">
+<a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.print_meta_contents">[docs]</a>
+<span class="k">def</span> <span class="nf">print_meta_contents</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">max_lines</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">max_chars_per_line</span><span class="o">=</span><span class="mi">80</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Print parts of metadata files for inspection.</span>
 
 <span class="sd">    Parameters</span>
@@ -455,7 +476,10 @@
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">80</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="read_initial_values"><a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.read_initial_values">[docs]</a><span class="k">def</span> <span class="nf">read_initial_values</span><span class="p">(</span><span class="n">mesa_dir</span><span class="p">):</span>
+
+<div class="viewcode-block" id="read_initial_values">
+<a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.read_initial_values">[docs]</a>
+<span class="k">def</span> <span class="nf">read_initial_values</span><span class="p">(</span><span class="n">mesa_dir</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Read grid point values given the MESA run directory.&quot;&quot;&quot;</span>
     <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">mesa_dir</span><span class="p">,</span> <span class="s2">&quot;inlist_grid_points&quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
@@ -481,7 +505,10 @@
     <span class="k">return</span> <span class="n">initial_values</span></div>
 
 
-<div class="viewcode-block" id="initial_values_from_dirname"><a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.initial_values_from_dirname">[docs]</a><span class="k">def</span> <span class="nf">initial_values_from_dirname</span><span class="p">(</span><span class="n">mesa_dir</span><span class="p">):</span>
+
+<div class="viewcode-block" id="initial_values_from_dirname">
+<a class="viewcode-back" href="../../../api/posydon.grids.io.html#posydon.grids.io.initial_values_from_dirname">[docs]</a>
+<span class="k">def</span> <span class="nf">initial_values_from_dirname</span><span class="p">(</span><span class="n">mesa_dir</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Use the name of the directory for inferring the main initial values.&quot;&quot;&quot;</span>
     <span class="n">dirname</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">mesa_dir</span><span class="p">)))</span>
     <span class="k">if</span> <span class="s2">&quot;initial_mass&quot;</span> <span class="ow">in</span> <span class="n">dirname</span><span class="p">:</span>                           <span class="c1"># single-star grid</span>
@@ -494,6 +521,7 @@
     <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="n">dirname</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">variable_name</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
               <span class="k">for</span> <span class="n">variable_name</span> <span class="ow">in</span> <span class="n">variable_names</span><span class="p">]</span>
     <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">values</span><span class="p">)</span></div>
+
 </pre></div>
 
            </div>

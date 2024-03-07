@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The PSyGrid Object &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>The PSyGrid Object &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -34,7 +35,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -123,7 +124,7 @@
            <div itemprop="articleBody">
              
   <section id="the-psygrid-object">
-<span id="psygrid"></span><h1>The PSyGrid Object<a class="headerlink" href="#the-psygrid-object" title="Permalink to this headline"></a></h1>
+<span id="psygrid"></span><h1>The PSyGrid Object<a class="headerlink" href="#the-psygrid-object" title="Link to this heading"></a></h1>
 <p>The PSyGrid class is the “bridge” connecting MESA and POSYDON. It:</p>
 <ul class="simple">
 <li><p>encapsulates the data from a MESA grid in a compact form</p></li>
@@ -135,11 +136,11 @@
 </pre></div>
 </div>
 <section id="creating-a-psygrid-object">
-<h2>Creating a PSyGrid object<a class="headerlink" href="#creating-a-psygrid-object" title="Permalink to this headline"></a></h2>
+<h2>Creating a PSyGrid object<a class="headerlink" href="#creating-a-psygrid-object" title="Link to this heading"></a></h2>
 <p>A PSyGrid HDF5 file can be created by using the <code class="docutils literal notranslate"><span class="pre">create()</span></code> method on a newly
 constructed PSyGrid object.</p>
 <section id="basic-example">
-<h3>Basic example<a class="headerlink" href="#basic-example" title="Permalink to this headline"></a></h3>
+<h3>Basic example<a class="headerlink" href="#basic-example" title="Link to this heading"></a></h3>
 <p>The simplest method is to provide the paths of the folder of the MESA runs
 output, and the HDF5 file to be created.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span> <span class="o">=</span> <span class="n">PSyGrid</span><span class="p">()</span>
@@ -149,7 +150,7 @@ output, and the HDF5 file to be created.</p>
 <p>Now, the PSyGrid object is ready to be used for accessing and plotting data.</p>
 </section>
 <section id="output-options">
-<h3>Output options<a class="headerlink" href="#output-options" title="Permalink to this headline"></a></h3>
+<h3>Output options<a class="headerlink" href="#output-options" title="Link to this heading"></a></h3>
 <p>Use the option <code class="docutils literal notranslate"><span class="pre">verbose</span></code> to see more details while the PSyGrid object is
 being built.</p>
 <p>Set <code class="docutils literal notranslate"><span class="pre">overwrite</span></code> to <code class="docutils literal notranslate"><span class="pre">True</span></code> if the HDF5 file already exists.</p>
@@ -163,7 +164,7 @@ when they occur, or <code class="docutils literal notranslate"><span class="pre"
 </div>
 </section>
 <section id="setting-the-properties-of-the-grid">
-<h3>Setting the properties of the grid<a class="headerlink" href="#setting-the-properties-of-the-grid" title="Permalink to this headline"></a></h3>
+<h3>Setting the properties of the grid<a class="headerlink" href="#setting-the-properties-of-the-grid" title="Link to this heading"></a></h3>
 <p>PSyGrid provides a compact form of the initial MESA grid. To define how many runs should be included (e.g. for testing purposes),
 and which data columns are needed, use the following code block as a guide.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">DEFAULT_BINARY_HISTORY_COLS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;star_1_mass&#39;</span><span class="p">,</span> <span class="s1">&#39;star_2_mass&#39;</span><span class="p">,</span> <span class="s1">&#39;period_days&#39;</span><span class="p">,</span> <span class="s1">&#39;binary_separation&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;rl_relative_overflow_1&#39;</span><span class="p">,</span> <span class="s1">&#39;rl_relative_overflow_2&#39;</span><span class="p">,</span> <span class="s1">&#39;lg_mtransfer_rate&#39;</span><span class="p">]</span>
@@ -198,14 +199,14 @@ and which data columns are needed, use the following code block as a guide.</p>
 </section>
 </section>
 <section id="loading-an-existing-psygrid-object">
-<h2>Loading an existing PSyGrid object<a class="headerlink" href="#loading-an-existing-psygrid-object" title="Permalink to this headline"></a></h2>
+<h2>Loading an existing PSyGrid object<a class="headerlink" href="#loading-an-existing-psygrid-object" title="Link to this heading"></a></h2>
 <p>To load a PSyGrid object from an HDF5 file you only need its path:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">grid</span> <span class="o">=</span> <span class="n">PSyGrid</span><span class="p">(</span><span class="s1">&#39;/home/mydata/my_MESA_grid&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="closing-deleting-a-psygrid-object">
-<h2>Closing/deleting a PSyGrid object<a class="headerlink" href="#closing-deleting-a-psygrid-object" title="Permalink to this headline"></a></h2>
+<h2>Closing/deleting a PSyGrid object<a class="headerlink" href="#closing-deleting-a-psygrid-object" title="Link to this heading"></a></h2>
 <p>As with files in Python, it is preferable to “close” PSyGrid objects after
 handling them.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">.close()</span></code> method closes the HDF5 file associated to the PSyGrid object.
@@ -220,7 +221,7 @@ use the <code class="docutils literal notranslate"><span class="pre">del</span><
 </div>
 </section>
 <section id="grid-engineering-advanced-use-case-scenario">
-<h2>Grid engineering (advanced use case scenario)<a class="headerlink" href="#grid-engineering-advanced-use-case-scenario" title="Permalink to this headline"></a></h2>
+<h2>Grid engineering (advanced use case scenario)<a class="headerlink" href="#grid-engineering-advanced-use-case-scenario" title="Link to this heading"></a></h2>
 <p>When confronted with a large parameter space to cover, we advise that the
 parameter space be split into multiple directories for separate grid slices,
 composed of a few thousand runs each. These separate grids can be combined
@@ -229,14 +230,14 @@ together afterwards.</p>
 HPC facility with Slurm. Our experience is that grid manipulation is most
 easily performed with a Jupyter notebook using Slurm magic commands which can
 be installed with</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>!pip install git+https://github.com/NERSC/slurm-magic.git
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">NERSC</span><span class="o">/</span><span class="n">slurm</span><span class="o">-</span><span class="n">magic</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
 <p>directly from the Jupyter notebook.</p>
 <p>Here we illustrate how to post process an example HMS-HMS grid composed of
 three slices at fixed mass ratios of 0.50, 0.70, and 0.90.</p>
 <section id="creating-grid-slices">
-<h3>Creating grid slices<a class="headerlink" href="#creating-grid-slices" title="Permalink to this headline"></a></h3>
+<h3>Creating grid slices<a class="headerlink" href="#creating-grid-slices" title="Link to this heading"></a></h3>
 <p>The following script allows to post process the raw MESA data into a <code class="docutils literal notranslate"><span class="pre">PSyGrid</span></code>
 object either in its <code class="docutils literal notranslate"><span class="pre">ORIGINAL</span></code> form (without any downsampling) or to use
 the <code class="docutils literal notranslate"><span class="pre">LITE</span></code> downsampling presented in Fragos et al. (2022).</p>
@@ -299,20 +300,20 @@ store Slurm output messages, and two directories where we will store the two
 different <code class="docutils literal notranslate"><span class="pre">PSyGrid</span></code> object outputs, i.e. <code class="docutils literal notranslate"><span class="pre">ORIGINAL</span></code> and <code class="docutils literal notranslate"><span class="pre">LITE</span></code>.
 Once the post processing of the data is complete, we will be notified by email
 from Slurm.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>%%sbatch
-#!/bin/bash
-#SBATCH --mail-type=ALL
-#SBATCH --mail-user=my_email
-#SBATCH --account=b1119
-#SBATCH --partition=posydon-priority
-#SBATCH --array=0-2
-#SBATCH --ntasks-per-node 1
-#SBATCH --mem-per-cpu=8G
-#SBATCH --time=24:00:00
-#SBATCH --job-name=&quot;psygrid&quot;
-#SBATCH --output=/working_dir/grid_%a.out
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">sbatch</span>
+<span class="c1">#!/bin/bash</span>
+<span class="c1">#SBATCH --mail-type=ALL</span>
+<span class="c1">#SBATCH --mail-user=my_email</span>
+<span class="c1">#SBATCH --account=b1119</span>
+<span class="c1">#SBATCH --partition=posydon-priority</span>
+<span class="c1">#SBATCH --array=0-2</span>
+<span class="c1">#SBATCH --ntasks-per-node 1</span>
+<span class="c1">#SBATCH --mem-per-cpu=8G</span>
+<span class="c1">#SBATCH --time=24:00:00</span>
+<span class="c1">#SBATCH --job-name=&quot;psygrid&quot;</span>
+<span class="c1">#SBATCH --output=/working_dir/grid_%a.out</span>
 
-srun python /working_dir/create_individual_psygrid_files.py $SLURM_ARRAY_TASK_ID LITE
+<span class="n">srun</span> <span class="n">python</span> <span class="o">/</span><span class="n">working_dir</span><span class="o">/</span><span class="n">create_individual_psygrid_files</span><span class="o">.</span><span class="n">py</span> <span class="err">$</span><span class="n">SLURM_ARRAY_TASK_ID</span> <span class="n">LITE</span>
 </pre></div>
 </div>
 <p>The above code cell will return the Slurm job id which we can use to verify that
@@ -325,7 +326,7 @@ will take roughly one hour per grid slice.</p>
 <img alt="../_images/slurm_job.png" src="../_images/slurm_job.png" />
 </section>
 <section id="rerun-subsample-of-grid-slices">
-<h3>Rerun subsample of grid slices<a class="headerlink" href="#rerun-subsample-of-grid-slices" title="Permalink to this headline"></a></h3>
+<h3>Rerun subsample of grid slices<a class="headerlink" href="#rerun-subsample-of-grid-slices" title="Link to this heading"></a></h3>
 <p>Because of convergence issues, a non-negligible fraction of the MESA
 simulations did not converge. The grid architect would now like to rerun the
 subsample of the grid with convergence problem changing one or more MESA inlist
@@ -350,7 +351,7 @@ with the <code class="docutils literal notranslate"><span class="pre">runs_to_re
 of indices of tracks to rerun.</p>
 </section>
 <section id="combine-grid-slices">
-<h3>Combine grid slices<a class="headerlink" href="#combine-grid-slices" title="Permalink to this headline"></a></h3>
+<h3>Combine grid slices<a class="headerlink" href="#combine-grid-slices" title="Link to this heading"></a></h3>
 <p>Let assume that we now have the three original grid slices
 (<code class="docutils literal notranslate"><span class="pre">grid_q_0.50.h5,grid_q_0.70.h5,grid_q_0.90.h5</span></code>),
 three additional reruns of them addressing convergence issues
@@ -408,7 +409,7 @@ with the following cell.</p>
 </div>
 </section>
 <section id="add-post-process-quantities">
-<h3>Add post process quantities<a class="headerlink" href="#add-post-process-quantities" title="Permalink to this headline"></a></h3>
+<h3>Add post process quantities<a class="headerlink" href="#add-post-process-quantities" title="Link to this heading"></a></h3>
 <p>There is a list of quantities that <code class="docutils literal notranslate"><span class="pre">POSYDON</span></code> requires to be precomputed
 on the original grids. These quantities include, e.g., core-collapse
 and common envelope properties.</p>
@@ -493,7 +494,7 @@ and common envelope properties.</p>
 </div>
 </section>
 <section id="splitting-the-grid-into-chunks">
-<h3>Splitting the grid into chunks<a class="headerlink" href="#splitting-the-grid-into-chunks" title="Permalink to this headline"></a></h3>
+<h3>Splitting the grid into chunks<a class="headerlink" href="#splitting-the-grid-into-chunks" title="Link to this heading"></a></h3>
 <p>Some data sharing services limit the file size. E.g. <code class="docutils literal notranslate"><span class="pre">git-lfs</span></code> limits
 the maximum file size to be around 2 GB. The following script splits the
 post processed grid into chunks of files of 2 GB size.</p>

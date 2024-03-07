@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2D plotting functionalities for POSYON GRIDS &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>2D plotting functionalities for POSYON GRIDS &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -34,7 +35,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
@@ -128,7 +129,7 @@
            <div itemprop="articleBody">
              
   <section id="d-plotting-functionalities-for-posyon-grids">
-<span id="plot2d"></span><h1>2D plotting functionalities for POSYON GRIDS<a class="headerlink" href="#d-plotting-functionalities-for-posyon-grids" title="Permalink to this headline"></a></h1>
+<span id="plot2d"></span><h1>2D plotting functionalities for POSYON GRIDS<a class="headerlink" href="#d-plotting-functionalities-for-posyon-grids" title="Link to this heading"></a></h1>
 <p>Similar to our 1D plotting functions, we provide a series of 2D plotting
 functionalities within POSYDON. The <code class="docutils literal notranslate"><span class="pre">plot2D</span></code> method supports either a MESA
 grid which samples the 2D parameter space of binary initial conditions or a
@@ -144,9 +145,9 @@ instrument paper.</p>
 </pre></div>
 </div>
 <section id="how-to-plot-the-mesa-termination-flags">
-<h2>How to plot the MESA termination flags<a class="headerlink" href="#how-to-plot-the-mesa-termination-flags" title="Permalink to this headline"></a></h2>
+<h2>How to plot the MESA termination flags<a class="headerlink" href="#how-to-plot-the-mesa-termination-flags" title="Link to this heading"></a></h2>
 <section id="termination-flag-1-2-combined">
-<h3>Termination flag 1 &amp; 2 combined<a class="headerlink" href="#termination-flag-1-2-combined" title="Permalink to this headline"></a></h3>
+<h3>Termination flag 1 &amp; 2 combined<a class="headerlink" href="#termination-flag-1-2-combined" title="Link to this heading"></a></h3>
 <p>Any plotting parameter is passed to the <code class="docutils literal notranslate"><span class="pre">plot2D</span></code> method through the kwarg
 <code class="docutils literal notranslate"><span class="pre">PLOT_PROPERTIES</span></code>. In our case we would like to visualize the figure, save it
 to a given <code class="docutils literal notranslate"><span class="pre">path_to_file</span></code> with filename <code class="docutils literal notranslate"><span class="pre">fname</span></code> and then close it.
@@ -177,7 +178,7 @@ the default marker size with the following code</p>
 <img alt="../../_images/q_0.7_TF12.png" src="../../_images/q_0.7_TF12.png" />
 </section>
 <section id="termination-flag-1">
-<h3>Termination flag 1<a class="headerlink" href="#termination-flag-1" title="Permalink to this headline"></a></h3>
+<h3>Termination flag 1<a class="headerlink" href="#termination-flag-1" title="Link to this heading"></a></h3>
 <p>Similarly we can plot the termination flag 1 which indicates how the MESA
 simulation ended. We can display as a color map any final value stored in
 <code class="docutils literal notranslate"><span class="pre">final_values</span></code>.
@@ -197,7 +198,7 @@ of Fragos et al. (2022).</p>
 <img alt="../../_images/q_0.7_TF1.png" src="../../_images/q_0.7_TF1.png" />
 </section>
 <section id="termination-flag-2">
-<h3>Termination flag 2<a class="headerlink" href="#termination-flag-2" title="Permalink to this headline"></a></h3>
+<h3>Termination flag 2<a class="headerlink" href="#termination-flag-2" title="Link to this heading"></a></h3>
 <p>The termination flag 2 shows a summary of all mass transfer cases which
 occurred during the binaries’ evolution.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PLOT_PROPERTIES_TF2</span> <span class="o">=</span> <span class="n">PLOT_PROPERTIES_TF12</span>
@@ -213,7 +214,7 @@ occurred during the binaries’ evolution.</p>
 <img alt="../../_images/q_0.7_TF2.png" src="../../_images/q_0.7_TF2.png" />
 </section>
 <section id="termination-flag-3">
-<h3>Termination flag 3<a class="headerlink" href="#termination-flag-3" title="Permalink to this headline"></a></h3>
+<h3>Termination flag 3<a class="headerlink" href="#termination-flag-3" title="Link to this heading"></a></h3>
 <p>The termination flag 3 shows the final stellar state of star 1.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PLOT_PROPERTIES_TF3</span> <span class="o">=</span> <span class="n">PLOT_PROPERTIES_TF12</span>
 <span class="n">PLOT_PROPERTIES_TF3</span><span class="p">[</span><span class="s1">&#39;fname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;q_</span><span class="si">%1.1f</span><span class="s1">_TF3.png&#39;</span><span class="o">%</span><span class="n">q</span>
@@ -228,7 +229,7 @@ occurred during the binaries’ evolution.</p>
 <img alt="../../_images/q_0.7_TF3.png" src="../../_images/q_0.7_TF3.png" />
 </section>
 <section id="termination-flag-4">
-<h3>Termination flag 4<a class="headerlink" href="#termination-flag-4" title="Permalink to this headline"></a></h3>
+<h3>Termination flag 4<a class="headerlink" href="#termination-flag-4" title="Link to this heading"></a></h3>
 <p>The termination flag 4 shows the final stellar state of star 2.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PLOT_PROPERTIES_TF4</span> <span class="o">=</span> <span class="n">PLOT_PROPERTIES_TF12</span>
 <span class="n">PLOT_PROPERTIES_TF4</span><span class="p">[</span><span class="s1">&#39;fname&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;q_</span><span class="si">%1.1f</span><span class="s1">_TF4.png&#39;</span><span class="o">%</span><span class="n">q</span>
@@ -243,7 +244,7 @@ occurred during the binaries’ evolution.</p>
 <img alt="../../_images/q_0.7_TF4.png" src="../../_images/q_0.7_TF4.png" />
 </section>
 <section id="all-termination-flags">
-<h3>All termination flags<a class="headerlink" href="#all-termination-flags" title="Permalink to this headline"></a></h3>
+<h3>All termination flags<a class="headerlink" href="#all-termination-flags" title="Link to this heading"></a></h3>
 <p>We plot all termination flags at once in a large subplot of panels with
 the option <code class="docutils literal notranslate"><span class="pre">termination_flag='all'</span></code>.
 In order to fit all legends we suggest to increase the figure size and marker
@@ -251,9 +252,9 @@ size to, e.g. <code class="docutils literal notranslate"><span class="pre">(25,2
 </section>
 </section>
 <section id="display-custom-quantities">
-<h2>Display custom quantities<a class="headerlink" href="#display-custom-quantities" title="Permalink to this headline"></a></h2>
+<h2>Display custom quantities<a class="headerlink" href="#display-custom-quantities" title="Link to this heading"></a></h2>
 <section id="relative-change-of-a-final-quantity">
-<h3>Relative change of a final quantity<a class="headerlink" href="#relative-change-of-a-final-quantity" title="Permalink to this headline"></a></h3>
+<h3>Relative change of a final quantity<a class="headerlink" href="#relative-change-of-a-final-quantity" title="Link to this heading"></a></h3>
 <p>The relative change of any value stored within <code class="docutils literal notranslate"><span class="pre">final_values</span></code> can be
 displayed by adding the prefix <code class="docutils literal notranslate"><span class="pre">relative_change_</span></code> to the z-variable displayed
 as a colorbar. E.g. we can display the relative change of star_1_mass:</p>
@@ -272,7 +273,7 @@ as a colorbar. E.g. we can display the relative change of star_1_mass:</p>
 <img alt="../../_images/q_0.7_TF1_DM1.png" src="../../_images/q_0.7_TF1_DM1.png" />
 </section>
 <section id="custom-quantities">
-<h3>Custom quantities<a class="headerlink" href="#custom-quantities" title="Permalink to this headline"></a></h3>
+<h3>Custom quantities<a class="headerlink" href="#custom-quantities" title="Link to this heading"></a></h3>
 <p>The user can plot custom quantities as a color map on termination flag 1.
 For example, we display the maximum surf_avg_omega_div_omega_crit during
 the history of star 2 as follows</p>
@@ -295,7 +296,7 @@ the history of star 2 as follows</p>
 <img alt="../../_images/q_0.7_TF1_max.png" src="../../_images/q_0.7_TF1_max.png" />
 </section>
 <section id="core-collapse-quantities">
-<h3>Core collapse quantities<a class="headerlink" href="#core-collapse-quantities" title="Permalink to this headline"></a></h3>
+<h3>Core collapse quantities<a class="headerlink" href="#core-collapse-quantities" title="Link to this heading"></a></h3>
 <p>Numerical post processed quantities can be displayed using the z variable option
 as shown with termination flag 1.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">PLOT_PROPERTIES_CC</span> <span class="o">=</span> <span class="n">PLOT_PROPERTIES_TF12</span>
@@ -340,7 +341,7 @@ strings in the dataset. These quantities can be plotted using the
 <img alt="../../_images/q_0.7_CC_state.png" src="../../_images/q_0.7_CC_state.png" />
 </section>
 <section id="displaying-final-quantities-also-for-initial-and-unstable-mass-transfer">
-<h3>Displaying final quantities also for initial and unstable mass transfer<a class="headerlink" href="#displaying-final-quantities-also-for-initial-and-unstable-mass-transfer" title="Permalink to this headline"></a></h3>
+<h3>Displaying final quantities also for initial and unstable mass transfer<a class="headerlink" href="#displaying-final-quantities-also-for-initial-and-unstable-mass-transfer" title="Link to this heading"></a></h3>
 <p>We have a debug <code class="docutils literal notranslate"><span class="pre">termination_flag</span></code> option which allows us to display
 as a colormap the final value also for the tracks that ends because of
 initial or unstable mass transfer.</p>
@@ -360,9 +361,9 @@ initial or unstable mass transfer.</p>
 </section>
 </section>
 <section id="advanced-plotting-options">
-<h2>Advanced plotting options<a class="headerlink" href="#advanced-plotting-options" title="Permalink to this headline"></a></h2>
+<h2>Advanced plotting options<a class="headerlink" href="#advanced-plotting-options" title="Link to this heading"></a></h2>
 <section id="how-to-plot-up-to-onset-of-rlo">
-<h3>How to plot up to onset of RLO<a class="headerlink" href="#how-to-plot-up-to-onset-of-rlo" title="Permalink to this headline"></a></h3>
+<h3>How to plot up to onset of RLO<a class="headerlink" href="#how-to-plot-up-to-onset-of-rlo" title="Link to this heading"></a></h3>
 <p>This functionality allows to slice the MESA runs at onset of Roche-Lobe
 overflow and display with a color a quantity in <code class="docutils literal notranslate"><span class="pre">history1</span></code> or
 <code class="docutils literal notranslate"><span class="pre">binary_history</span></code>
@@ -372,7 +373,7 @@ Note: depending on how many
 runs you intend to display this might take a while.</p>
 </section>
 <section id="overplot-grids">
-<h3>Overplot grids<a class="headerlink" href="#overplot-grids" title="Permalink to this headline"></a></h3>
+<h3>Overplot grids<a class="headerlink" href="#overplot-grids" title="Link to this heading"></a></h3>
 <p>Sometimes you want to rerun a subsample of the grid. This option will allow you
 to stack as many grid reruns as you wish.
 You can combine the new grid by passing it to the option <code class="docutils literal notranslate"><span class="pre">extra_grid=new_grid</span></code>.

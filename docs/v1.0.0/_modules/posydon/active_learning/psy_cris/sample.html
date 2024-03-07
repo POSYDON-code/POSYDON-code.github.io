@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>posydon.active_learning.psy_cris.sample &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>posydon.active_learning.psy_cris.sample &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-        <script src="../../../../_static/jquery.js"></script>
-        <script src="../../../../_static/underscore.js"></script>
-        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
@@ -31,7 +32,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
@@ -122,7 +123,9 @@
 <span class="kn">from</span> <span class="nn">scipy.spatial.distance</span> <span class="kn">import</span> <span class="n">pdist</span>
 
 
-<div class="viewcode-block" id="Sampler"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler">[docs]</a><span class="k">class</span> <span class="nc">Sampler</span><span class="p">:</span>
+<div class="viewcode-block" id="Sampler">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler">[docs]</a>
+<span class="k">class</span> <span class="nc">Sampler</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Class implementing PTMCMC and MCMC for PSY-CRIS algorith.</span>
 
 <span class="sd">    Modular implementation of PTMCMC and MCMC designed to</span>
@@ -160,7 +163,9 @@
         <span class="c1"># Not fully implemented yet I&#39;m pretty sure....</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_MAX_APC_str_</span> <span class="o">=</span> <span class="p">[]</span>
 
-<div class="viewcode-block" id="Sampler.TD_2d_analytic"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.TD_2d_analytic">[docs]</a>    <span class="k">def</span> <span class="nf">TD_2d_analytic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="Sampler.TD_2d_analytic">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.TD_2d_analytic">[docs]</a>
+    <span class="k">def</span> <span class="nf">TD_2d_analytic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;2-dimensional analytic target distribution for testing MCMC/PTMCMC.</span>
 
 <span class="sd">        The function:</span>
@@ -186,7 +191,10 @@
         <span class="n">arg2</span> <span class="o">=</span> <span class="o">-</span><span class="mi">8</span> <span class="o">*</span> <span class="n">mu</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">*</span> <span class="p">(</span><span class="n">nu</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
         <span class="k">return</span> <span class="p">(</span><span class="mi">16</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">arg2</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Sampler.get_TD_classification_data"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.get_TD_classification_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_TD_classification_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Sampler.get_TD_classification_data">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.get_TD_classification_data">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_TD_classification_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get target-distribution classification data.</span>
 
 <span class="sd">        Calculate terms relevant for creating target distributions</span>
@@ -238,7 +246,10 @@
                 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">max_probs</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">cls_key</span><span class="p">)</span>
             <span class="k">return</span> <span class="n">max_probs</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="n">cls_key</span></div>
 
-<div class="viewcode-block" id="Sampler.TD_classification"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.TD_classification">[docs]</a>    <span class="k">def</span> <span class="nf">TD_classification</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">classifier_name</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Sampler.TD_classification">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.TD_classification">[docs]</a>
+    <span class="k">def</span> <span class="nf">TD_classification</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">classifier_name</span><span class="p">,</span> <span class="n">position</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Target distribution using classification.</span>
 
 <span class="sd">        $f(x) = 1 - max[P_{\rm class}(x)]$</span>
@@ -273,7 +284,10 @@
         <span class="n">theoretical_max_TD_cls_term</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">_TableData_</span><span class="o">.</span><span class="n">num_classes</span>
         <span class="k">return</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">max_probs</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">theoretical_max_TD_cls_term</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="n">TD_BETA</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sampler.TD_classification_regression"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.TD_classification_regression">[docs]</a>    <span class="k">def</span> <span class="nf">TD_classification_regression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Sampler.TD_classification_regression">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.TD_classification_regression">[docs]</a>
+    <span class="k">def</span> <span class="nf">TD_classification_regression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">names</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Target distribution using both classification &amp; regression.</span>
 
 <span class="sd">        Classification: $1 - max[P_{\rm class}(x)]$</span>
@@ -346,7 +360,10 @@
         <span class="k">return</span> <span class="p">(</span><span class="n">TD_TAU</span> <span class="o">*</span> <span class="n">classification_term</span>
                 <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">TD_TAU</span><span class="p">)</span> <span class="o">*</span> <span class="n">regression_term</span><span class="p">)</span> <span class="o">**</span> <span class="n">TD_BETA</span></div>
 
-<div class="viewcode-block" id="Sampler.save_chain_step_history"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.save_chain_step_history">[docs]</a>    <span class="k">def</span> <span class="nf">save_chain_step_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">chain_step_history</span><span class="p">,</span>
+
+<div class="viewcode-block" id="Sampler.save_chain_step_history">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.save_chain_step_history">[docs]</a>
+    <span class="k">def</span> <span class="nf">save_chain_step_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">chain_step_history</span><span class="p">,</span>
                                 <span class="n">overwrite</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Save PTMCMC output chain_step_history inside the sampler object.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="n">key</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chain_step_hist_holder_</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="ow">or</span> <span class="n">overwrite</span><span class="p">):</span>
@@ -357,14 +374,20 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_chain_step_hist_holder_</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">chain_step_history</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Saved chain to &#39;</span><span class="si">{0}</span><span class="s2">&#39;.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">))</span></div>
 
-<div class="viewcode-block" id="Sampler.get_saved_chain_step_history"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.get_saved_chain_step_history">[docs]</a>    <span class="k">def</span> <span class="nf">get_saved_chain_step_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">return_all</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Sampler.get_saved_chain_step_history">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.get_saved_chain_step_history">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_saved_chain_step_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">return_all</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Return the saved chain step history.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">return_all</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chain_step_hist_holder_</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chain_step_hist_holder_</span><span class="p">[</span><span class="n">key</span><span class="p">]</span></div>
 
-<div class="viewcode-block" id="Sampler.run_PTMCMC"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.run_PTMCMC">[docs]</a>    <span class="k">def</span> <span class="nf">run_PTMCMC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">T_max</span><span class="p">,</span> <span class="n">N_tot</span><span class="p">,</span> <span class="n">target_dist</span><span class="p">,</span> <span class="n">classifier_name</span><span class="p">,</span>
+
+<div class="viewcode-block" id="Sampler.run_PTMCMC">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.run_PTMCMC">[docs]</a>
+    <span class="k">def</span> <span class="nf">run_PTMCMC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">T_max</span><span class="p">,</span> <span class="n">N_tot</span><span class="p">,</span> <span class="n">target_dist</span><span class="p">,</span> <span class="n">classifier_name</span><span class="p">,</span>
                    <span class="n">init_pos</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">N_draws_per_swap</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">c_spacing</span><span class="o">=</span><span class="mf">1.2</span><span class="p">,</span>
                    <span class="n">alpha</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">upper_limit_reject</span><span class="o">=</span><span class="mf">1e5</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                    <span class="n">trace_plots</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">TD_kwargs</span><span class="p">):</span>
@@ -568,7 +591,10 @@
 
         <span class="k">return</span> <span class="n">chain_step_history</span><span class="p">,</span> <span class="n">T_list</span></div>
 
-<div class="viewcode-block" id="Sampler.run_MCMC"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.run_MCMC">[docs]</a>    <span class="k">def</span> <span class="nf">run_MCMC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N_trials</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">step_history</span><span class="p">,</span> <span class="n">target_dist</span><span class="p">,</span>
+
+<div class="viewcode-block" id="Sampler.run_MCMC">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.run_MCMC">[docs]</a>
+    <span class="k">def</span> <span class="nf">run_MCMC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">N_trials</span><span class="p">,</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">step_history</span><span class="p">,</span> <span class="n">target_dist</span><span class="p">,</span>
                  <span class="n">classifier_name</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">upper_limit_reject</span><span class="o">=</span><span class="mf">1e4</span><span class="p">,</span> <span class="o">**</span><span class="n">TD_kwargs</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Run a Markov chain Monte Carlo given a target distribution.</span>
 
@@ -659,7 +685,10 @@
 
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">step_history</span><span class="p">),</span> <span class="n">accept</span><span class="p">,</span> <span class="n">reject</span></div>
 
-<div class="viewcode-block" id="Sampler.normalize_step_history"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.normalize_step_history">[docs]</a>    <span class="k">def</span> <span class="nf">normalize_step_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step_history</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Sampler.normalize_step_history">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.normalize_step_history">[docs]</a>
+    <span class="k">def</span> <span class="nf">normalize_step_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step_history</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Take steps and normalize [0,1] according to min/max in each axis.</span>
 
 <span class="sd">        The max and min are taken from the original data set from TableData.</span>
@@ -672,7 +701,10 @@
             <span class="p">)</span>
         <span class="k">return</span> <span class="n">normed_steps</span></div>
 
-<div class="viewcode-block" id="Sampler.undo_normalize_step_history"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.undo_normalize_step_history">[docs]</a>    <span class="k">def</span> <span class="nf">undo_normalize_step_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">normed_steps</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Sampler.undo_normalize_step_history">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.undo_normalize_step_history">[docs]</a>
+    <span class="k">def</span> <span class="nf">undo_normalize_step_history</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">normed_steps</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Rescale step history.</span>
 
 <span class="sd">        Take normed steps from [0,1] and return their value</span>
@@ -687,7 +719,10 @@
             <span class="p">)</span>
         <span class="k">return</span> <span class="n">mapped_steps</span></div>
 
-<div class="viewcode-block" id="Sampler.do_simple_density_logic"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.do_simple_density_logic">[docs]</a>    <span class="k">def</span> <span class="nf">do_simple_density_logic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step_history</span><span class="p">,</span> <span class="n">N_points</span><span class="p">,</span> <span class="n">Kappa</span><span class="p">,</span>
+
+<div class="viewcode-block" id="Sampler.do_simple_density_logic">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.do_simple_density_logic">[docs]</a>
+    <span class="k">def</span> <span class="nf">do_simple_density_logic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step_history</span><span class="p">,</span> <span class="n">N_points</span><span class="p">,</span> <span class="n">Kappa</span><span class="p">,</span>
                                 <span class="n">var_mult</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">add_mvns_together</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                                 <span class="n">include_training_data</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Perform multivariate normal density logic on a given step history.</span>
@@ -790,7 +825,10 @@
         <span class="n">only_new_accpeted_points</span> <span class="o">=</span> <span class="n">accepted_points</span><span class="p">[</span><span class="n">how_many_training_data</span><span class="p">:]</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">only_new_accpeted_points</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">rejected_points</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sampler.do_density_logic"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.do_density_logic">[docs]</a>    <span class="k">def</span> <span class="nf">do_density_logic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step_history</span><span class="p">,</span> <span class="n">N_points</span><span class="p">,</span> <span class="n">Kappa</span><span class="p">,</span>  <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+
+<div class="viewcode-block" id="Sampler.do_density_logic">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.do_density_logic">[docs]</a>
+    <span class="k">def</span> <span class="nf">do_density_logic</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step_history</span><span class="p">,</span> <span class="n">N_points</span><span class="p">,</span> <span class="n">Kappa</span><span class="p">,</span>  <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                          <span class="n">norm_steps</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">var_mult</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                          <span class="n">add_mvns_together</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">pre_acc_points</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                          <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -941,7 +979,10 @@
             <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">accepted_sigmas</span><span class="p">),</span>
         <span class="p">)</span></div>
 
-<div class="viewcode-block" id="Sampler.get_proposed_points"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.get_proposed_points">[docs]</a>    <span class="k">def</span> <span class="nf">get_proposed_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step_history</span><span class="p">,</span> <span class="n">N_points</span><span class="p">,</span> <span class="n">Kappa</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+
+<div class="viewcode-block" id="Sampler.get_proposed_points">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.get_proposed_points">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_proposed_points</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step_history</span><span class="p">,</span> <span class="n">N_points</span><span class="p">,</span> <span class="n">Kappa</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                             <span class="n">norm_steps</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">add_mvns_together</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                             <span class="n">include_training_data</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">var_mult</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                             <span class="n">seed</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">n_repeats</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_iters</span><span class="o">=</span><span class="mf">1e3</span><span class="p">,</span>
@@ -1093,7 +1134,10 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">make_prop_points_plots</span><span class="p">(</span><span class="n">step_history</span><span class="p">,</span> <span class="n">best_acc_pts</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">best_acc_pts</span><span class="p">,</span> <span class="n">best_Kappa</span></div>
 
-<div class="viewcode-block" id="Sampler.make_prop_points_plots"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.make_prop_points_plots">[docs]</a>    <span class="k">def</span> <span class="nf">make_prop_points_plots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step_hist</span><span class="p">,</span> <span class="n">prop_points</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+
+<div class="viewcode-block" id="Sampler.make_prop_points_plots">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.make_prop_points_plots">[docs]</a>
+    <span class="k">def</span> <span class="nf">make_prop_points_plots</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step_hist</span><span class="p">,</span> <span class="n">prop_points</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
                                <span class="n">show_fig</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">save_fig</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Plot the proposed / accepted points over the step history.&quot;&quot;&quot;</span>
         <span class="n">axis1</span><span class="p">,</span> <span class="n">axis2</span> <span class="o">=</span> <span class="n">axes</span>
@@ -1124,7 +1168,10 @@
         <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.22</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
         <span class="k">return</span> <span class="n">fig</span><span class="p">,</span> <span class="n">sub</span></div>
 
-<div class="viewcode-block" id="Sampler.make_trace_plot"><a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.make_trace_plot">[docs]</a>    <span class="k">def</span> <span class="nf">make_trace_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chain_holder</span><span class="p">,</span> <span class="n">T_list</span><span class="p">,</span> <span class="n">Temp</span><span class="p">,</span> <span class="n">save_fig</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+
+<div class="viewcode-block" id="Sampler.make_trace_plot">
+<a class="viewcode-back" href="../../../../api/posydon.active_learning.psy_cris.sample.html#posydon.active_learning.psy_cris.sample.Sampler.make_trace_plot">[docs]</a>
+    <span class="k">def</span> <span class="nf">make_trace_plot</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chain_holder</span><span class="p">,</span> <span class="n">T_list</span><span class="p">,</span> <span class="n">Temp</span><span class="p">,</span> <span class="n">save_fig</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                         <span class="n">show_fig</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Make a `step number` vs. `position of a sampler in an axis` plot.</span>
 
@@ -1168,7 +1215,9 @@
             <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;trace_plot_T</span><span class="si">{0:.0f}</span><span class="s2">.pdf&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">T_list</span><span class="p">[</span><span class="n">which_temp</span><span class="p">]))</span>
         <span class="k">if</span> <span class="n">show_fig</span><span class="p">:</span>
             <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-        <span class="k">return</span> <span class="kc">None</span></div></div>
+        <span class="k">return</span> <span class="kc">None</span></div>
+</div>
+
 </pre></div>
 
            </div>

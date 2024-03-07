@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Custom population synthesis &mdash; posydon 0+untagged.1.gf7eaf3c documentation</title>
+  <title>Custom population synthesis &mdash; posydon 1.0.0+8.gb73a6ab documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=dc08a344"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -34,7 +35,7 @@
             posydon
           </a>
               <div class="version">
-                0+untagged.1.gf7eaf3c
+                1.0.0+8.gb73a6ab
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -109,7 +110,7 @@
            <div itemprop="articleBody">
              
   <section id="custom-population-synthesis">
-<span id="custom-pop-synth"></span><h1>Custom population synthesis<a class="headerlink" href="#custom-population-synthesis" title="Permalink to this headline"></a></h1>
+<span id="custom-pop-synth"></span><h1>Custom population synthesis<a class="headerlink" href="#custom-population-synthesis" title="Link to this heading"></a></h1>
 <p>The modularity of the POSYDON code allows the user to easily change
 the default evolutionary tree dictated by the flow chart tree. The flow
 chart tree is a list of 4D points composed of <code class="docutils literal notranslate"><span class="pre">binary.star_1.state,</span>
@@ -118,7 +119,7 @@ evolutionary step. Here we show how the user can replace part or the entire
 POSYDON flow chart tree and customize the evolution with user specified
 steps.</p>
 <section id="custom-step">
-<h2>Custom step<a class="headerlink" href="#custom-step" title="Permalink to this headline"></a></h2>
+<h2>Custom step<a class="headerlink" href="#custom-step" title="Link to this heading"></a></h2>
 <p>The user can develop a <code class="docutils literal notranslate"><span class="pre">POSYDON</span></code> step which is a python class with a
 <code class="docutils literal notranslate"><span class="pre">__call__</span></code> method which updates the current properties of the binary objects
 (see reference binary object). As an example, let’s create our own treatment
@@ -177,7 +178,7 @@ simulation properties as follows (see ref. the POSYDON API)</p>
 </div>
 </section>
 <section id="custom-flow-charts">
-<h2>Custom flow charts<a class="headerlink" href="#custom-flow-charts" title="Permalink to this headline"></a></h2>
+<h2>Custom flow charts<a class="headerlink" href="#custom-flow-charts" title="Link to this heading"></a></h2>
 <p>Let us now see how one can alter the default flow chart links. Let us assume
 that you have a custom step that maps the evolution of Roche lobe overflowing
 HMS-HeMS binaries called <code class="docutils literal notranslate"><span class="pre">HMS_HeMS_RLO_step</span></code>. With the <code class="docutils literal notranslate"><span class="pre">CHANGE_FLOW_CHART</span></code>
