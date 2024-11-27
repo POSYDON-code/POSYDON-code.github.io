@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>posydon.grids.psygrid &mdash; posydon v1.0.4 documentation</title>
+  <title>posydon.grids.psygrid &mdash; posydon 1.0.4 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             posydon
           </a>
               <div class="version">
-                v1.0.4
+                1.0.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -66,8 +66,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Plotting</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../visualization/plot1D/plot1D.html">1D plotting functionalities for POSYON GRIDS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../visualization/plot2D/plot2D.html">2D plotting functionalities for POSYON GRIDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../visualization/plot1D/plot1D.html">1D plotting functionalities for POSYDON GRIDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../visualization/plot2D/plot2D.html">2D plotting functionalities for POSYDON GRIDS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../visualization/VHD/VHD.html">Van den Heuvel diagrams</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interpolation/violinplot.html">Making the Violin Plot</a></li>
 </ul>
@@ -130,7 +130,7 @@
 
 <span class="sd">    NOTE: you can use a family of HDF5 files in case of file size restrictions.</span>
 <span class="sd">    For example, using `mygrid.h5.%d` for the path when creating/loading grids,</span>
-<span class="sd">    implied that split files will be `mygrid.h5.0`, `mygrid.h5.1`, and so on.</span>
+<span class="sd">    implies that split files will be `mygrid.h5.0`, `mygrid.h5.1`, and so on.</span>
 <span class="sd">    When overwriting the file, all the family is overwritten (effectively, the</span>
 <span class="sd">    files are emptied to avoid remainder split files from previous operations.)</span>
 
@@ -194,8 +194,8 @@
 <span class="sd">   to select the exact set of columns, provide them in a tuple instead of list.</span>
 
 
-<span class="sd">II. READING DATA FROM GRID</span>
-<span class="sd">--------------------------</span>
+<span class="sd">II. READING DATA FROM A GRID</span>
+<span class="sd">----------------------------</span>
 <span class="sd">mygrid = PSyGrid(&quot;thegrid.h5&quot;)  # opens a stored grid</span>
 
 <span class="sd"># Indexing...</span>
@@ -229,7 +229,7 @@
 <span class="sd">    for run in mygrid:</span>
 <span class="sd">        print(run)</span>
 
-<span class="sd">c) Getting number of runs:</span>
+<span class="sd">c) Getting the number of runs:</span>
 
 <span class="sd">    n_runs = len(psygrid)</span>
 
@@ -263,8 +263,8 @@
 
 <span class="sd">    myrun.history1.star_mass + myrun.history1.star_mass</span>
 
-<span class="sd">loads the table two times! To reduce reading times, store in local variables</span>
-<span class="sd">all the tables that are going to be needed more than once:</span>
+<span class="sd">loads the table two times! To reduce reading times, store all the tables</span>
+<span class="sd">that are going to be needed more than once in local variables:</span>
 
 <span class="sd">    myhistory1 = myrun.history1</span>
 <span class="sd">    myhistory1.star_mass + myhistory1.star_mass</span>

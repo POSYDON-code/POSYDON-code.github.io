@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>posydon.grids.post_processing &mdash; posydon v1.0.4 documentation</title>
+  <title>posydon.grids.post_processing &mdash; posydon 1.0.4 documentation</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -31,7 +31,7 @@
             posydon
           </a>
               <div class="version">
-                v1.0.4
+                1.0.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
@@ -66,8 +66,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Plotting</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../visualization/plot1D/plot1D.html">1D plotting functionalities for POSYON GRIDS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../visualization/plot2D/plot2D.html">2D plotting functionalities for POSYON GRIDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../visualization/plot1D/plot1D.html">1D plotting functionalities for POSYDON GRIDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../visualization/plot2D/plot2D.html">2D plotting functionalities for POSYDON GRIDS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../visualization/VHD/VHD.html">Van den Heuvel diagrams</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../interpolation/violinplot.html">Making the Violin Plot</a></li>
 </ul>
@@ -151,8 +151,8 @@
                       <span class="n">single_star</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Compute post processed quantitiy of any grid.</span>
 
-<span class="sd">    This function post process any supported grid and computes:</span>
-<span class="sd">    - Core collpase quantities for 5 prescritions given the fiducial POSYDON</span>
+<span class="sd">    This function post processes any supported grid and computes:</span>
+<span class="sd">    - Core collapse quantities for 5 prescriptions given the fiducial POSYDON</span>
 <span class="sd">    assumption given in MODEL plus:</span>
 <span class="sd">      A: direct collapse</span>
 <span class="sd">      B: Fryer+12-rapid</span>
@@ -162,13 +162,13 @@
 <span class="sd">      for each prescrition we store the compact object state (WD/NS/BH),</span>
 <span class="sd">      SN type (WD, ECSN, CCSN, PISN, PPISN), fallback mass fraction f_gb,</span>
 <span class="sd">      compact object mass and spin.</span>
-<span class="sd">    - Core masses at he-depletion (used in Patton core collpase)</span>
-<span class="sd">    - Mass envelopes for common ennvelope step.</span>
+<span class="sd">    - Core masses at he-depletion (used in Patton core collapse)</span>
+<span class="sd">    - Mass envelopes for common envelope step.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    grid : PSyGrid</span>
-<span class="sd">        MESA gri in PSyGrid format.</span>
+<span class="sd">        MESA grid in PSyGrid format.</span>
 <span class="sd">    index : None, touple or int</span>
 <span class="sd">        If None, loop over all indicies otherwise provide a range, e.g. [10,20]</span>
 <span class="sd">        or a index, e.g. 42.</span>
@@ -179,7 +179,7 @@
 <span class="sd">    single_star : bool</span>
 <span class="sd">        If `True` the PSyGrid contains single stars.</span>
 <span class="sd">    verbose : bool</span>
-<span class="sd">        If `True` print on screen the results of each core collpase.</span>
+<span class="sd">        If `True` print the results of each core collapse on screen.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
@@ -188,7 +188,7 @@
 <span class="sd">        processed values. This is used to ensure one to one mapping when</span>
 <span class="sd">        appending the extra columns back to a grid.</span>
 <span class="sd">    EXTRA_COLUMNS: dict</span>
-<span class="sd">        Dictionary containing all post processe quantities.</span>
+<span class="sd">        Dictionary containing all post processed quantities.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">CORE_COLLAPSES</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;direct&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Fryer+12-rapid&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">],</span>
@@ -331,7 +331,7 @@
                 <span class="n">EXTRA_COLUMNS</span><span class="p">[</span><span class="s1">&#39;S</span><span class="si">%s</span><span class="s1">_center_other&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">single_star</span><span class="p">:</span>
-            <span class="c1"># core collpase quantities</span>
+            <span class="c1"># core collapse quantities</span>
             <span class="k">if</span> <span class="n">interpolation_class</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;no_MT&#39;</span><span class="p">,</span> <span class="s1">&#39;stable_MT&#39;</span><span class="p">]:</span>
                 <span class="k">if</span> <span class="n">star_2_CO</span> <span class="ow">or</span> <span class="n">TF1</span> <span class="o">==</span> <span class="s1">&#39;Primary has depleted central carbon&#39;</span><span class="p">:</span>
                     <span class="n">star</span> <span class="o">=</span> <span class="n">binary</span><span class="o">.</span><span class="n">star_1</span>
@@ -468,7 +468,7 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Append post processed quantity to a grid.</span>
 
 <span class="sd">    This function appends the quantities computed in post_process_grid to any</span>
-<span class="sd">    grid. Note that this function ensure you can append the quantities only if</span>
+<span class="sd">    grid. Note that this function ensures you can append the quantities only if</span>
 <span class="sd">    the grid follows the order of MESA_dirs_EXTRA_COLUMNS.</span>
 
 <span class="sd">    Parameters</span>
@@ -480,9 +480,9 @@
 <span class="sd">        processed values. This is used to ensure one to one mapping when</span>
 <span class="sd">        appending the extra columns back to a grid.</span>
 <span class="sd">    EXTRA_COLUMNS: dict</span>
-<span class="sd">        Dictionary containing all post processe quantities.</span>
+<span class="sd">        Dictionary containing all post processed quantities.</span>
 <span class="sd">    verbose : bool</span>
-<span class="sd">        If `True` print on screen the results of each core collpase.</span>
+<span class="sd">        If `True` print the results of each core collapse on screen.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># check correspondance of EXTRA_COLUMNS with grid</span>

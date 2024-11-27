@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>I. CREATING A GRID &mdash; posydon v1.0.4 documentation</title>
+  <title>I. CREATING A GRID &mdash; posydon 1.0.4 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -32,7 +32,7 @@
             posydon
           </a>
               <div class="version">
-                v1.0.4
+                1.0.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -67,8 +67,8 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Plotting</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../visualization/plot1D/plot1D.html">1D plotting functionalities for POSYON GRIDS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../visualization/plot2D/plot2D.html">2D plotting functionalities for POSYON GRIDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visualization/plot1D/plot1D.html">1D plotting functionalities for POSYDON GRIDS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../visualization/plot2D/plot2D.html">2D plotting functionalities for POSYDON GRIDS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../visualization/VHD/VHD.html">Van den Heuvel diagrams</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../interpolation/violinplot.html">Making the Violin Plot</a></li>
 </ul>
@@ -134,7 +134,7 @@ description=”My 1000-run grid.”)</p>
 </dl>
 <p>NOTE: you can use a family of HDF5 files in case of file size restrictions.
 For example, using <cite>mygrid.h5.%d</cite> for the path when creating/loading grids,
-implied that split files will be <cite>mygrid.h5.0</cite>, <cite>mygrid.h5.1</cite>, and so on.
+implies that split files will be <cite>mygrid.h5.0</cite>, <cite>mygrid.h5.1</cite>, and so on.
 When overwriting the file, all the family is overwritten (effectively, the
 files are emptied to avoid remainder split files from previous operations.)</p>
 </div></blockquote>
@@ -198,8 +198,8 @@ to select the exact set of columns, provide them in a tuple instead of list.</p>
 </li>
 </ol>
 </section>
-<section id="ii-reading-data-from-grid">
-<h1>II. READING DATA FROM GRID<a class="headerlink" href="#ii-reading-data-from-grid" title="Permalink to this headline"></a></h1>
+<section id="ii-reading-data-from-a-grid">
+<h1>II. READING DATA FROM A GRID<a class="headerlink" href="#ii-reading-data-from-a-grid" title="Permalink to this headline"></a></h1>
 <p>mygrid = PSyGrid(“thegrid.h5”)  # opens a stored grid</p>
 <p># Indexing…
 t1 = mygrid[0][“binary_history”][“age”]
@@ -236,7 +236,7 @@ if tenth_run[“binary_history”] is None:</p>
 </dl>
 </div></blockquote>
 </li>
-<li><p>Getting number of runs:</p>
+<li><p>Getting the number of runs:</p>
 <blockquote>
 <div><p>n_runs = len(psygrid)</p>
 </div></blockquote>
@@ -277,8 +277,8 @@ run_set = set(psygrid)</p>
 <blockquote>
 <div><p>myrun.history1.star_mass + myrun.history1.star_mass</p>
 </div></blockquote>
-<p>loads the table two times! To reduce reading times, store in local variables
-all the tables that are going to be needed more than once:</p>
+<p>loads the table two times! To reduce reading times, store all the tables
+that are going to be needed more than once in local variables:</p>
 <blockquote>
 <div><p>myhistory1 = myrun.history1
 myhistory1.star_mass + myhistory1.star_mass</p>
