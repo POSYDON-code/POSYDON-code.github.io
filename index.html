@@ -126,9 +126,9 @@
           <li class="nav-item">
             <a class="nav-link" href="#About"><p style="font-size:2vw;">About</p></a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" href="#News"><p style="font-size:2vw;">News</p></a>
-          </li>
+          </li>-->
           <li class="nav-item">
             <a class="nav-link" href="team.html"><p style="font-size:2vw;">Team</p></a>
           </li>
@@ -139,11 +139,11 @@
             <a class="nav-link" href="papers.html"><p style="font-size:2vw;">Papers</p></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://github.com/POSYDON-code/POSYDON/tree/main" target="_blank"><p style="font-size:2vw;">Code</p></a>
+            <a class="nav-link" href="code.html"><p style="font-size:2vw;">Code</p></a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" href="./docs/index.html" target="_blank"><p style="font-size:2vw;">Docs</p></a>
-          </li>
+          </li>-->
           <!-- <li class="nav-item">
             <a class="nav-link" href="https://data.posydon.org" target="_blank"><p style="font-size:2vw;">Database</p></a>
           </li>
@@ -158,18 +158,34 @@
       <ul class="carousel-indicators">
         <li data-target="#demo" data-slide-to="0" class="active"></li>
         <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to="3"></li>
       </ul>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block mx-auto" src="images/carousel/webpage_photos.006.jpeg" alt="" style="width:100%; height: auto">
           <div class="carousel-caption">
-            <p style="font-size:1.2vw;"><a href="https://ciera.northwestern.edu/gallery/binary-system-mass-transfer/" target="_blank" style="color: rgb(255,255,255)">Credit: NU Viz and CIERA - Matthew McCrory, Francesca Valsecchi, and Vicky Kalogera</a></p>
+            <p style="font-size:0.8vw;"><em>A low mass star transferring mass to a neutron star</em> (<a href="https://ciera.northwestern.edu/gallery/binary-system-mass-transfer/" target="_blank" style="color: rgb(255,255,255)">learn more</a>)</p>
+            <p style="font-size:0.5vw;">Credit: NU Viz and CIERA - Matthew McCrory, Francesca Valsecchi, and Vicky Kalogera</p>
           </div>
         </div>
         <div class="carousel-item">
           <img class="d-block mx-auto" src="images/carousel/webpage_photos.005.jpeg" alt="" style="width:100%; height: auto">
           <div class="carousel-caption">
-            <p style="font-size:1.2vw;"><a href="https://ciera.northwestern.edu/gallery/black-hole-accretion-disk/" target="_blank" style="color: rgb(255,255,255)">Credit: NU Viz and CIERA - Matthew McCrory, Francesca Valsecchi, and Vicky Kalogera</a></p>
+            <p style="font-size:0.8vw;"><em>A black hole accretes matter from a blue, hot massive star</em> (<a href="https://ciera.northwestern.edu/gallery/black-hole-accretion-disk/" target="_blank" style="color: rgb(255,255,255)">learn more</a>)</p>
+            <p style="font-size:0.5vw;">Credit: NU Viz and CIERA - Matthew McCrory, Francesca Valsecchi, and Vicky Kalogera</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block mx-auto" src="images/carousel/posydon_f2f_2024_geneva_resized.png" alt="" style="width:100%; height: auto">
+          <div class="carousel-caption">
+            <p style="font-size:1.2vw;">POSYDON members & colleagues at our biennial face to face meeting (Geneva, Switzerland, 2024)</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block mx-auto" src="images/carousel/grids_padded.png" alt="" style="width:100%; height: auto">
+          <div class="carousel-caption">
+            <p style="font-size:1.2vw;"><a href="https://arxiv.org/abs/2411.02376" target="_blank" style="color: rgb(255,255,255)">Read more about our latest version of POSYDON (v2) on the arXiv</a></p>
           </div>
         </div>
       </div> 
@@ -191,9 +207,10 @@
           <h1 style="text-align:center">ABOUT</h1> 
           <hr/>
           <p><b>POSYDON</b> : <b>PO</b>pulation <b>SY</b>nthesis with <b>D</b>etailed binary-evolution simulati<b>ON</b>s</p>
-          <p><i>A next-generation single and binary-star population synthesis code incorporating full stellar structure and evolution modeling with the use of <a href="http://mesa.sourceforge.net/" target="_blank">MESA</a></i>.</p>
-          <p>POSYDON is being developed by a collaborative team of astrophysicists and computer scientists led by Principal Investigators Tassos Fragos (Universit&#233; de Gen&#232;ve) and Vicky Kalogera (Northwestern University). The code is modular in many aspects and the user can specify initial population properties and adopt choices that determine how stellar evolution proceeds. Populations are simulated with the use of MESA evolutionary tracks for single, non-interacting, and interacting binaries organized in grids. Machine-learning methods are incorporated and applied on the grids for classification and various interpolation calculations, and the development of irregular grids guided by active learning, for computational efficiency.</p>
-          <p>POSYDON is a a publically available, community tool. In the different tabs found at the top of the page one can access the source code, find extensive documentation on installing and using POSYDON, access the grids of single- and binary-star evolutionary models via an advanced database query system, and perform small-scale population synthesis simulations with POSYDON using a user-friendly web application.</p>
+          <p><i>A next-generation single and binary-star population synthesis code incorporating full stellar structure and evolution modeling with the use of <a href="https://mesastar.org/" target="_blank">MESA</a></i>.</p>
+          <p>POSYDON is being developed by <a href="team.html">a collaborative team</a> of astrophysicists and computer scientists led by Principal Investigators Tassos Fragos (Universit&#233; de Gen&#232;ve) and Vicky Kalogera (Northwestern University).</p>
+          <p>The POSYDON code is modular in many aspects. For general population synthesis, users can specify initial population properties and adopt choices that determine how stellar evolution proceeds. Populations are simulated using POSYDON's library of pre-computed grids, which contain MESA evolutionary tracks for single, non-interacting, and interacting binaries. Users are also welcome to build their own library of MESA grids for use with POSYDON. Machine-learning methods are incorporated and applied on the pre-computed grids for classification and various interpolation calculations. There is also architecture available for the development of irregular grids guided by active learning for computational efficiency.</p>
+          <p>POSYDON is a a publicly available tool, and we invite its use by everyone in the astronomy community. Please use the tabs above to: access the  <a href="code.html">source code, documentation, and data</a>. Through our documenation, you may find installation and tutorials that can help you <a href="https://posydon.org/POSYDON/tutorials-examples/population-synthesis/10_binaries_pop_syn.html" target="_blank">learn how to perform small-scale population synthesis simulations</a> with POSYDON.</p>
         </div>
 
         <div class="col-md-4 offset-1 bg-info text-white h-100">
@@ -314,10 +331,11 @@
 
         <div class="col-9 col-md-2 text-center align-self-center col-half-offset">
           <div class="thumbnail">
-            <a href="https://www.iastate.edu/" target="_blank"><img style= "max-width: 100%; height: auto;" src="images/Funding/ISU_seal.png" alt=""></a>
+            <a href="https://www.ufl.edu/" target="_blank"><img style= "max-width: 100%; height: auto;" src="images/Funding/uf_logo.png" alt=""></a>
             <p></p>
           </div>
         </div>
+        
       </div>
       <p></p>
     </div>
