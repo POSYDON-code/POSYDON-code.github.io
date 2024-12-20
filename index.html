@@ -26,7 +26,7 @@
     <![endif]-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 	
 	
     <style>
@@ -48,7 +48,7 @@
       }
 
       .dropdown-item{
-        font-size: 20px !important;
+        font-size: 12px !important;
       }
 
       .navbar-text
@@ -87,18 +87,32 @@
         margin-left:4.166666667%
       }
 
+      .carousel {
+        position:relative;
+      }
+
+      .carousel-control-prev, .carousel-control-next {
+        position: absolute;
+        top:50%;
+        transform:TranslateY(-50%);
+      }
+
       .carousel-control-prev{
-        left: 5% !important;
+        /*left: 5% !important;*/
+        right: auto;
+        left: -70px;
       }
 
       .carousel-control-next{
-        right: 5% !important;
+        /*right: 5% !important;*/
+        left:auto;
+        right:-70px;
       }
 
-      .carousel-control-next-icon, .carousel-control-prev-icon {
+      /*.carousel-control-next-icon, .carousel-control-prev-icon {
         width: 60px !important;
         height: 60px !important;
-      }
+      }*/
 
       .news-container {
         position: absolute;
@@ -300,7 +314,7 @@
           <hr/>
           <p style="font-size:18px"> <b>POSYDON</b> (<b>PO</b>pulation <b>SY</b>nthesis with <b>D</b>etailed binary-evolution simulati<b>ON</b>s) is a next-generation 
             single and binary-star population synthesis code incorporating full stellar structure and evolution modeling with the use of <a href="https://mesastar.org/" target="_blank"><b>MESA</b></a>. 
-            Follow the links to the right for documentation on
+            Follow the links to the right for the latest documentation on
           </p>
           <ul style="font-size:16px;"> 
             <li><a href="https://posydon.org/POSYDON/getting-started/installation-guide.html" target="_blank">Installation</a></li> 
@@ -308,7 +322,9 @@
             <li><a href="https://posydon.org/POSYDON/tutorials-examples/population-synthesis/binary-pop-syn.html" target="_blank">Tutorials</a></li> 
             <!--are also welcome to build their own library of MESA grids for use with POSYDON. </p> allowing users to specify initial population properties and adopt choices that determine how stellar evolution proceeds.-->
           </ul>
-          <p style="font-size:18px"> and to access POSYDON's source code on GitHub and MESA grids for population synthesis hosted on Zenodo. POSYDON is being developed by a collaborative <a href="team.html">team</a> of 
+          <p style="font-size:18px"> and to access POSYDON's source code on GitHub and MESA grids for population synthesis hosted on Zenodo.</p>
+          <p style="font-size:18px">
+            POSYDON is being developed by a collaborative <a href="team.html">team</a> of 
             astrophysicists and computer scientists led by Principal Investigators Tassos Fragos (Universit&#233; de Gen&#232;ve) and Vicky Kalogera (Northwestern University). Follow links up top to view <a href="papers.html">papers</a> 
             from our collaboration that demonstrate POSYDON's capabilities or to aid you further in getting started with the code, including access to older versions.
           </p>
@@ -325,9 +341,6 @@
           </ul>
         </div>
 
-        <!--<div class="col-md-4">
-          <img src="images/POSYDON_evolution_diagram.png" style="width:150%" loading="lazy">
-        </div>-->
         <div class="col-md-6">
           <!--card deck with links to docs, code, and data-->
           <div class="card-deck" style="margin: 80px 5px">
@@ -337,7 +350,7 @@
               </center>
               <div class="card-body text-center">
                 <h5 class="card-title">Documentation</h5>
-                <p class="card-text">Read our docs on installation instructions, functionality, usage tutorials, and more.</p>
+                <p class="card-text">Read about installation, features, tutorials, and more.</p>
                 <a href="https://posydon.org/POSYDON/" class="btn btn-primary rounded-pill" target="_blank">Read the docs</a>
               </div>
             </div>
@@ -347,7 +360,7 @@
               </center>
               <div class="card-body text-center">
                 <h5 class="card-title">Code Repository</h5>
-                <p class="card-text">Find the latest version  of our source code on GitHub.</p>
+                <p class="card-text">Find current and past versions of our source code on GitHub.</p>
                 <a href="https://github.com/POSYDON-code/POSYDON/" class="btn btn-primary rounded-pill" target="_blank">Access source code</a>
               </div>
             </div>
