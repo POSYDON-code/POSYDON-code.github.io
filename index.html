@@ -199,7 +199,7 @@
             <a class="nav-link" href="papers.html"><p style="font-size:1.5vw;">Papers</p></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="code.html"><p style="font-size:1.5vw;">Using POSYDON</p></a>
+            <a class="nav-link" href="code.html"><p style="font-size:1.5vw;">Getting Started</p></a>
           </li>
           <!--<li class="nav-item">
             <a class="nav-link" href="./docs/v1.0.4/index.html" target="_blank"><p style="font-size:1.5vw;">Docs</p></a>
@@ -244,7 +244,6 @@
           <li><b>[October 30th, 2020]</b> We posted on the <b><a href="https://arxiv.org/abs/2010.16333" target="_blank">arXiv</a></b> a new paper about the impact of mass-transfer physics on the observable properties of field binary black hole populations (Bavera et al.)</li>	  
         </ul>
       </div>-->
-
     </nav>
     
     <div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
@@ -291,17 +290,39 @@
       </a>
     </div>
 
-    <div class="container-fluid p-4" style="margin: 200px 0px;">
+    <div class="container-fluid p-4" style="margin: 50px 5px;">
       <div class="row">
-        <div class="col-md-6 bg-light text-dark">
+        <div class="col-md-6 text-dark">
           <p style="position:relative;">
             <a id="About" style="position:absolute; top:-180px;"></a>
           </p>
-          <h2 style="text-align:left">About</h2> 
+          <h2 style="text-align:left">What is POSYDON?</h2> 
           <hr/>
-          <p style="font-size:18px"> <b>POSYDON</b> (<b>PO</b>pulation <b>SY</b>nthesis with <b>D</b>etailed binary-evolution simulati<b>ON</b>s) is a next-generation single and binary-star population synthesis code incorporating full stellar structure and evolution modeling with the use of <a href="https://mesastar.org/" target="_blank"><b>MESA</b></a>. Follow the links below to get started with documentation on installation, accessing our source code, or downloading our <b>MESA</b> data sets for the latest version of <b>POSYDON</b>.</p>
-          <p style="font-size:18px">If you use POSYDON, consider joining our <a href="https://groups.google.com/g/posydon-users/" target="_blank">Google Users Group</a>. Please message this group with questions or issues you come across. Alternatively, you can raise a new issue or view existing ones on our GitHub repository.</p>
-          
+          <p style="font-size:18px"> <b>POSYDON</b> (<b>PO</b>pulation <b>SY</b>nthesis with <b>D</b>etailed binary-evolution simulati<b>ON</b>s) is a next-generation 
+            single and binary-star population synthesis code incorporating full stellar structure and evolution modeling with the use of <a href="https://mesastar.org/" target="_blank"><b>MESA</b></a>. 
+            Follow the links to the right for documentation on
+          </p>
+          <ul style="font-size:16px;"> 
+            <li><a href="https://posydon.org/POSYDON/getting-started/installation-guide.html" target="_blank">Installation</a></li> 
+            <li><a href="https://posydon.org/POSYDON/introduction-acknowledgements/intro.html" target="_blank">Features and functionality</a></li>
+            <li><a href="https://posydon.org/POSYDON/tutorials-examples/population-synthesis/binary-pop-syn.html" target="_blank">Tutorials</a></li> 
+            <!--are also welcome to build their own library of MESA grids for use with POSYDON. </p> allowing users to specify initial population properties and adopt choices that determine how stellar evolution proceeds.-->
+          </ul>
+          <p style="font-size:18px"> and to access POSYDON's source code on GitHub and MESA grids for population synthesis hosted on Zenodo. POSYDON is being developed by a collaborative <a href="team.html">team</a> of 
+            astrophysicists and computer scientists led by Principal Investigators Tassos Fragos (Universit&#233; de Gen&#232;ve) and Vicky Kalogera (Northwestern University). Follow links up top to view <a href="papers.html">papers</a> 
+            from our collaboration that demonstrate POSYDON's capabilities or to aid you further in getting started with the code, including access to older versions.
+          </p>
+          <p style="font-size:18px"> 
+          </p>
+          <!--<p style="font-size:18px">If you use POSYDON, consider joining our <a href="https://groups.google.com/g/posydon-users/" target="_blank">Google Users Group</a>. Please message this group with questions or issues you come across. Alternatively, you can raise a new issue or view existing ones on our GitHub repository.</p>
+          <p style="font-size:18px">The POSYDON code is modular in many aspects, consisting of pre-computed stellar evolution models (via MESA), on-the-fly calculations, and machine learning methods to provide a self-consistent population synthesis package. POSYDON features:</p>
+          <ul style="font-size:16px;"> 
+            <li>Detailed stellar evolution calculations that represent both single and binary (both non-interacting and interacting) stellar evolution.</li> 
+            <li>Machine-learning methods to classify and interpolate models, offering seamlessly constructued synthetic stellar populations.</li>
+            <li>Customizable options to e.g., control the initial mass function, stellar metallicity, or details of supernovae outcomes.</li> 
+            <li>Architecture for the development of irregular grids guided by active learning for computational efficiency.</li> -->
+            <!--are also welcome to build their own library of MESA grids for use with POSYDON. </p> allowing users to specify initial population properties and adopt choices that determine how stellar evolution proceeds.-->
+          </ul>
         </div>
 
         <!--<div class="col-md-4">
@@ -309,14 +330,14 @@
         </div>-->
         <div class="col-md-6">
           <!--card deck with links to docs, code, and data-->
-          <div class="card-deck" style="margin: 10px">
+          <div class="card-deck" style="margin: 80px 5px">
             <div class="card" style="width: 16rem;">
               <center>
                 <img class="card-img-top" src="images/tab_logo_inverted.png" alt="Card image cap" style="width: 44px; height:80px;">
               </center>
               <div class="card-body text-center">
-                <h5 class="card-title">Getting Started</h5>
-                <p class="card-text">Read our docs for installation instructions and tutorials.</p>
+                <h5 class="card-title">Documentation</h5>
+                <p class="card-text">Read our docs on installation instructions, functionality, usage tutorials, and more.</p>
                 <a href="https://posydon.org/POSYDON/" class="btn btn-primary rounded-pill" target="_blank">Read the docs</a>
               </div>
             </div>
@@ -336,7 +357,7 @@
               </center>
               <div class="card-body text-center">
                 <h5 class="card-title">Download the Data</h5>
-                <p class="card-text">MESA grids for pop. synth. are available on Zenodo.</p>
+                <p class="card-text">MESA grids for POSYDON are available on Zenodo.</p>
                 <a href="https://zenodo.org/communities/posydon/records?q=&l=list&p=1&s=10&sort=newest" class="btn btn-primary rounded-pill" target="_blank">Access pre-calculated grids</a>
               </div>
             </div>
@@ -345,11 +366,10 @@
       </div>
     </div>
 
-    <div class="container-fluid p-4">
+    <!--<div class="container-fluid p-4">
       <div class="row">
         <div class="col-md-6 bg-light text-dark">
-          <!-- <hr/>-->
-          <!--<p><b>POSYDON</b> : <b>PO</b>pulation <b>SY</b>nthesis with <b>D</b>etailed binary-evolution simulati<b>ON</b>s</p>-->
+          <hr/>
           <p style="font-size:24px"> POSYDON is being developed by <a href="team.html">a collaborative team</a> of astrophysicists and computer scientists led by Principal Investigators Tassos Fragos (Universit&#233; de Gen&#232;ve) and Vicky Kalogera (Northwestern University).</p>
           <p style="font-size:24px">The POSYDON code is modular in many aspects, consisting of pre-computed stellar evolution models (via MESA), on-the-fly calculations, and machine learning methods to provide a self-consistent population synthesis package. POSYDON features:</p>
           <ul style="font-size:18px;"> 
@@ -357,18 +377,17 @@
             <li>Machine-learning methods to classify and interpolate models, offering seamlessly constructued synthetic stellar populations.</li>
             <li>Customizable options to e.g., control the initial mass function, stellar metallicity, or details of supernovae outcomes.</li> 
             <li>Architecture for the development of irregular grids guided by active learning for computational efficiency.</li> 
-            <!--are also welcome to build their own library of MESA grids for use with POSYDON. </p> allowing users to specify initial population properties and adopt choices that determine how stellar evolution proceeds.-->
           </ul>
-          </div>
+          </div>-->
 
-        <div class="col-md-4 offset-1 bg-info text-white h-100">
+        <!--<div class="col-md-4 offset-1 bg-info text-white h-100">
           <p style="position:relative;">
             <a id="News" style="position:absolute; top:-180px;"></a>
           </p>
           <h1 style="text-align:center">News</h1> 
-          <hr/>
+          <hr/>-->
           <!--calc(90vh - 200px)-->
-          <ul class="list-group list-group-flush" style="max-height: 300px; overflow-y: scroll">
+          <!--<ul class="list-group list-group-flush" style="max-height: 300px; overflow-y: scroll">
 
             <li class="list-group-item list-group-item-info"><b>[November 5th, 2024]</b> We posted on the <b><a href="https://arxiv.org/abs/2411.02586" target="_blank">arXiv</a></b> a paper presenting a method of binary stellar evolution track interpolation (Srivastava et al.)</li>
 		  
@@ -422,13 +441,15 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div>-->
 
 
     <!--<p>POSYDON is being developed by <a href="team.html">a collaborative team</a> of astrophysicists and computer scientists led by Principal Investigators Tassos Fragos (Universit&#233; de Gen&#232;ve) and Vicky Kalogera (Northwestern University).</p>
     <p>The POSYDON code is modular in many aspects. For general population synthesis, users can specify initial population properties and adopt choices that determine how stellar evolution proceeds. Populations are simulated using POSYDON's library of pre-computed grids, which contain MESA evolutionary tracks for single, non-interacting, and interacting binaries. Users are also welcome to build their own library of MESA grids for use with POSYDON. Machine-learning methods are incorporated and applied on the pre-computed grids for classification and various interpolation calculations. There is also architecture available for the development of irregular grids guided by active learning for computational efficiency.</p>
     <p>POSYDON is a a publicly available tool, and we invite its use by everyone in the astronomy community. Please use the tabs above to: access the  <a href="code.html">source code, documentation, and data</a>. Through our documenation, you may find installation and tutorials that can help you <a href="https://posydon.org/POSYDON/tutorials-examples/population-synthesis/10_binaries_pop_syn.html" target="_blank">learn how to perform small-scale population synthesis simulations</a> with POSYDON.</p>
   -->
+
+
     
     <div class="container py-4">
       <p style="position:relative;">
