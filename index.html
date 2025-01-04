@@ -26,8 +26,8 @@
     <![endif]-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-	
 	
     <style>
       
@@ -179,6 +179,51 @@
 
   <body>
 
+    <script>
+
+      function highlightActive() {
+
+        // Get current page URL
+        var currentUrl = window.location.href.split('index.html')[1];
+
+        // Find the matching navbar item
+        $('.navbar-nav a').each(function() {
+          var linkUrl = $(this).attr('href');
+          if (currentUrl === linkUrl) {
+            $(this).parent().addClass('active'); // Add 'active' class to parent <li>
+            if (currentUrl === "#Code"){
+              $('#codeCard').effect('highlight',{color:"#c7e3ff"},1000);
+            }
+          }
+          // remove active class from others
+          else {
+            $(this).parent().removeClass('active')
+          }
+        
+        })
+      
+      };
+
+      $(document).ready(function(){
+
+        $(window).on('hashchange', function(){
+        
+          highlightActive();
+
+        }).on('load', function(){
+
+          highlightActive();
+
+        });
+
+        $('#codeLink').click( function(){
+          $('#codeCard').effect('highlight',{color:"#c7e3ff"},1000);
+        });
+
+    });
+
+    </script>
+
     <a id="back2top" href="#" class="btn btn-light btn-lg back2top" role="button"><i class="fa fa-arrow-up fa-1x"></i></a>
 
 
@@ -194,8 +239,8 @@
       <!-- Nav -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"><p style="font-size:1.5vw;">Home</p><span class="sr-only">(current)</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="homeLink"><p style="font-size:1.5vw;">Home</p><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#About"><p style="font-size:1.5vw;">About</p></a>
@@ -210,10 +255,10 @@
             <a class="nav-link" href="#Funding"><p style="font-size:1.5vw;">Funding</p></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="papers.html"><p style="font-size:1.5vw;">Papers</p></a>
+            <a class="nav-link" href="https://ui.adsabs.harvard.edu/public-libraries/ZZsD9bzLTzWnLV3hwyJxbA" target="_blank"><p style="font-size:1.5vw;">Papers</p></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="code.html"><p style="font-size:1.5vw;">Getting Started</p></a>
+            <a class="nav-link" href="#Code" id="codeLink"><p style="font-size:1.5vw;">Code</p></a>
           </li>
           <!--<li class="nav-item">
             <a class="nav-link" href="./docs/v1.0.4/index.html" target="_blank"><p style="font-size:1.5vw;">Docs</p></a>
@@ -282,7 +327,7 @@
           <hr/>
           <p style="font-size:18px"> <b>POSYDON</b> (<b>PO</b>pulation <b>SY</b>nthesis with <b>D</b>etailed binary-evolution simulati<b>ON</b>s) is a next-generation 
             single and binary-star population synthesis code incorporating full stellar structure and evolution modeling with the use of <a href="https://mesastar.org/" target="_blank"><b>MESA</b></a>. 
-            Follow the links to the right for the latest documentation on
+            Follow the links for the latest documentation on
           </p>
           <ul style="font-size:16px;"> 
             <li>How to <a href="https://posydon.org/POSYDON/getting-started/installation-guide.html" target="_blank">install</a> POSYDON</li> 
@@ -290,21 +335,97 @@
             <li>Learning to use POSYDON with <a href="https://posydon.org/POSYDON/tutorials-examples/population-synthesis/binary-pop-syn.html" target="_blank">tutorials</a></li> 
             <!--are also welcome to build their own library of MESA grids for use with POSYDON. </p> allowing users to specify initial population properties and adopt choices that determine how stellar evolution proceeds.-->
           </ul>
-          <p style="font-size:18px"> and to access source code on GitHub or MESA grids for population synthesis on Zenodo. There are now two major releases of POSYDON (v1 and v2) that you can follow links for on the right.</p>
-          <hr style="margin: 140px 5px 50px 5px">
+          <p style="font-size:18px"> and to access source code on GitHub or MESA grids for population synthesis on Zenodo. There are now two major releases of POSYDON (v1 and v2) that you can follow quick links for on the right.  
+             Read more about each version in their respective instrument papers</p>
+             <ul style="font-size:16px;"> 
+              <li><a href="https://ui.adsabs.harvard.edu/abs/2024arXiv241102376A/abstract" target="_blank">Andrews et al. 2024</a> [POSYDON v2]</li> 
+              <li><a href="https://ui.adsabs.harvard.edu/abs/2023ApJS..264...45F/abstract" target="_blank">Fragos et al. 2023</a> [POSYDON v1]</li>
+            </ul>
+
+          <h2 style="text-align:left; margin: 70px 5px 0px 5px">Want to get involved?</h2> 
+          <hr/>
+          <p style="font-size:18px">
+            If you do use POSYDON, consider joining our Google users' group to ask questions or raise issues about the code, or feel free to do the same on our Github repository. We would love to hear from you to help make 
+            POSYDON as useful and versatile a research tool as possible.
+          </p>
           <p style="font-size:18px">
             POSYDON is being developed by a <a href="team.html">team</a> of 
-            astrophysicists and computer scientists led by Principal Investigators Tassos Fragos (Universit&#233; de Gen&#232;ve) and Vicky Kalogera (Northwestern University). Follow links up top to view <a href="papers.html">papers</a> 
-            from our collaboration that demonstrate POSYDON's capabilities or to aid you further in getting started with the code, including access to older versions.
+            astrophysicists and computer scientists led by Principal Investigators Tassos Fragos (Universit&#233; de Gen&#232;ve), Vicky Kalogera (Northwestern University), and Aggelos Katsaggelos (Northwestern University). 
+            Quick links to the right will let you access our Google users' group, see current and past team members, or browse our team's work on NASA's ADS abstract service.
           </p>
+          
+          <div class="col-md-12 h-100">
+            <!--<p style="position:relative;">
+              <a id="News" style="position:absolute;"></a>
+            </p>-->
+            <h2 style="text-align:left; margin: 100px 5px 0px 5px">News</h2> 
+            <hr/>
+            <!--calc(90vh - 200px)-->
+            <ul class="list-group list-group-flush" style="max-height: 120px; overflow-y: scroll">
+  
+              <li class="list-group-item"><b>[November 5th, 2024]</b> We posted on the <b><a href="https://arxiv.org/abs/2411.02586" target="_blank">arXiv</a></b> a paper presenting a method of binary stellar evolution track interpolation (Srivastava et al.)</li>
+        
+              <li class="list-group-item"><b>[November 4th, 2024]</b> We posted on the <b><a href="https://arxiv.org/abs/2411.02376" target="_blank">arXiv</a></b> the preprint version of the POSYDON v2.0 instrument paper (Andrews et al.). This describes the second version of our code and grids of simulated binaries </li>
+  
+              <li class="list-group-item"><b>[October 29th, 2024]</b> We posted on the <b><a href="http://arxiv.org/abs/2410.20415" target="_blank">arXiv</a></b> a paper utilizing POSYDON to investigate the impact of common-envelope efficiency and core-collapse supernova kicks on the black hole (BH) mass distribution of neutron star-BH (NSBH) mergers, and systems observed in the lower BH mass gap (Xing et al.)</li>	  
+        
+              <li class="list-group-item"><b>[October 25th, 2024]</b> We posted on the <b><a href="http://arxiv.org/abs/2410.18501" target="_blank">arXiv</a></b> a paper on how the Gaia black holes could have formed without binary interactions if the Wolf-Rayet winds are a bit stronger (Kruckow et al.)</li>
+        
+              <li class="list-group-item"><b>[October 14th, 2024]</b> We posted on the <b><a href="https://arxiv.org/abs/2410.11105" target="_blank">arXiv</a></b> a paper presenting a new emulation method for predicting the stellar profile outputs of MESA simulations. (Teng et al.)</li>
+  
+              <li class="list-group-item"><b>[August 7th, 2024]</b> On <b><a href="https://arxiv.org/abs/2403.17279" target="_blank">arXiv</a></b> you can find the published paper demonstrating the spin down of post mass transfer (MT) systems according to several magentic braking prescriptions proposed in the literature that we implemented in MESA. We compared their ability to explain observed post-MT systems (Sun et al.)</li>
+        
+              <li class="list-group-item"><b>[June 28th, 2024]</b> We posted on the <b><a href="https://arxiv.org/abs/2407.00200" target="_blank">arXiv</a></b> a paper exploring the role of Roche-lobe overflow after BH formation in the wind-fed BH-HMXB population. (Xing et al.)</li>
+        
+              <li class="list-group-item"><b>[June 21st, 2024]</b> On <b><a href="https://arxiv.org/abs/2311.07528" target="_blank">arXiv</a></b> you can find the published paper exploring the proposed mechanism of Wind Roche-lobe overflow with MESA models representing low mass binaries. Our models are compared to observed rapidly rotating blue lurkers whose stellar properties can be explained as a result of this mechanism (Sun et al.)</li>	  
+        
+              <li class="list-group-item"><b>[March 28th, 2024]</b> On <b><a href="https://arxiv.org/abs/2403.19743" target="_blank">arXiv</a></b> you can find the accepted paper sugggesting that Mixed-Morphology SN Remnants originate from the evolution of winds of the stellar RSG progenitor inside a dense ISM environment, using POSYDON single star models for the the test cases (Chiotellis et al.)</li>
+        
+              <li class="list-group-item"><b>[March 13th, 2024]</b> We posted on the <b><a href="https://arxiv.org/abs/2403.07172" target="_blank">arXiv</a></b> a paper exploring the role of rotation in modeling Be X-ray Binaries (Rocha et al.)</li>
+  
+              <li class="list-group-item"><b>[February 19th, 2024]</b> On <b><a href="https://arxiv.org/abs/2402.12442" target="_blank">arXiv</a></b> de Wit and collaborators have posted a paper investigating mass loss of evolved massive stars (mainly RSGs) in low metallicity environments, comparing with POSYDON stellar tracks</li>		  
+        
+              <li class="list-group-item"><b>[September 18th, 2023]</b> We posted on the <b><a href="https://arxiv.org/abs/2309.09600" target="_blank">arXiv</a></b> a paper about neutron star-black hole mergers at solar metallicity (Xing et al.)</li>
+        
+              <li class="list-group-item"><b>[February 6th, 2023]</b> We have published the POSYDON v1.0 instrument paper (Fragos et al. 2023) in the <a href="http://dx.doi.org/10.3847/1538-4365/ac90c1" target="_blank">Astrophysical Journal Supplement</a>! This describes the <a href="https://github.com/POSYDON-code/POSYDON/releases/tag/v1.0.0" target="_blank">first version of our code</a> and <a href="https://doi.org/10.5281/zenodo.6384234" target="_blank">grids of simulated binaries</a>. The code is distributed via <a href="https://anaconda.org/posydon/posydon" target="_blank">anaconda</a>.</li>
+            
+              <li class="list-group-item"><b>[December 21st, 2022]</b> We posted on the <b><a href="https://arxiv.org/abs/2212.10924" target="_blank">arXiv</a></b> a paper about the formation of 30 solar mass black hole mergers at solar metallicity (Bavera et al.)</li>
+        
+              <li class="list-group-item"><b>[November 7th, 2022]</b> We posted on the <b><a href="https://arxiv.org/abs/2211.02158" target="_blank">arXiv</a></b> a paper about the natal kick of the black hole in the X-ray binary MAXI J1305-704 (Kimball et al.)</li>
+            
+              <li class="list-group-item"><b>[September 16th, 2022]</b> We posted on the <b><a href="https://arxiv.org/abs/2209.06844" target="_blank">arXiv</a></b> a paper about the lower mass gap with low mass X-ray binary population synthesis (Siegel et al.)</li>
+  
+              <li class="list-group-item"><b>[September 14th, 2022]</b> We posted on the <b><a href="https://arxiv.org/abs/2209.05505" target="_blank">arXiv</a></b> a paper about the signatures of different physical processes using detailed binary evolution calculations (Misra et al.)</li>
+              
+              <li class="list-group-item"><b>[April 1st, 2022]</b> We posted on the <b><a href="https://arxiv.org/abs/2203.16683" target="_blank">arXiv</a></b> a paper about a new active-learning algorithm that can efficiently create the grids of binary simulations used by POSYDON as an input (Rocha et al.)</li>
+  
+              <li class="list-group-item"><b>[February 15th, 2022]</b> We posted on the <b><a href="https://arxiv.org/abs/2202.05892" target="_blank">arXiv</a></b> the preprint version of the POSYDON v1.0 instrument paper (Fragos et al.). This describes the first version of our code and grids of simulated binaries</li>
+  
+              <li class="list-group-item"><b>[November 4th, 2021]</b> We published on <b><a href="https://dl.acm.org/doi/abs/10.1145/3474717.3483989" target="_blank">ACM SIGSPATIAL'2021</a></b> a new demo paper about a prototype system for coupling similarity and diversity for clustering astrophysics multivariate datasets (Teng et al.)</li>
+  
+              <li class="list-group-item"><b>[August 23rd, 2021]</b> We published on <b><a href="https://dl.acm.org/doi/abs/10.1145/3469830.3470916" target="_blank">SSTD'2021</a></b> a new demo paper about a system for context aware clustering of stellar evolution (Teng et al.)</li>
+  
+              <li class="list-group-item"><b>[July 1st, 2021]</b> We posted on the <b><a href="https://arxiv.org/abs/2106.15841" target="_blank">arXiv</a></b> a new paper about the probing the progenitors of spinning binary black-hole mergers with long gamma-ray bursts (Bavera et al.)</li>
+  
+              <li class="list-group-item"><b>[June 10th, 2021]</b> We posted on the <b><a href="https://arxiv.org/abs/2106.05228" target="_blank">arXiv</a></b> a new paper about the explodability of single massive star progenitors of stripped-envelope supernovae (Zapartas et al.)</li>
+  
+              <li class="list-group-item"><b>[December 3rd, 2020]</b> We posted on the <b><a href="https://arxiv.org/abs/2012.02274" target="_blank">arXiv</a></b> a new paper about the role of core-collapse physics in the observability of black-hole neutron-star mergers as multi-messenger sources (Román-Garza et al.)</li>
+  
+              <li class="list-group-item"><b>[October 30th, 2020]</b> We posted on the <b><a href="https://arxiv.org/abs/2010.16333" target="_blank">arXiv</a></b> a new paper about the impact of mass-transfer physics on the observable properties of field binary black hole populations (Bavera et al.)</li>
+            </ul>
+          </div>
+
         </div>
 
         <!--righthand column in 1st homepage row of content-->
         <div class="col-md-6">
+          <p style="position:relative;">
+            <a id="Code" style="position:absolute; top:-180px;"></a>
+          </p>
           <!-- parent card containing navigation panes with links listed here-->
-          <div class="card border-0" style="margin: 6.5px">
+          <div class="card border-0" style="margin: 6.5px" id="codeCard">
             <div class="card-header bg-transparent"> 
-                <ul class="nav nav-pills card-header-pills"  id="myTab" role="tablist">
+                <ul class="nav nav-pills card-header-pills"  id="versionTabs" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="v2-tab" data-toggle="tab" href="#v2" role="tab" aria-controls="v2" aria-selected="true">POSYDON v2</a>
                     </li>
@@ -366,7 +487,7 @@
                         <img class="card-img-top" src="images/zenodo-black-200.png" alt="Card image cap" style="width:200px; height:80px;">
                       </center>
                       <div class="card-body text-center">
-                        <h5 class="card-title">Download the Data</h5>
+                        <h5 class="card-title">Download Datasets</h5>
                         <p class="card-text">MESA grids for POSYDON v2 are available on Zenodo.</p>
                         <!--<a href="https://zenodo.org/communities/posydon/records?q=&l=list&p=1&s=10&sort=newest" class="btn btn-primary rounded-pill" target="_blank">Access pre-calculated grids</a>-->
                         <div class="btn-group">
@@ -480,8 +601,8 @@
               <div class="card-body text-center">
                 <p class="card-text" style="font-size: 42px;"><i class="fa fa-users"></i></p>
                 <h5 class="card-title">Our Team</h5>
-                <p class="card-text">View current and past members of our collaboration.</p>
-                <a href="team.html" class="btn btn-secondary">Meet the team</a>
+                <p class="card-text">See current and past members of our collaboration.</p>
+                <a href="team.html" class="btn btn-secondary">View members</a>
               </div>
 
             </div>
