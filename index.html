@@ -58,6 +58,11 @@
         font-style: italic !important;
       }
 
+      .navbar-custom {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0.8) 100%);
+        height:70px;
+      }
+
       hr{
         border-top: 1.5px solid black !important;
       }
@@ -164,7 +169,7 @@
       .news-container ui li:last-child::after {
         display:none
       }
-
+      /* for a scrolling news ticker */
       @keyframes scroll {
         from{
           transform: translateX(100%);
@@ -235,10 +240,12 @@
     <a id="back2top" href="#" class="btn btn-light btn-lg back2top" role="button"><i class="fa fa-arrow-up fa-1x"></i></a>
 
 
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black">
+    <!--<nav class="navbar navbar-custom sticky-top navbar-expand-lg navbar-dark bg-black">-->
+    <nav class="navbar navbar-custom sticky-top navbar-expand-lg navbar-dark">
       <!-- logo on leftside -->
       <a class="navbar-brand">
-        <img src="images/logo.png" height="150px" class="d-inline-block align-top" alt="" loading="eager">
+        <!--height="150px"-->
+        <img src="images/logo_transparent_cropped.png" height="70px" class="d-inline-block align-top" alt="" loading="eager">
       </a>
       <!-- Adjust header -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -369,7 +376,7 @@
             <h2 style="text-align:left; margin: 100px 5px 0px 5px">News</h2> 
             <hr/>
             <!--calc(90vh - 200px)-->
-            <ul class="list-group list-group-flush" style="max-height: 120px; overflow-y: scroll">
+            <ul class="list-group list-group-flush" style="max-height: 240px; overflow-y: scroll">
   
               <li class="list-group-item"><b>[November 5th, 2024]</b> We posted on the <b><a href="https://arxiv.org/abs/2411.02586" target="_blank">arXiv</a></b> a paper presenting a method of binary stellar evolution track interpolation (Srivastava et al.)</li>
         
