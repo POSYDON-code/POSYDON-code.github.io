@@ -22,6 +22,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
     <style>    
@@ -31,6 +32,10 @@
 
       .navbar-brand{
         font-size: 32px !important;
+      }
+
+      .navbar-custom {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
       }
 
       .bg-black{
@@ -66,7 +71,7 @@
         bottom: 50px;
         right: 10px;
         display: none;
-        background-color: rgb(4, 164, 87);
+        background-color: rgb(0, 0, 0);
         color: white;
         cursor: pointer;
         z-index: 99;
@@ -85,11 +90,12 @@
   </head>
 
   <body>
-    <a id="back2top" href="#" class="btn btn-light btn-lg back2top" role="button">TOP</i></a>
 
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-black">
+    <a id="back2top" href="#" class="btn btn-light btn-lg back2top" role="button"><i class="fa fa-arrow-up fa-1x"></i></a>
+
+    <nav class="navbar navbar-custom sticky-top navbar-expand-lg navbar-dark bg-black">
       <a class="navbar-brand">
-        <img src="images/logo.png" height="150px" class="d-inline-block align-top" alt="" loading="lazy">
+        <img src="images/logo_transparent_cropped.png" class="d-inline-block align-top" alt="" loading="eager" style="max-height:100px;">
       </a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,28 +105,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html#"><p style="font-size:2vw;">Home</p><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.html#"><p style="font-size:38px;">Home</p><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#About"><p style="font-size:2vw;">About</p></a>
+            <a class="nav-link" href="index.html#About"><p style="font-size:38px;">About</p></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#News"><p style="font-size:2vw;">News</p></a>
+            <a class="nav-link" href="index.html#Code" id="codeLink"><p style="font-size:38px;">Get Started</p></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="team.html"><p style="font-size:2vw;">Team</p></a>
+            <a class="nav-link" href="#"><p style="font-size:38px;">Team</p></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#Funding"><p style="font-size:2vw;">Funding</p></a>
+            <a class="nav-link" href="index.html#Funding"><p style="font-size:38px;">Funding</p></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="papers.html"><p style="font-size:2vw;">Papers</p></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/POSYDON-code/POSYDON-public" target="_blank"><p style="font-size:2vw;">Code</p></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./docs/index.html" target="_blank"><p style="font-size:2vw;">Docs</p></a>
+            <a class="nav-link" href="summer_school.html"><p style="font-size:38px;">Summer School</p></a>
           </li>
         </ul>
       </div>
@@ -139,29 +139,29 @@
     <h2 style="text-align:center">LEADERSHIP</h2> 
     <br>
 
-    <div class="row">
+    <div class="row justify-content-center">
 
-      <div class="col-md text-center">
+      <div class="col-md text-center col-half-offset">
         <div class="thumbnail">
-        <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/JeffAndrews.jpg" alt="">
+        <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/JeffAndrews.jpg" alt="" loading="eager">
         <p></p>
         <h5><a href="https://www.phys.ufl.edu/wp/index.php/people/faculty/jeff-andrews/" target="_blank" style="color: rgb(0,0,0)">Jeff Andrews</a></h5>
         <p class="card-text">University of Florida</p>
         </div>
     </div>
 
-    <div class="col-md text-center">
+    <div class="col-md text-center col-half-offset">
       <div class="thumbnail">
-      <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/Tassos.jpg" alt="">
+      <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/Tassos.jpg" alt="" loading="eager">
       <p></p>
-      <h5><a href="http://www.tassosfragos.com/" target="_blank" style="color: rgb(0,0,0)">Tassos Fragos</a></h5>
+      <h5><a href="#" style="color: rgb(0,0,0); text-decoration: none;">Tassos Fragos</a></h5>
       <p class="card-text">Universit&#233; de Gen&#232;ve</p>
       </div>
     </div>
 
     <div class="col-md text-center col-half-offset">
       <div class="thumbnail">
-        <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/Vicky-Kalogera-Square-300x300.jpg" alt="">
+        <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/Vicky-Kalogera-Square-300x300.jpg" alt="" loading="eager">
         <p></p>
         <h5><a href="https://sites.northwestern.edu/vickykalogera/" target="_blank" style="color: rgb(0,0,0)">Vicky Kalogera</a></h5>
         <p class="card-text">Northwestern University</p>
@@ -170,7 +170,7 @@
 
     <div class="col-md text-center col-half-offset">
       <div class="thumbnail">
-        <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/katsaggelos-aggelos.jpg" alt="">
+        <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/katsaggelos-aggelos.jpg" alt="" loading="eager">
         <p></p>
         <h5><a href="https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/katsaggelos-aggelos.html" target="_blank" style="color: rgb(0,0,0)">Aggelos Katsaggelos</a></h5>
         <p class="card-text">Northwestern University</p>
@@ -184,29 +184,29 @@
     <h2 style="text-align:center">CORE DEVELOPERS</h2> 
     <br>
 
-    <div class="row">
+    <div class="row justify-content-center">
 
-        <div class="col-md text-center">
+        <div class="col-md text-center col-half-offset">
           <div class="thumbnail">
-          <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/MaxBriel.jpg" alt="">
+          <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/MaxBriel_resize.jpg" alt="" loading="eager">
           <p></p>
           <h5><a href="https://maxbriel.com/" target="_blank" style="color: rgb(0,0,0)">Max Briel</a></h5>
           <p class="card-text">Universit&#233; de Gen&#232;ve</p>
           </div>
         </div>
 
-        <div class="col-md text-center">
+        <div class="col-md text-center col-half-offset">
           <div class="thumbnail">
-          <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/SethGossage.jpg" alt="">
+          <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/SethGossage.jpg" alt="" loading="eager">
           <p></p>
           <h5><a href="https://sgossage.github.io/" target="_blank" style="color: rgb(0,0,0)">Seth Gossage</a></h5>
           <p class="card-text">Northwestern University</p>
           </div>
         </div>
 
-        <div class="col-md text-center">
+        <div class="col-md text-center col-half-offset">
           <div class="thumbnail">
-          <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/MatthiasKruckow.png" alt="">
+          <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/MatthiasKruckow.png" alt="" loading="eager">
           <p></p>
           <h5><a href="https://inspirehep.net/authors/1946800" target="_blank" style="color: rgb(0,0,0)">Matthias Kruckow</a></h5>
           <p class="card-text">Universit&#233; de Gen&#232;ve</p>
@@ -215,6 +215,7 @@
 
           
       </div>
+
       <br>
 
 
@@ -222,16 +223,16 @@
 
         <div class="col-md text-center col-half-offset">
           <div class="thumbnail">
-          <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/CamilleLiotine.jpeg" alt="">
+          <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/CamilleLiotine_resize.jpg" alt="" loading="eager">
           <p></p>
           <h5><a href="https://www.linkedin.com/in/camille-liotine-astro/" target="_blank" style="color: rgb(0,0,0)">Camille Liotine</a></h5>
           <p class="card-text">Northwestern University</p>
           </div>
-      </div>
+        </div>
 
         <div class="col-md text-center col-half-offset">
             <div class="thumbnail">
-            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/PhilippMouraSrivastava.png" alt="">
+            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/PhilippMouraSrivastava.png" alt="" loading="eager">
             <p></p>
             <h5><a href="https://www.linkedin.com/in/philipp-moura-srivastava-25077a144/" target="_blank" style="color: rgb(0,0,0)">Philipp M. Srivastava</a></h5>
             <p class="card-text">Northwestern University</p>
@@ -241,7 +242,7 @@
 
         <div class="col-md text-center col-half-offset">
             <div class="thumbnail">
-            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/ElizabethTeng.jpg" alt="">
+            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/ElizabethTeng_resize.jpg" alt="" loading="eager">
             <p></p>
             <h5><a href="https://www.linkedin.com/in/elizabeth-teng/" target="_blank" style="color: rgb(0,0,0)">Elizabeth Teng</a></h5>
             <p class="card-text">Northwestern University</p>
@@ -249,34 +250,27 @@
         </div>
 
       </div>
+
       <br>
 
       <h2 style="text-align:center">PAST CORE DEVELOPERS</h2> 
       <hr/>
   
-      <div class="row">
-          <div class="col-md align-top  col-half-offset">
-              <h5><a href="https://www.linkedin.com/in/simone-bavera-0a0029193/" target="_blank" style="color: rgb(0,0,0)">Simone Bavera </a></h5>
-              <h5><a href="https://www.it.northwestern.edu/departments/it-services-support/research/staff/coughlin.html" target="_blank" style="color: rgb(0,0,0)">Scott Coughlin </a></h5>
-              <h5><a href="https://github.com/aarondotter" target="_blank" style="color: rgb(0,0,0)">Aaron Dotter</a></h5>
-          </div>
-          <div class="col-md align-top  col-half-offset">
-              <h5><a href="https://scholar.google.es/citations?user=8VCX1DEAAAAJ&hl=es&oi=sra" target="_blank" style="color: rgb(0,0,0)">Juan Gabriel Serra P&#233;rez</a></h5>
-              <h5><a href="https://www.linkedin.com/in/kkovlakas" target="_blank" style="color: rgb(0,0,0)">Konstantinos Kovlakas</a></h5>
-          </div>
-          <div class="col-md align-top  col-half-offset">
-            <h5><a href="https://www.ntnu.edu/employees/devina.misra" target="_blank" style="color: rgb(0,0,0)">Devina Misra</a></h5>
-            <h5><a href="https://ciera.northwestern.edu/directory/kyle-rocha/" target="_blank" style="color: rgb(0,0,0)">Kyle Rocha</a></h5>
-            <h5><a href="https://inspirehep.net/authors/1867611" target="_blank" style="color: rgb(0,0,0)">Ying Qin </a></h5>
-            <h5><a href="https://sunmeng1118.wixsite.com/mysite" target="_blank" style="color: rgb(0,0,0)">Meng Sun</a></h5>
-          </div>
-
-          <div class="col-md align-top  col-half-offset">
-            <h5><a href="https://www.linkedin.com/in/nam-tran-435b891b0" target="_blank" style="color: rgb(0,0,0)">Nam Tran </a></h5>
-            <h5><a href="https://www.linkedin.com/in/zepei-xing-86ab10206/" target="_blank" style="color: rgb(0,0,0)">Zepei Xing</a></h5>
-            <h5><a href="https://www.ia.forth.gr/people/zapartas" target="_blank" style="color: rgb(0,0,0)">Manos Zapartas</a></h5>
-        </div>
-        </div>
+      <ul style="columns: 4;list-style-type: none; text-align: center;">
+        <li><a href="https://ch.linkedin.com/in/ssbvr" target="_blank" style="color: rgb(0,0,0)">Simone Bavera </a></li>
+        <li><a href="https://www.it.northwestern.edu/departments/it-services-support/research/staff/coughlin.html" target="_blank" style="color: rgb(0,0,0)">Scott Coughlin </a></li>
+        <li><a href="https://github.com/aarondotter" target="_blank" style="color: rgb(0,0,0)">Aaron Dotter</a></li>
+        <li><a href="https://scholar.google.es/citations?user=8VCX1DEAAAAJ&hl=es&oi=sra" target="_blank" style="color: rgb(0,0,0)">Juan Gabriel Serra P&#233;rez</a></li>
+        <li><a href="https://www.linkedin.com/in/kkovlakas" target="_blank" style="color: rgb(0,0,0)">Konstantinos Kovlakas</a></li>
+        <li><a href="https://www.ntnu.edu/employees/devina.misra" target="_blank" style="color: rgb(0,0,0)">Devina Misra</a></li>
+        <li><a href="https://ciera.northwestern.edu/directory/kyle-rocha/" target="_blank" style="color: rgb(0,0,0)">Kyle Rocha</a></li>
+        <li><a href="https://inspirehep.net/authors/1867611" target="_blank" style="color: rgb(0,0,0)">Ying Qin </a></li>
+        <li><a href="https://sunmeng1118.wixsite.com/mysite" target="_blank" style="color: rgb(0,0,0)">Meng Sun</a></li>
+        <li><a href="https://www.linkedin.com/in/nam-tran-435b891b0" target="_blank" style="color: rgb(0,0,0)">Nam Tran </a></li>
+        <li><a href="https://www.linkedin.com/in/zepei-xing-86ab10206/" target="_blank" style="color: rgb(0,0,0)">Zepei Xing</a></li>
+        <li><a href="https://www.ia.forth.gr/people/zapartas" target="_blank" style="color: rgb(0,0,0)">Manos Zapartas</a></li>
+      </ul>
+      
       <br>
 
       
@@ -286,7 +280,7 @@
 
         <div class="col-md text-center col-half-offset">
             <div class="thumbnail">
-            <img style= "width: 125px; max-height: 125px; vertical-align: top;" src="images/teams/ChristopherBerry.JPG" alt="">
+            <img style= "width: 125px; max-height: 125px; vertical-align: top;" src="images/teams/ChristopherBerry_resize.JPG" alt="" loading="lazy">
             <p></p>
             <h5><a href="https://cplberry.com/" target="_blank" style="color: rgb(0,0,0)">Christopher Berry</a></h5>
             <p class="card-text">University of Glasgow</p>
@@ -295,7 +289,7 @@
 
         <div class="col-md text-center col-half-offset">
           <div class="thumbnail">
-            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/AbhishekChattaraj.png" alt="">
+            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/AbhishekChattaraj_resize.png" alt="" loading="lazy">
             <p></p>
             <h5><a target="_blank" style="color: rgb(0,0,0)">Abhishek Chattaraj</a></h5>
             <p class="card-text">University of Florida</p>
@@ -306,7 +300,7 @@
 
         <div class="col-md text-center col-half-offset">
             <div class="thumbnail">
-              <img style= "width: 130px; height: 125px; vertical-align: top;" src="images/teams/MonicaGallegosGarcia.png" alt="">
+              <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/MonicaGallegosGarcia_resize.png" alt="" loading="lazy">
               <p></p>
               <h5><a href="https://mpgalleg.github.io/" target="_blank" style="color: rgb(0,0,0)">Monica Gallegos-Garcia</a></h5>
               <p class="card-text">Harvard University</p>
@@ -315,7 +309,7 @@
 
         <div class="col-md text-center col-half-offset">
           <div class="thumbnail">
-            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/EiriniKasdagli.jpg" alt="">
+            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/EiriniKasdagli_resize.jpg" alt="" loading="lazy">
             <p></p>
             <h5><a target="_blank" style="color: rgb(0,0,0)">Eirini Kasdagli</a></h5>
             <p class="card-text">University of Florida</p>
@@ -329,7 +323,7 @@
       
         <div class="col-md text-center col-half-offset">
           <div class="thumbnail">
-            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/Konstantinos.jpg" alt="">
+            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/Konstantinos.jpg" alt="" loading="lazy">
             <p></p>
             <h5><a href="https://www.linkedin.com/in/kkovlakas" target="_blank" style="color: rgb(0,0,0)">Konstantinos Kovlakas</a></h5>
             <p class="card-text">Institute of Space Sciences</p>
@@ -338,7 +332,7 @@
 
         <div class="col-md text-center col-half-offset">
           <div class="thumbnail">
-            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/DevinaMisra.jpeg" alt="">
+            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/DevinaMisra_resize.jpg" alt="" loading="lazy">
             <p></p>
             <h5><a href="https://www.ntnu.edu/employees/devina.misra" target="_blank" style="color: rgb(0,0,0)">Devina Misra</a></h5>
             <p class="card-text">Norwegian University of Science and Technology</p>
@@ -348,7 +342,7 @@
 
         <div class="col-md text-center col-half-offset">
           <div class="thumbnail">
-            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/Rocha-Kyle-360x360.jpg" alt="">
+            <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/Rocha-Kyle-360x360.jpg" alt="" loading="lazy">
             <p></p>
             <h5><a href="https://ciera.northwestern.edu/directory/kyle-rocha/" target="_blank" style="color: rgb(0,0,0)">Kyle Rocha</a></h5>
             <p class="card-text">Northwestern University</p>
@@ -357,7 +351,7 @@
 
       <div class="col-md text-center col-half-offset">
         <div class="thumbnail">
-          <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/DimitrisSouropanis.png" alt="">
+          <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/DimitrisSouropanis.png" alt="" loading="lazy">
           <p></p>
           <h5><a href="https://www.ia.forth.gr/people/souropanis" target="_blank" style="color: rgb(0,0,0)">Dimitris Souropanis</a></h5>
           <p class="card-text">FORTH Institute of Astrophysics</p>
@@ -371,7 +365,7 @@
 
       <div class="col-md text-center col-half-offset">
         <div class="thumbnail">
-        <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/MengSun.jpg" alt="">
+        <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/MengSun.jpg" alt="" loading="lazy">
         <p></p>
         <h5><a href="https://sunmeng1118.wixsite.com/mysite" target="_blank" style="color: rgb(0,0,0)">Meng Sun</a></h5>
         <p class="card-text">Northwestern University</p>
@@ -380,7 +374,7 @@
 
       <div class="col-md text-center col-half-offset">
           <div class="thumbnail">
-          <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/ZepeiXing.jpg" alt="">
+          <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/ZepeiXing.jpg" alt="" loading="lazy">
           <p></p>
           <h5><a href="https://www.linkedin.com/in/zepei-xing-86ab10206/" target="_blank" style="color: rgb(0,0,0)">Zepei Xing</a></h5>
           <p class="card-text">Universit&#233; de Gen&#232;ve</p>
@@ -389,7 +383,7 @@
 
       <div class="col-md text-center  col-half-offset">
           <div class="thumbnail">
-          <img style= "width: 130px; height: 125px; vertical-align: top;" src="images/teams/Manos.jpg" alt="">
+          <img style= "width: 125px; height: 125px; vertical-align: top;" src="images/teams/Manos_resize.jpg" alt="" loading="lazy">
           <p></p>
           <h5><a href="https://www.ia.forth.gr/people/zapartas" target="_blank" style="color: rgb(0,0,0)">Manos Zapartas</a></h5>
           <p class="card-text">FORTH Institute of Astrophysics</p>
@@ -404,27 +398,22 @@
     <h2 style="text-align:center">PAST MEMBERS</h2> 
     <hr/>
 
-    <div class="row">
-        <div class="col-md align-top  col-half-offset">
-            <h5><a href="https://www.linkedin.com/in/simone-bavera-0a0029193/" target="_blank" style="color: rgb(0,0,0)">Simone Bavera </a></h5>
-            <h5><a href="https://www.it.northwestern.edu/departments/it-services-support/research/staff/coughlin.html" target="_blank" style="color: rgb(0,0,0)">Scott Coughlin</a></h5>
-            <h5><a href="https://github.com/aarondotter" target="_blank" style="color: rgb(0,0,0)">Aaron Dotter</a></h5>
-            <h5><a href="https://www.linkedin.com/in/prabin-giri/" target="_blank" style="color: rgb(0,0,0)">Prabin Giri</a></h5>
-        </div>
-        <div class="col-md align-top  col-half-offset">           
-            <h5><a href="https://scholar.google.com/citations?hl=en&user=o5u5qXEAAAAJ" target="_blank" style="color: rgb(0,0,0)">Shamal Lalvani</a></h5>
-            <h5><a href="https://inspirehep.net/authors/1867611" target="_blank" style="color: rgb(0,0,0)">Ying Qin </a></h5>
-            <h5><a href="https://www.researchgate.net/profile/Jaime_Roman-Garza" target="_blank" style="color: rgb(0,0,0)">Jaime Rom&#225;n-Garza</a></h5>
-            <h5><a href="https://scholar.google.es/citations?user=8VCX1DEAAAAJ&hl=es&oi=sra" target="_blank" style="color: rgb(0,0,0)">Juan Gabriel Serra P&#233;rez</a></h5>
-        </div>
-        <div class="col-md align-top  col-half-offset">
-            <h5><a href="http://www.linkedin.com/in/petter-stahle" target="_blank" style="color: rgb(0,0,0)">Petter Alexander Stahle</a></h5>
-            <h5><a href="https://www.linkedin.com/in/xuteng123" target="_blank" style="color: rgb(0,0,0)">Xu Teng</a></h5>
-            <h5><a href="https://www.ece.iastate.edu/ece-directory/profile/gocet25/" target="_blank" style="color: rgb(0,0,0)">Goce Trajcevski</a></h5>
-            <h5><a href="https://www.linkedin.com/in/nam-tran-435b891b0" target="_blank" style="color: rgb(0,0,0)">Nam Tran </a></h5>
-            <h5><a href="https://michaelzevin.com/" target="_blank" style="color: rgb(0,0,0)">Michael Zevin</a></h5>
-        </div>
-    </div>
+    <ul style="columns: 3;list-style-type: none; text-align: center;">
+      <li><a href="https://ch.linkedin.com/in/ssbvr" target="_blank" style="color: rgb(0,0,0)">Simone Bavera </a></li>
+      <li><a href="https://www.it.northwestern.edu/departments/it-services-support/research/staff/coughlin.html" target="_blank" style="color: rgb(0,0,0)">Scott Coughlin </a></li>
+      <li><a href="https://github.com/aarondotter" target="_blank" style="color: rgb(0,0,0)">Aaron Dotter</a></li>
+      <li><a href="https://www.linkedin.com/in/prabin-giri/" target="_blank" style="color: rgb(0,0,0)">Prabin Giri</a></li>
+      <li><a href="https://scholar.google.com/citations?hl=en&user=o5u5qXEAAAAJ" target="_blank" style="color: rgb(0,0,0)">Shamal Lalvani</a></li>
+      <li><a href="https://inspirehep.net/authors/1867611" target="_blank" style="color: rgb(0,0,0)">Ying Qin </a></li>
+      <li><a href="https://www.researchgate.net/profile/Jaime_Roman-Garza" target="_blank" style="color: rgb(0,0,0)">Jaime Rom&#225;n-Garza</a></li>
+      <li><a href="https://scholar.google.es/citations?user=8VCX1DEAAAAJ&hl=es&oi=sra" target="_blank" style="color: rgb(0,0,0)">Juan Gabriel Serra P&#233;rez</a></li>
+      <li><a href="http://www.linkedin.com/in/petter-stahle" target="_blank" style="color: rgb(0,0,0)">Petter Alexander Stahle</a></li>
+      <li><a href="https://www.linkedin.com/in/xuteng123" target="_blank" style="color: rgb(0,0,0)">Xu Teng</a></li></li>
+      <li><a href="https://www.ece.iastate.edu/ece-directory/profile/gocet25/" target="_blank" style="color: rgb(0,0,0)">Goce Trajcevski</a></li>
+      <li><a href="https://www.linkedin.com/in/nam-tran-435b891b0" target="_blank" style="color: rgb(0,0,0)">Nam Tran </a></li>
+      <li><a href="https://michaelzevin.com/" target="_blank" style="color: rgb(0,0,0)">Michael Zevin</a></li>
+    </ul>
+
     <br>
 
   <footer>
