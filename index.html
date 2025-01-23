@@ -191,7 +191,7 @@
       function highlightActive(load=true) {
 
         // Get current page URL
-        var currentUrl = location.hash;
+        var currentUrl = window.location.hash;
 
         // on initial page load the url directs to index.html, which leads to an initially empty string
         if (currentUrl == "") {
