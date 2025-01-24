@@ -26,7 +26,11 @@
     <!-- This ensures that links will not open inside the iframe, but on the parent page level -->
     <base target="_parent" />
     <style>
-      .news-container {
+      .news-list {
+        list-style: none;
+      }
+
+      /*.news-container {
         position: absolute;
         top:0%;
         left: 0;
@@ -75,12 +79,12 @@
 
       .news-container ui li:last-child::after {
         display:none
-      }
+      }*/
     </style>
   </head>
 
   <body>
-    <ul class="list-group list-group-flush news-container">
+    <ul class="list-group list-group-flush news-list">
       <li class="list-group-item"><b>[January 22nd, 2025]</b> <b>Announcement:</b> We are happy to announce the <a href="https://posydon.org/summer_school.html">first POSYDON summer school</a> in September 2025.</li>
       <li class="list-group-item"><b>[November 5th, 2024]</b> We posted on the <b><a href="https://arxiv.org/abs/2411.02586" target="_blank">arXiv</a></b> a paper presenting a method of binary stellar evolution track interpolation (Srivastava et al.)</li>
       <li class="list-group-item"><b>[November 4th, 2024]</b> We posted on the <b><a href="https://arxiv.org/abs/2411.02376" target="_blank">arXiv</a></b> the preprint version of the POSYDON v2.0 instrument paper (Andrews et al.). This describes the second version of our code and grids of simulated binaries </li>
