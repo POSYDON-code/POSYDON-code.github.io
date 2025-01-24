@@ -120,56 +120,6 @@
         height: 60px !important;
       }*/
 
-      .news-container {
-        position: absolute;
-        top:0%;
-        left: 0;
-        right: 0;
-        box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
-        z-index: 99;
-      }
-
-      .news-container .title {
-        position: absolute;
-        background: #5babbe;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        padding: 0 24px;
-        color: white;
-        font-weight:bold;
-        z-index: 100;
-
-      }
-
-      .news-container ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        transform: translateX(calc(89px - 35698px));
-        animation: scroll 500s infinite linear;
-      }
-
-      .news-container ul li {
-        white-space: nowrap;
-        padding: 1px 24px;
-        color: #ffffff;
-        position: relative;
-      }
-
-      .news-container ul li::after {
-        content:"";
-        width: 1px;
-        height: 100%;
-        background:#b8b8b8;
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-
-      .news-container ui li:last-child::after {
-        display:none
-      }
       /* for a scrolling news ticker */
       @keyframes scroll {
         from{
