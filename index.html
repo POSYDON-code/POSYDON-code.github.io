@@ -141,7 +141,12 @@
       function highlightActive(load=true) {
 
         // Get current page URL
-        var currentUrl = window.location.href.split('index.html')[1];
+        var currentUrl = window.location.hash;
+
+        // on initial page load the url directs to index.html, which leads to an initially empty string
+        if (currentUrl == "") {
+          currentUrl = "#"
+        }
 
         // Find the matching navbar item
         $('.navbar-nav a').each(function() {
