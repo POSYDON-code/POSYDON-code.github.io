@@ -100,3 +100,8 @@ hr{
     transform: translateX(calc(89px - 35698px))
   }
 }
+
+/* Add black outline to carousel caption text */
+.carousel-caption {
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.95);
+}
