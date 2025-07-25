@@ -6,6 +6,10 @@ footer a {
   font-size: 32px !important;
 }
 
+.navbar-nav .nav-link {
+  font-size: 2rem !important;
+}
+
 .bg-black{
   background-color: black !important;
 }
