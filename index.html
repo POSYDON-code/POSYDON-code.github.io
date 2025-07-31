@@ -20,6 +20,8 @@
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/posydon.css", rel="stylesheet">
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -28,205 +30,40 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-	
-    <style>
-      
-      footer a {
-        color: white;
-      }
-
-      .navbar-brand{
-        font-size: 32px !important;
-      }
-
-      .bg-black{
-        background-color: black !important;
-      }
-
-      /*.nav-link{
-        font-size: 32px !important;
-      }*/
-
-      .dropdown-item{
-        font-size: 12px !important;
-      }
-
-      .navbar-text
-      {
-        font-size: 32px !important;
-        color: white !important;
-        font-style: italic !important;
-      }
-
-      .navbar-custom {
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 100%);
-      }
-
-      hr{
-        border-top: 1.5px solid black !important;
-      }
-
-      .jumbotron {
-        margin-bottom: 0px;
-      }
-
-      .back2top 
-      {
-        position: fixed;
-        bottom: 50px;
-        right: 10px;
-        display: none;
-        background-color: rgb(0, 0, 0);
-        color: white;
-        cursor: pointer;
-        z-index: 99;
-      }
-
-      .back2top:hover {
-        color: white;
-        background-color: #555; /* Add a dark-grey background on hover */
-      }
-
-      .col-half-offset{
-        margin-left:4.166666667%
-      }
-
-      .carousel {
-        position:relative;
-      }
-
-      .carousel-controls {
-        position: absolute !important;
-        /*top:50%;
-        transform:TranslateY(-50%);*/
-        width: 5% !important;
-        min-width: 60px !important;
-      }
-
-      .carousel-control-prev{
-        /*left: 5% !important;*/
-        right: auto;
-        left: 0px;
-      }
-
-      .carousel-control-next{
-        /*right: 5% !important;*/
-        left:auto;
-        right: 0px;
-      }
-
-      /*.carousel-control-next-icon, .carousel-control-prev-icon {
-        width: 60px !important;
-        height: 60px !important;
-      }*/
-
-      /* for a scrolling news ticker */
-      @keyframes scroll {
-        from{
-          transform: translateX(100%);
-        }
-        to {
-          transform: translateX(calc(89px - 35698px))
-        }
-      }
-
-    </style>
+    <script src="scripts.js"></script>
   </head>
 
   <body>
 
-    <script>
-
-      // highlights the active navbar item (also while on the same html page)
-      function highlightActive(load=true) {
-
-        // Get current page URL
-        var currentUrl = window.location.hash;
-
-        // on initial page load the url directs to index.html, which leads to an initially empty string
-        if (currentUrl == "") {
-          currentUrl = "#"
-        }
-
-        // Find the matching navbar item
-        $('.navbar-nav a').each(function() {
-
-          var linkUrl = $(this).attr('href');
-
-          if (currentUrl === linkUrl) {
-            // Add 'active' class to parent <li>
-            $(this).parent().addClass('active'); 
-            console.log(window.location.href)
-            // only highlight code links on window load to avoid double triggers
-            if ((currentUrl === "#Code") && (load)){
-              $('#codeCard').effect('highlight',{color:"#c7e3ff"},1000);
-            }
-          }
-          // remove active class from others navbar items
-          else {
-            $(this).parent().removeClass('active')
-          }
-
-        })
-      
-      };
-
-      $(document).ready(function(){
-
-        // highlight appropriate navbar items on load or hashchange
-        $(window).on('hashchange', function(event){
-
-          highlightActive(load = false);
-
-        }).on('load', function(event){
-
-          highlightActive(load = true);
-
-        });
-
-        // highlight code cards on clicking Code navbar item 
-        $('#codeLink').click(function(){
-          $('#codeCard').effect('highlight', {color:"#c7e3ff"}, 1000);
-        });
-
-      });
-
-    </script>
-
     <a id="back2top" href="#" class="btn btn-light btn-lg back2top" role="button"><i class="fa fa-arrow-up fa-1x"></i></a>
 
 
-    <!--<nav class="navbar navbar-custom sticky-top navbar-expand-lg navbar-dark bg-black">-->
-    <nav class="navbar navbar-custom sticky-top navbar-expand-lg navbar-dark">
-      <!-- logo on leftside -->
-      <a class="navbar-brand">
-        <!--height="150px"-->
-        <img src="images/logo_transparent_cropped.png" class="d-inline-block align-top" alt="" loading="eager" style="max-height:100px;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo_transparent_cropped.png" alt="POSYDON Logo" style="max-height:60px;">
       </a>
-      <!-- Adjust header -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Nav -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#" id="homeLink"><p style="font-size:38px;">Home</p><span class="sr-only">(current)</span></a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" id="homeLink">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#About"><p style="font-size:38px;">About</p></a>
+            <a class="nav-link" href="#About">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Code" id="codeLink"><p style="font-size:38px;">Get Started</p></a>
+            <a class="nav-link" href="#Code" id="codeLink">Get Started</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="team.html"><p style="font-size:38px;">Team</p></a>
+            <a class="nav-link" href="team.html">Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#Funding"><p style="font-size:38px;">Funding</p></a>
+            <a class="nav-link" href="#Funding">Funding</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="school.html"><p style="font-size:38px;">School</p></a>
+            <a class="nav-link" href="school.html">School</a>
           </li>
         </ul>
       </div>
@@ -322,9 +159,6 @@
 
         <!--righthand column in 1st homepage row of content -->
         <div class="col-md-6">
-          <p style="position:relative;">
-            <a id="Code" style="position:absolute; top:-180px;"></a>
-          </p>
           <!-- parent card containing navigation panes with links listed here -->
           <div class="card border-0" style="margin: 6.5px">
             <div class="card-header bg-transparent"> 
@@ -337,7 +171,6 @@
                     </li>
                 </ul>
             </div>
-
             <!-- parent card body -->
             <div class="card-body" id="codeCard">
               <!-- parent card navigation content-->
@@ -349,80 +182,47 @@
                   <div class="container-fluid mt-4">
 
                     <div class="row justify-content-center">
-                    <!-- docs card -->
-                    <div class="col-auto mb-3">
-                     <div class="card" style="width: 16rem;">
 
-                      <center>
-                        <img class="card-img-top" src="images/tab_logo_inverted.png" alt="Card image cap" style="max-width: 44px; max-height:80px;">
-                      </center>
-                      <div class="card-body text-center">
-                        <h5 class="card-title">Documentation</h5>
-                        <p class="card-text">Read about installation, features, tutorials, and more.</p>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Read the docs
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://posydon.org/POSYDON/development/index.html" target="_blank">development</a>
-                            <a class="dropdown-item" href="https://posydon.org/POSYDON/v2.0.0-pre2/index.html" target="_blank">v2.0.0-pre2 (stable)</a>
-                            <a class="dropdown-item" href="https://posydon.org/POSYDON/v2.0.0-pre1/index.html" target="_blank">v2.0.0-pre1</a>
-                          </div>
+                    <!-- docs card -->
+                    <div class="col-sm-12 col-md-6 col-xl-4 mb-3 d-flex align-items-stretch">
+                      <div class="card h-100" style="width: 100%;">
+                        <center>
+                          <img class="card-img-top" src="images/tab_logo_inverted.png" alt="Card image cap" style="max-width: 44px; max-height:80px;">
+                        </center>
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Documentation</h5>
+                          <p class="card-text">Read about installation, features, tutorials, and more.</p>
+                          <a href="https://posydon.org/POSYDON/latest/index.html" class="btn btn-secondary" target="_blank">Read the docs</a>  
                         </div>
                       </div>
-
-                     </div>
                     </div>
 
                     <!-- github card -->
-                    <div class="col-auto mb-3">
-                     <div class="card" style="width: 16rem;">
-
-                      <center>
-                        <img class="card-img-top" src="images/github-mark.png" alt="Card image cap" style="max-width:80px; max-height:80px;">
-                      </center>
-                      <div class="card-body text-center">
-                        <h5 class="card-title">Code Repository</h5>
-                        <p class="card-text">Find the latest POSYDON v2 source code on GitHub.</p>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Access source code
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://github.com/POSYDON-code/POSYDON/releases/latest", target="_blank">Latest Release</a>
-                            <a class="dropdown-item" href="https://github.com/POSYDON-code/POSYDON/tree/v2.0.0-pre2" target="_blank">v2.0.0-pre2 (stable)</a>
-                            <a class="dropdown-item" href="https://github.com/POSYDON-code/POSYDON/tree/v2.0.0-pre1" target="_blank">v2.0.0-pre1</a>
-                          </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4 mb-3 d-flex align-items-stretch">
+                      <div class="card h-100" style="width: 100%;">
+                        <center>
+                          <img class="card-img-top" src="images/github-mark.png" alt="Card image cap" style="max-width:80px; max-height:80px;">
+                        </center>
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Code Repository</h5>
+                          <p class="card-text">Find the latest POSYDON source code on GitHub.</p>
+                          <a href="https://github.com/POSYDON-code/POSYDON/releases/latest" class="btn btn-secondary" target="_blank">The code</a>
                         </div>
                       </div>
-
-                     </div>
                     </div>
 
                     <!-- zenodo card -->
-                    <div class="col-auto mb-3">
-                     <div class="card" style="width: 16rem;">
-
-                      <center>
-                        <img class="card-img-top" src="images/zenodo-black-200.png" alt="Card image cap" style="max-width:200px; max-height:80px;">
-                      </center>
-                      <div class="card-body text-center">
-                        <h5 class="card-title">Download Datasets</h5>
-                        <p class="card-text">MESA grids for POSYDON v2 are available on Zenodo.</p>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pre-computed grids
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">low mass res., 2 - 10<sup>-4</sup> <i>Z</i><sub>&odot;</sub> (coming soon!)</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="https://zenodo.org/records/14205146", target="_blank">high mass res., <i>Z</i><sub>&odot;</sub></a>
-                            <a class="dropdown-item" href="https://zenodo.org/records/14216817", target="_blank">high mass res., <i>Z</i><sub>&odot;</sub>, w/ Edd. accretion</a>
-                          </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4 mb-3 d-flex align-items-stretch">
+                      <div class="card h-100" style="width: 100%;">
+                        <center>
+                          <img class="card-img-top" src="images/zenodo-black-200.png" alt="Card image cap" style="max-width:200px; max-height:80px;">
+                        </center>
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Download Datasets</h5>
+                          <p class="card-text">Pre-computed MESA grids from DR2</p>
+                          <a href="https://zenodo.org/records/15194708" class="btn btn-secondary" target="_blank">Zenodo</a>
                         </div>
                       </div>
-
-                     </div>
                     </div>
 
                     </div>
@@ -437,78 +237,47 @@
                   <div class="container-fluid mt-4">
 
                     <div class="row justify-content-center">
-                    <!-- docs card -->
-                    <div class="col-auto mb-3">
-                     <div class="card h-100" style="width: 16rem;">
 
-                      <center>
-                        <img class="card-img-top" src="images/tab_logo_inverted.png" alt="Card image cap" style="max-width: 44px; max-height:80px;">
-                      </center>
-                      <div class="card-body text-center">
-                        <h5 class="card-title">Documentation</h5>
-                        <p class="card-text">Read about installation, features, tutorials, and more.</p>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Read the docs
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://posydon.org/POSYDON/v1.0.5/index.html" target="_blank">v1.0.5 (stable)</a>
-                            <a class="dropdown-item" href="https://posydon.org/POSYDON/v1.0.4/index.html" target="_blank">v1.0.4</a>
-                            <a class="dropdown-item" href="https://posydon.org/POSYDON/v1.0.0/index.html" target="_blank">v1.0.0</a>
-                          </div>
+                    <!-- docs card -->
+                    <div class="col-sm-12 col-md-6 col-xl-4 mb-3 d-flex align-items-stretch">
+                      <div class="card h-100" style="width: 100%;">
+                        <center>
+                          <img class="card-img-top" src="images/tab_logo_inverted.png" alt="Card image cap" style="max-width: 44px; max-height:80px;">
+                        </center>
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Documentation</h5>
+                          <p class="card-text">Read about installation, features, tutorials, and more.</p>
+                          <a href="https://posydon.org/POSYDON/v1.0.5/index.html" class="btn btn-secondary" target="_blank">Read the docs</a>
                         </div>
                       </div>
-
-                     </div>
                     </div>
 
                     <!-- github card -->
-                    <div class="col-auto mb-3">
-                     <div class="card h-100" style="width: 16rem;">
-
-                      <center>
-                        <img class="card-img-top" src="images/github-mark.png" alt="Card image cap" style="max-width:80px; max-height:80px;">
-                      </center>
-                      <div class="card-body text-center">
-                        <h5 class="card-title">Code Repository</h5>
-                        <p class="card-text">Find the latest POSYDON v1 source code on GitHub.</p>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Access source code
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://github.com/POSYDON-code/POSYDON/tree/v1.0.5" target="_blank">v1.0.5 (stable)</a>
-                            <a class="dropdown-item" href="https://github.com/POSYDON-code/POSYDON/tree/v1.0.4" target="_blank">v1.0.4</a>
-                            <a class="dropdown-item" href="https://github.com/POSYDON-code/POSYDON/tree/v1.0.0" target="_blank">v1.0.0</a>
-                          </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4 mb-3 d-flex align-items-stretch">
+                      <div class="card h-100" style="width: 100%;">
+                        <center>
+                          <img class="card-img-top" src="images/github-mark.png" alt="Card image cap" style="max-width:80px; max-height:80px;">
+                        </center>
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Code Repository</h5>
+                          <p class="card-text">Find the last POSYDON v1 source code on GitHub.</p>
+                          <a href="https://github.com/POSYDON-code/POSYDON/tree/v1.0.5" class="btn btn-secondary" target="_blank">The code</a>
                         </div>
                       </div>
-
-                     </div>
                     </div>
 
                     <!-- zenodo card -->
-                    <div class="col-auto mb-3">
-                     <div class="card h-100" style="width: 16rem;">
-
-                      <center>
-                        <img class="card-img-top" src="images/zenodo-black-200.png" alt="Card image cap" style="max-width:200px; max-height:80px;">
-                      </center>
-                      <div class="card-body text-center">
-                        <h5 class="card-title">Download the Data</h5>
-                        <p class="card-text">MESA grids for POSYDON v1 are available on Zenodo.</p>
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Pre-computed grids
-                          </button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="https://zenodo.org/records/6655751", target="_blank">high mass res., <i>Z</i><sub>&odot;</sub></a>
-                          </div>
+                    <div class="col-sm-12 col-md-6 col-xl-4 mb-3 d-flex align-items-stretch">
+                      <div class="card h-100" style="width: 100%;">
+                        <center>
+                          <img class="card-img-top" src="images/zenodo-black-200.png" alt="Card image cap" style="max-width:200px; max-height:80px;">
+                        </center>
+                        <div class="card-body text-center">
+                          <h5 class="card-title">Download Datasets</h5>
+                          <p class="card-text">Pre-computed MESA grids from DR1.</p>
+                          <a href="https://zenodo.org/records/6655751" class="btn btn-secondary" target="_blank">Zenodo</a>
                         </div>
-
                       </div>
-
-                     </div>
                     </div>
 
                   </div>
@@ -519,53 +288,61 @@
             </div>  
           </div>
 
+          <hr>
           <!--start contacts and papers card deck -->
           <!--<div class="card-deck" style="margin: 40px 30px">-->
           <div class="container-fluid mt-4">
             
           <div class="row justify-content-center">
-            <!-- users group card -->
-            <div class="col-auto mb-3">
-             <div class="card h-100" style="width: 16rem;">
 
-              <div class="card-body text-center">
-                <p class="card-text" style="font-size: 42px;"><i class="fa fa-envelope"></i></p>
-                <h5 class="card-title">Users' Group</h5>
-                <p class="card-text">Join our Google users' group to ask questions/raise issues.</p>
-                <a href="https://groups.google.com/g/posydon-users/" class="btn btn-secondary" target="_blank">Access users' group</a>
+            <!-- users group card -->
+            <div class="col-sm-12 col-md-6 mb-3 d-flex align-items-stretch">
+              <div class="card h-100" style="width: 100%;">
+                <div class="card-body text-center">
+                  <p class="card-text" style="font-size: 42px;"><i class="fa fa-envelope"></i></p>
+                  <h5 class="card-title">Users' Group</h5>
+                  <p class="card-text">Join our Google users' group to ask questions/raise issues.</p>
+                  <a href="https://groups.google.com/g/posydon-users/" class="btn btn-secondary" target="_blank">Access users' group</a>
+                </div>
               </div>
-            
-             </div>
+            </div>
+
+            <!-- discussions card -->
+            <div class="col-sm-12 col-md-6 mb-3 d-flex align-items-stretch">
+              <div class="card h-100" style="width: 100%;">
+                <div class="card-body text-center">
+                  <p class="card-text" style="font-size: 42px;"><i class="fa fa-comment"></i></p>
+                  <h5 class="card-title">Github Discussions</h5>
+                  <p class="card-text">Join our Github discussions to ask questions/raise issues.</p>
+                  <a href="https://github.com/POSYDON-code/POSYDON/discussions" class="btn btn-secondary" target="_blank">Access discussions</a>
+                </div>
+              </div>
             </div>
 
             <!-- team card -->
-            <div class="col-auto mb-3">
-             <div class="card h-100" style="width: 16rem;">
-
-              <div class="card-body text-center">
-                <p class="card-text" style="font-size: 42px;"><i class="fa fa-users"></i></p>
-                <h5 class="card-title">Our Team</h5>
-                <p class="card-text">See current and past members of our collaboration.</p>
-                <a href="team.html" class="btn btn-secondary">View members</a>
+            <div class="col-sm-12 col-md-6 mb-3 d-flex align-items-stretch">
+              <div class="card h-100" style="width: 100%;">
+                <div class="card-body text-center">
+                  <p class="card-text" style="font-size: 42px;"><i class="fa fa-users"></i></p>
+                  <h5 class="card-title">Our Team</h5>
+                  <p class="card-text">See current and past members of our collaboration.</p>
+                  <a href="team.html" class="btn btn-secondary">View members</a>
+                </div>
               </div>
-
-             </div>
             </div>
 
             <!-- nasa ads card -->
-            <div class="col-auto mb-3">
-             <div class="card h-100" style="width: 16rem;">
-
-              <center>
-                <img class="card-img-top" src="images/nasa_ads_sm.png" alt="Card image cap" style="max-width:277px; max-height:80px; position:relative; top:20%;">
-              </center>
-              <div class="card-body text-center">
-                <h5 class="card-title">Read papers</h5>
-                <p class="card-text">Find papers by our collaboration members showcasing POSYDON.</p>
-                <a href="https://ui.adsabs.harvard.edu/public-libraries/ZZsD9bzLTzWnLV3hwyJxbA" class="btn btn-secondary" target="_blank">Browse library</a>
+            <div class="col-sm-12 col-md-6 mb-3 d-flex align-items-stretch">
+              <div class="card h-100" style="width: 100%;">
+                <center>
+                  <img class="card-img-top" src="images/nasa_ads_sm.png" alt="Card image cap" style="max-width:277px; max-height:80px; position:relative; top:20%;">
+                </center>
+                <div class="card-body text-center">
+                  <h5 class="card-title">Read papers</h5>
+                  <p class="card-text">Find papers by our collaboration members showcasing POSYDON.</p>
+                  <a href="https://ui.adsabs.harvard.edu/public-libraries/ZZsD9bzLTzWnLV3hwyJxbA" class="btn btn-secondary" target="_blank">Browse library</a>
+                </div>
               </div>
-            
-             </div>
             </div>
 
            </div>
@@ -667,29 +444,12 @@
     <footer>
       <!-- Copyright -->
       <div class="container-fluid text-center text-light bg-secondary py-1 fixed-bottom"> 
-        &#169 2024 Copyright:
+&#169 2025 Copyright:
         <a href="#">POSYDON.org</a>
       </div>
     </footer>
 
-    <script>
-      $(document).ready(function(){
-        $(window).scroll(function () {
-          if ($(this).scrollTop() > 50) {
-            $('#back2top').fadeIn();
-          } else {
-            $('#back2top').fadeOut();
-          }
-        });
-        // scroll body to 0px on click
-        $('#back2top').click(function () {
-          $('body,html').animate({
-            scrollTop: 0
-          }, 400);
-          return false;
-        });
-      });
-    </script>
+    <script src="scripts.js"></script>
 
   </body>
 </html>
