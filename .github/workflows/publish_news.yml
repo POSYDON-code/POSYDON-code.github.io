@@ -38,7 +38,7 @@ jobs:
 
           # 2. Read existing database array
           try:
-              with open('news.json', 'r') as f:
+              with open('pages/news.json', 'r') as f:
                   news_list = json.load(f)
           except Exception:
               news_list = []
@@ -47,14 +47,14 @@ jobs:
           news_list.insert(0, new_entry)
 
           # 4. Save database file back
-          with open('news.json', 'w') as f:
+          with open('pages/news.json', 'w') as f:
               json.dump(news_list, f, indent=2)
 
       - name: Commit and Push to GitHub Pages
         run: |
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
-          git add news.json
+          git add pages/news.json
           git commit -m "Auto-published news: ${{ github.event.issue.title }}"
           git push
 
