@@ -1,0 +1,64 @@
+name: Publish News Entry
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  publish:
+    if: github.event.label.name == 'news-approved'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Parse Issue Form Data
+        id: parse
+        uses: stefanbuck/github-issue-parser@v3
+        with:
+          template-path: .github/ISSUE_TEMPLATE/news_submission.yml
+
+      - name: Update news.json using Python
+        shell: python
+        run: |
+          import json
+
+          # 1. Load parsed form data
+          form_data = json.loads('${{ steps.parse.outputs.json_string }}')
+          
+          new_entry = {
+              "type": "Announcement" if "Announcement" in form_data.get("entry_type", "") else "Paper",
+              "date_string": form_data.get("date_display", "Recent").strip(),
+              "content": form_data.get("content", "").strip()
+          }
+
+          # 2. Read existing database array
+          try:
+              with open('news.json', 'r') as f:
+                  news_list = json.load(f)
+          except Exception:
+              news_list = []
+
+          # 3. Prepend new entry to the very top
+          news_list.insert(0, new_entry)
+
+          # 4. Save database file back
+          with open('news.json', 'w') as f:
+              json.dump(news_list, f, indent=2)
+
+      - name: Commit and Push to GitHub Pages
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add news.json
+          git commit -m "Auto-published news: ${{ github.event.issue.title }}"
+          git push
+
+      - name: Close Approved Issue
+        run: gh issue close ${{ github.event.issue.number }} --comment "Successfully published to the website!"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

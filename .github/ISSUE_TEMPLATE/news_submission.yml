@@ -1,0 +1,28 @@
+name: 📰 Submit News Entry
+description: Add a news entry to the public POSYDON website.
+title: "[News]: New Entry Submission"
+labels: ["news-pending"]
+body:
+  - type: dropdown
+    id: entry_type
+    attributes:
+      label: Entry Type
+      options:
+        - Paper (Paper/arXiv/Preprint)
+        - Announcement (Registration/Event)
+    validations:
+      required: true
+  - type: input
+    id: date_display
+    attributes:
+      label: Display Date
+      placeholder: "e.g., June 26th, 2026"
+    validations:
+      required: true
+  - type: textarea
+    id: content
+    attributes:
+      label: News Content Text (HTML links allowed)
+      placeholder: "Example: We posted on the <b><a href='https://arxiv.org...'>arXiv</a></b> a paper..."
+    validations:
+      required: true

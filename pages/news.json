@@ -1,0 +1,242 @@
+[
+  {
+    "type": "Regular",
+    "date_string": "June 2026",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2026ApJ..1004...94X/abstract\" target=\"_blank\">The Astrophysical Journal</a></b> a paper investigating disk-regulated mass transfer between rotating nondegenerate stars, with applications to Be and sdOB binaries (Xing et al.)"
+  },
+  {
+    "type": "Announcement",
+    "date_string": "April 17th, 2026",
+    "content": "The registration for the <a href=\"https://posydon.org/posydon-school-2026/\">second POSYDON school</a> is now closed and we will contact accepted participants soon. Looking forward to seeing everyone in August!"
+  },
+  {
+    "type": "Announcement",
+    "date_string": "March 16th, 2026",
+    "content": "We will be hosting the <a href=\"https://posydon.org/posydon-school-2026/\">second POSYDON school</a> in August 2026, Geneva, Switzerland."
+  },
+  {
+    "type": "Regular",
+    "date_string": "February 2026",
+    "content": "We posted on the <b><a href=\"https://ui.adsabs.harvard.edu/abs/2026arXiv260203629B/abstract\" target=\"_blank\">arXiv</a></b> a paper presenting a detailed study of binary black hole formation through stable mass transfer in the Case A evolutionary channel (Briel et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "February 2026",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2026MNRAS.546f2208Z/abstract\" target=\"_blank\">Monthly Notices of the Royal Astronomical Society</a></b> a paper comparing population synthesis predictions with observations to investigate the demographics of binary companions to stripped-envelope supernovae (Zapartas et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "January 2026",
+    "content": "We posted on the <b><a href=\"https://ui.adsabs.harvard.edu/abs/2026arXiv260106577N/abstract\" target=\"_blank\">arXiv</a></b> a paper showing that a binary merger product can serve as the direct progenitor of a Type II-P supernova (Niu et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "January 2026",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2026MNRAS.545f2163S/abstract\" target=\"_blank\">Monthly Notices of the Royal Astronomical Society</a></b> a paper exploring the impact of binaries on stripped-envelope supernovae across metallicity, revealing persistent subtype diversity and low ejecta masses (Souropanis et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "January 2026",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2026ApJ...997...52C/abstract\" target=\"_blank\">The Astrophysical Journal</a></b> a paper forming double neutron stars using detailed binary evolution models with POSYDON and comparing the results to Galactic systems (Chattaraj et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "November 2025",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2025ApJS..281....3A/abstract\" target=\"_blank\">The Astrophysical Journal Supplement Series</a></b> the POSYDON Version 2 instrument paper, describing population synthesis with detailed binary-evolution simulations across a cosmological range of metallicities (Andrews et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "November 2025",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2025ApJ...993..159W/abstract\" target=\"_blank\">The Astrophysical Journal</a></b> a paper using deep Hubble Space Telescope observations to rule out a surviving massive binary companion to the Type Ic supernova SN 2012fh (Williams et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "October 2025",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2025A&A...702A.178A/abstract\" target=\"_blank\">Astronomy & Astrophysics</a></b> a paper investigating the metallicity dependence of red supergiant mass-loss rate relations (Antoniadis et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "September 2025",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2025A&A...701A..84B/abstract\" target=\"_blank\">Astronomy & Astrophysics</a></b> a paper presenting a new long gamma-ray burst formation pathway at solar metallicity (Briel et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "August 2025",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2025ApJ...989..188X/abstract\" target=\"_blank\">The Astrophysical Journal</a></b> a paper studying mass-gap black holes in coalescing neutron star-black hole binaries (Xing et al.)"
+  },
+  {
+    "type": "Announcement",
+    "date_string": "May 16th, 2025",
+    "content": "The registration for the first POSYDON school is closed. We are checking the applications and will contact accepted participants soon. We are looking forward to seeing all the interested students in September! More details can be found on the <a href=\"https://posydon.org/posydon-school-2025\">2025 school web page</a>."
+  },
+  {
+    "type": "Regular",
+    "date_string": "May 2025",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2025ApJ...984..154S/abstract\" target=\"_blank\">The Astrophysical Journal</a></b> a paper introducing methods for irregularly sampled time-series interpolation in detailed binary evolution simulations (Srivastava et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "May 2025",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2025A&A...697A.167Z/abstract\" target=\"_blank\">Astronomy & Astrophysics</a></b> a paper examining the effects of mass loss in models of red supergiants in the Small Magellanic Cloud (Zapartas et al.)"
+  },
+  {
+    "type": "Announcement",
+    "date_string": "April 7th, 2025",
+    "content": "The <a href=\"https://posydon.org/posydon-school-2025/#apply\">registration</a> for the POSYDON school is now open. More details can be found on the <a href=\"https://posydon.org/posydon-school-2025\">2025 school web page</a>."
+  },
+  {
+    "type": "Regular",
+    "date_string": "April 2025",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2025ApJ...983...39R/abstract\" target=\"_blank\">The Astrophysical Journal</a></b> a paper presenting self-consistent stellar evolution calculations of mass transfer in eccentric binary orbits (Rocha et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "April 2025",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2025A&C....5100935T/abstract\" target=\"_blank\">Astronomy and Computing</a></b> a paper developing emulator models for stellar profiles in binary population modeling (Teng et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "March 2025",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2025ApJ...982...53L/abstract\" target=\"_blank\">The Astrophysical Journal</a></b> a paper exploring the challenges of forming millisecond pulsar-black hole binaries from isolated binary evolution (Liotine et al.)"
+  },
+  {
+    "type": "Announcement",
+    "date_string": "January 22nd, 2025",
+    "content": "We are happy to announce the <a href=\"https://posydon.org/school.html\">first POSYDON school</a> in September 2025."
+  },
+  {
+    "type": "Regular",
+    "date_string": "January 2025",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2025A&A...693A..27X/abstract\" target=\"_blank\">Astronomy & Astrophysics</a></b> a paper investigating the formation of wind-fed black hole high-mass X-ray binaries and the role of Roche-lobe overflow after black hole formation (Xing et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "December 2024",
+    "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2024A&A...692A.141K/abstract\" target=\"_blank\">Astronomy & Astrophysics</a></b> a paper showing how Gaia black holes can be used to constrain stellar wind models and the formation of black holes in non-interacting isolated binaries (Kruckow et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "November 5th, 2024",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2411.02586\" target=\"_blank\">arXiv</a></b> a paper presenting a method of binary stellar evolution track interpolation (Srivastava et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "November 4th, 2024",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2411.02376\" target=\"_blank\">arXiv</a></b> the preprint version of the POSYDON v2.0 instrument paper (Andrews et al.). This describes the second version of our code and grids of simulated binaries"
+  },
+  {
+    "type": "Regular",
+    "date_string": "October 29th, 2024",
+    "content": "We posted on the <b><a href=\"http://arxiv.org/abs/2410.20415\" target=\"_blank\">arXiv</a></b> a paper utilizing POSYDON to investigate the impact of common-envelope efficiency and core-collapse supernova kicks on the black hole (BH) mass distribution of neutron star-BH (NSBH) mergers, and systems observed in the lower BH mass gap (Xing et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "October 25th, 2024",
+    "content": "We posted on the <b><a href=\"http://arxiv.org/abs/2410.18501\" target=\"_blank\">arXiv</a></b> a paper on how the Gaia black holes could have formed without binary interactions if the Wolf-Rayet winds are a bit stronger (Kruckow et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "October 14th, 2024",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2410.11105\" target=\"_blank\">arXiv</a></b> a paper presenting a new emulation method for predicting the stellar profile outputs of MESA simulations (Teng et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "August 7th, 2024",
+    "content": "On <b><a href=\"https://arxiv.org/abs/2403.17279\" target=\"_blank\">arXiv</a></b> you can find the published paper demonstrating the spin down of post mass transfer (MT) systems according to several magnetic braking prescriptions proposed in the literature that we implemented in MESA. We compared their ability to explain observed post-MT systems (Sun et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "June 28th, 2024",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2407.00200\" target=\"_blank\">arXiv</a></b> a paper exploring the role of Roche-lobe overflow after BH formation in the wind-fed BH-HMXB population (Xing et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "June 21st, 2024",
+    "content": "On <b><a href=\"https://arxiv.org/abs/2311.07528\" target=\"_blank\">arXiv</a></b> you can find the published paper exploring the proposed mechanism of Wind Roche-lobe overflow with MESA models representing low mass binaries. Our models are compared to observed rapidly rotating blue lurkers whose stellar properties can be explained as a result of this mechanism (Sun et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "March 28th, 2024",
+    "content": "On <b><a href=\"https://arxiv.org/abs/2403.19743\" target=\"_blank\">arXiv</a></b> you can find the accepted paper suggesting that Mixed-Morphology SN Remnants originate from the evolution of winds of the stellar RSG progenitor inside a dense ISM environment, using POSYDON single star models for the test cases (Chiotellis et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "March 13th, 2024",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2403.07172\" target=\"_blank\">arXiv</a></b> a paper exploring the role of rotation in modeling Be X-ray Binaries (Rocha et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "February 19th, 2024",
+    "content": "On <b><a href=\"https://arxiv.org/abs/2402.12442\" target=\"_blank\">arXiv</a></b> de Wit and collaborators have posted a paper investigating mass loss of evolved massive stars (mainly RSGs) in low metallicity environments, comparing with POSYDON stellar tracks"
+  },
+  {
+    "type": "Regular",
+    "date_string": "September 18th, 2023",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2309.09600\" target=\"_blank\">arXiv</a></b> a paper about neutron star-black hole mergers at solar metallicity (Xing et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "February 6th, 2023",
+    "content": "We have published the POSYDON v1.0 instrument paper (Fragos et al. 2023) in the <a href=\"http://dx.doi.org/10.3847/1538-4365/ac90c1\" target=\"_blank\">Astrophysical Journal Supplement</a>! This describes the <a href=\"https://github.com/POSYDON-code/POSYDON/releases/tag/v1.0.0\" target=\"_blank\">first version of our code</a> and <a href=\"https://doi.org/10.5281/zenodo.6384234\" target=\"_blank\">grids of simulated binaries</a>. The code is distributed via <a href=\"https://anaconda.org/posydon/posydon\" target=\"_blank\">anaconda</a>."
+  },
+  {
+    "type": "Regular",
+    "date_string": "December 21st, 2022",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2212.10924\" target=\"_blank\">arXiv</a></b> a paper about the formation of 30 solar mass black hole mergers at solar metallicity (Bavera et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "November 7th, 2022",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2211.02158\" target=\"_blank\">arXiv</a></b> a paper about the natal kick of the black hole in the X-ray binary MAXI J1305-704 (Kimball et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "September 16th, 2022",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2209.06844\" target=\"_blank\">arXiv</a></b> a paper about the lower mass gap with low mass X-ray binary population synthesis (Siegel et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "September 14th, 2022",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2209.05505\" target=\"_blank\">arXiv</a></b> a paper about the signatures of different physical processes using detailed binary evolution calculations (Misra et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "April 1st, 2022",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2203.16683\" target=\"_blank\">arXiv</a></b> a paper about a new active-learning algorithm that can efficiently create the grids of binary simulations used by POSYDON as an input (Rocha et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "February 15th, 2022",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2202.05892\" target=\"_blank\">arXiv</a></b> the preprint version of the POSYDON v1.0 instrument paper (Fragos et al.). This describes the first version of our code and grids of simulated binaries"
+  },
+  {
+    "type": "Regular",
+    "date_string": "November 4th, 2021",
+    "content": "We published on <b><a href=\"https://dl.acm.org/doi/abs/10.1145/3474717.3483989\" target=\"_blank\">ACM SIGSPATIAL'2021</a></b> a new demo paper about a prototype system for coupling similarity and diversity for clustering astrophysics multivariate datasets (Teng et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "August 23rd, 2021",
+    "content": "We published on <b><a href=\"https://dl.acm.org/doi/abs/10.1145/3469830.3470916\" target=\"_blank\">SSTD'2021</a></b> a new demo paper about a system for context aware clustering of stellar evolution (Teng et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "July 1st, 2021",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2106.15841\" target=\"_blank\">arXiv</a></b> a new paper about probing the progenitors of spinning binary black-hole mergers with long gamma-ray bursts (Bavera et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "June 10th, 2021",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2106.05228\" target=\"_blank\">arXiv</a></b> a new paper about the explodability of single massive star progenitors of stripped-envelope supernovae (Zapartas et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "December 3rd, 2020",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2012.02274\" target=\"_blank\">arXiv</a></b> a new paper about the role of core-collapse physics in the observability of black-hole neutron-star mergers as multi-messenger sources (Román-Garza et al.)"
+  },
+  {
+    "type": "Regular",
+    "date_string": "October 30th, 2020",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2010.16333\" target=\"_blank\">arXiv</a></b> a new paper about the impact of mass-transfer physics on the observable properties of field binary black hole populations (Bavera et al.)"
+  }
+]
