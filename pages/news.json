@@ -2,6 +2,11 @@
   {
     "type": "Paper",
     "date_string": "June 2026",
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2606.13351\" target=\"_blank\">arXiv</a></b> a paper introducing POSYDON binary population spectral models, showing that binary interactions strongly affect UV and ionizing emission. The models are publicly available for SED fitting (Kasdagli et al.)."
+  },
+  {
+    "type": "Paper",
+    "date_string": "June 2026",
     "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2026ApJ..1004...94X/abstract\" target=\"_blank\">The Astrophysical Journal</a></b> a paper investigating disk-regulated mass transfer between rotating nondegenerate stars, with applications to Be and sdOB binaries (Xing et al.)"
   },
   {
