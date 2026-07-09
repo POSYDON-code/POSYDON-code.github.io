@@ -24,13 +24,16 @@ jobs:
 
       - name: Update news.json using Python
         shell: python
+        env:
+          FORM_DATA: ${{ steps.parse.outputs.jsonString }}
         run: |
           import json
+          import os
           import re
           from datetime import datetime
 
           # 1. Load parsed form data
-          form_data = json.loads('${{ steps.parse.outputs.json_string }}')
+          form_data = json.loads(os.environ["FORM_DATA"])
           
           new_entry = {
               "type": "Announcement" if "Announcement" in form_data.get("entry_type", "") else "Paper",
