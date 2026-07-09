@@ -26,6 +26,8 @@ jobs:
         shell: python
         run: |
           import json
+          import re
+          from datetime import datetime
 
           # 1. Load parsed form data
           form_data = json.loads('${{ steps.parse.outputs.json_string }}')
@@ -43,12 +45,26 @@ jobs:
           except Exception:
               news_list = []
 
-          # 3. Prepend new entry to the very top
-          news_list.insert(0, new_entry)
+          # 3. Append new entry to the list of news items
+          news_list.append(new_entry)
+
+          # 4. Sort the news list by date_string in descending order (most recent at the top)
+          #    NOTE: Formats that can be parsed: "June 26, 2026", "June 2026"
+          def parse_date(date_string):
+              date_string = re.sub(r'(\d+)(st|nd|rd|th)', r'\1', date_string).strip()
+              for fmt in ("%B %d, %Y", "%B %Y"):
+                  try:
+                      return datetime.strptime(date_string, fmt)
+                  except ValueError:
+                      pass
+              return datetime.min
+
+          news_list.sort(key=lambda x: parse_date(x["date_string"]), reverse=True)
 
           # 4. Save database file back
           with open('pages/news.json', 'w') as f:
               json.dump(news_list, f, indent=2)
+              f.write("\n")
 
       - name: Commit and Push to GitHub Pages
         run: |
