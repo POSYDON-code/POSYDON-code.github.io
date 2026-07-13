@@ -94,6 +94,8 @@ jobs:
           git add pages/news.json
           git commit -m "Auto-published news: ${{ github.event.issue.title }}"
           git push
+        env:
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
 
       # 6. Close news entry issue
       - name: Close Approved Issue
