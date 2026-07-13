@@ -59,7 +59,10 @@ jobs:
               news_list = json.load(f)
 
           # 3. Append new entry to the list of news items
-          news_list.append(new_entry)
+          if new_entry not in news_list:
+              news_list.append(new_entry)
+          else:
+              print("Entry already exists.")
 
           # 4. Sort the news list by date_string in descending order (most recent at the top)
           #    NOTE: Formats that can be parsed: "June 26, 2026", "June 2026"
