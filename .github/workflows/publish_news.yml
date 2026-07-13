@@ -82,8 +82,15 @@ jobs:
       # 5. Commit and push changes
       - name: Commit and Push to GitHub Pages
         run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
+          # 1. Fetch the exact ID for your app from GitHub's API
+          APP_SLUG="${{ steps.generate_token.outputs.app-slug }}"
+          BOT_USER_ID=$(gh api "/users/${APP_SLUG}[bot]" --jq .id)
+          
+          # 2. Configure Git to use the app's real verified profile info
+          git config --global user.name "${APP_SLUG}[bot]"
+          git config --global user.email "${BOT_USER_ID}+${APP_SLUG}[bot]@users.noreply.github.com"
+          
+          # 3. Push the file back to the protected branch
           git add pages/news.json
           git commit -m "Auto-published news: ${{ github.event.issue.title }}"
           git push
