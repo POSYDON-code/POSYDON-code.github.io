@@ -13,15 +13,28 @@ jobs:
       issues: write
 
     steps:
+      # 1. Generate a temporary token using news bot app credentials
+      - name: Generate GitHub App Token
+        id: generate_token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.NEWS_BOT_APP_ID }}
+          private-key: ${{ secrets.NEWS_BOT_PRIVATE_KEY }}
+
+      # 2. Checkout the repository with news bot token
       - name: Checkout repository
         uses: actions/checkout@v4
-
+        with:
+          token: ${{ steps.generate_token.outputs.token }}
+      
+      # 3. Parse news entry issue form
       - name: Parse Issue Form Data
         id: parse
         uses: stefanbuck/github-issue-parser@v3
         with:
           template-path: .github/ISSUE_TEMPLATE/news_submission.yml
 
+      # 4. Read news entries and add new entry
       - name: Update news.json using Python
         shell: python
         env:
@@ -42,14 +55,14 @@ jobs:
           }
 
           # 2. Read existing database array
-          try:
-              with open('pages/news.json', 'r') as f:
-                  news_list = json.load(f)
-          except Exception:
-              news_list = []
+          with open('pages/news.json', 'r') as f:
+              news_list = json.load(f)
 
           # 3. Append new entry to the list of news items
-          news_list.append(new_entry)
+          if new_entry not in news_list:
+              news_list.append(new_entry)
+          else:
+              print("Entry already exists.")
 
           # 4. Sort the news list by date_string in descending order (most recent at the top)
           #    NOTE: Formats that can be parsed: "June 26, 2026", "June 2026"
@@ -64,20 +77,31 @@ jobs:
 
           news_list.sort(key=lambda x: parse_date(x["date_string"]), reverse=True)
 
-          # 4. Save database file back
+          # 5. Save database file back
           with open('pages/news.json', 'w') as f:
               json.dump(news_list, f, indent=2)
               f.write("\n")
 
+      # 5. Commit and push changes
       - name: Commit and Push to GitHub Pages
         run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
+          # 1. Fetch the exact app ID from GitHub's API
+          APP_SLUG="${{ steps.generate_token.outputs.app-slug }}"
+          BOT_USER_ID=$(gh api "/users/${APP_SLUG}[bot]" --jq .id)
+          
+          # 2. Configure Git to use the app's verified profile info
+          git config --global user.name "${APP_SLUG}[bot]"
+          git config --global user.email "${BOT_USER_ID}+${APP_SLUG}[bot]@users.noreply.github.com"
+          
+          # 3. Push the file back to the protected branch
           git add pages/news.json
           git commit -m "Auto-published news: ${{ github.event.issue.title }}"
           git push
+        env:
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
 
+      # 6. Close news entry issue
       - name: Close Approved Issue
         run: gh issue close ${{ github.event.issue.number }} --comment "Successfully published to the website!"
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ steps.generate_token.outputs.token }}
