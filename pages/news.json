@@ -10,6 +10,11 @@
     "content": "We published in <b><a href=\"https://ui.adsabs.harvard.edu/abs/2026ApJ..1004...94X/abstract\" target=\"_blank\">The Astrophysical Journal</a></b> a paper investigating disk-regulated mass transfer between rotating nondegenerate stars, with applications to Be and sdOB binaries (Xing et al.)"
   },
   {
+    "type": "Paper",
+    "date_string": "June 2026",
+    "content": "We published in <a href=\"https://ui.adsabs.harvard.edu/abs/2026arXiv260503128C/abstract\" target=\"_blank\"><b>The Astrophysical Journal</b></a> a paper exploring the delay time distribution of double neutron star mergers across cosmic metallicities and investigating the role of the helium star\u2013neutron star evolutionary phase (Chattaraj et al.)."
+  },
+  {
     "type": "Announcement",
     "date_string": "April 17th, 2026",
     "content": "The registration for the <a href=\"https://posydon.org/posydon-school-2026/\">second POSYDON school</a> is now closed and we will contact accepted participants soon. Looking forward to seeing everyone in August!"
@@ -237,7 +242,7 @@
   {
     "type": "Paper",
     "date_string": "December 3rd, 2020",
-    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2012.02274\" target=\"_blank\">arXiv</a></b> a new paper about the role of core-collapse physics in the observability of black-hole neutron-star mergers as multi-messenger sources (Román-Garza et al.)"
+    "content": "We posted on the <b><a href=\"https://arxiv.org/abs/2012.02274\" target=\"_blank\">arXiv</a></b> a new paper about the role of core-collapse physics in the observability of black-hole neutron-star mergers as multi-messenger sources (Rom\u00e1n-Garza et al.)"
   },
   {
     "type": "Paper",
